@@ -5,14 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html",
+    "build": "parcel build ./src/index.html --public-url ./",
+    "deploy":
+      "npm run build && gh-pages -a -d dist -r git@github.com:claydiffrient/flash-cards.git",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "flash",
-    "cards",
-    "learning"
-  ],
+  "keywords": ["flash", "cards", "learning"],
   "author": "Clay Diffrient",
   "license": "MIT",
   "dependencies": {
@@ -32,6 +30,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.5.1",
+    "gh-pages": "^1.1.0",
     "parcel-bundler": "^1.4.1",
     "postcss-cssnext": "^3.0.2",
     "postcss-modules": "^1.1.0",

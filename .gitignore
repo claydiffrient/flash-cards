@@ -1,4 +1,5 @@
 node_modules
+dist/
 
 # Parcel's cache
 .cache
