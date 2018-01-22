@@ -20,5 +20,11 @@ module.exports = {
   },
   rules: {
     "prettier/prettier": "error"
+  },
+  overrides: {
+    files: ["**/__tests__/**/*"],
+    env: {
+      jest: true
+    }
   }
 };
