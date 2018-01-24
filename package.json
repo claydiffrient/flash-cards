@@ -23,6 +23,9 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "@instructure/babel-plugin-themeable-styles": "^4.6.0",
+    "@instructure/babel-plugin-transform-class-display-name": "^4.6.0",
+    "@instructure/postcss-themeable-styles": "^4.6.0",
     "autoprefixer": "^7.2.5",
     "babel-eslint": "^8.2.1",
     "babel-preset-env": "^1.6.1",

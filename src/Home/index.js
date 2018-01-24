@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import styles from "./styles.css";
 import Heading from "@instructure/ui-core/lib/components/Heading";
 import Text from "@instructure/ui-core/lib/components/Text";
 import Container from "@instructure/ui-core/lib/components/Container";
 import List, { ListItem } from "@instructure/ui-core/lib/components/List";
 
-export default class Home extends Component {
+import themeable from "@instructure/ui-themeable";
+import styles from "./styles.css";
+import theme from "./theme.js";
+
+class Home extends Component {
   render() {
     return (
       <div className={styles.root}>
@@ -64,3 +67,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default themeable(theme, styles)(Home);

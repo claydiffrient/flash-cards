@@ -1,6 +1,6 @@
 module.exports = {
   modules: true,
   plugins: {
-    autoprefixer: {}
+    "@instructure/postcss-themeable-styles": {}
   }
 };
