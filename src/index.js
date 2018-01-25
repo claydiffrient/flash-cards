@@ -2,7 +2,33 @@
 import React from "react";
 import ReactDOM from "react-dom";
 // import { AppContainer } from "react-hot-loader";
-import Home from "./Home/index";
 import "@instructure/ui-themes/lib/canvas";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Spinner from "@instructure/ui-core/lib/components/Spinner";
 
-ReactDOM.render(<Home />, document.getElementById("main"));
+import Loadable from "react-loadable";
+
+const LoadableHome = Loadable({
+  loader: () => import("./Home"),
+  loading() {
+    return <Spinner title="Loading" />;
+  }
+});
+
+const LoadableCard = Loadable({
+  loader: () => import("./Card"),
+  loading() {
+    return <Spinner title="Loading" />;
+  }
+});
+
+const Container = () => (
+  <Router>
+    <Switch>
+      <Route exact path="/" component={LoadableHome} />
+      <Route path="/cards" component={() => <LoadableCard text={{}} />} />
+    </Switch>
+  </Router>
+);
+
+ReactDOM.render(<Container />, document.getElementById("main"));
