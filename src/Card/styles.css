@@ -1,0 +1,6 @@
+.card {
+  background-color: var(--bgColor);
+  padding: var(--padding);
+  width: var(--width);
+  height: var(--height);
+}

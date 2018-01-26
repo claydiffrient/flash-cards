@@ -15,8 +15,8 @@ const LoadableHome = Loadable({
   }
 });
 
-const LoadableCard = Loadable({
-  loader: () => import("./Card"),
+const LoadableSessionPage = Loadable({
+  loader: () => import("./pages/SessionPage"),
   loading() {
     return <Spinner title="Loading" />;
   }
@@ -26,7 +26,10 @@ const Container = () => (
   <Router>
     <Switch>
       <Route exact path="/" component={LoadableHome} />
-      <Route path="/cards" component={() => <LoadableCard text={{}} />} />
+      <Route
+        path="/cards"
+        component={() => <LoadableSessionPage text={{}} />}
+      />
     </Switch>
   </Router>
 );

@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../index";
+import { Card } from "../index";
 import { shallow } from "enzyme";
 
 it("shows the front of the card by default", () => {
@@ -8,7 +8,12 @@ it("shows the front of the card by default", () => {
     back: "Back Side"
   };
   const wrapper = shallow(<Card text={text} />);
-  expect(wrapper).toMatchSnapshot();
+  expect(
+    wrapper
+      .find("Text")
+      .children()
+      .text()
+  ).toEqual(text.front);
 });
 
 it("shows the back after clicking the flip button", () => {
@@ -18,5 +23,10 @@ it("shows the back after clicking the flip button", () => {
   };
   const wrapper = shallow(<Card text={text} />);
   wrapper.find("Button").simulate("click");
-  expect(wrapper).toMatchSnapshot();
+  expect(
+    wrapper
+      .find("Text")
+      .children()
+      .text()
+  ).toEqual(text.back);
 });

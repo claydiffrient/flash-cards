@@ -3,6 +3,8 @@ import Heading from "@instructure/ui-core/lib/components/Heading";
 import Text from "@instructure/ui-core/lib/components/Text";
 import Container from "@instructure/ui-core/lib/components/Container";
 import List, { ListItem } from "@instructure/ui-core/lib/components/List";
+import Button from "@instructure/ui-core/lib/components/Button";
+import { Link } from "react-router-dom";
 
 import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
@@ -20,7 +22,7 @@ class Home extends Component {
           <Heading color="primary-inverse" margin="0 0 x-small">
             What is This?
           </Heading>
-          <Text as="p" textAlign="start" color="primary-inverse">
+          <Text as="p" color="primary-inverse">
             Flash Cards is a web app being developed to help with learning
             things. {"It's"} being developed by Clay Diffrient as a project for
             the EDPS 6560 Mulitimedia Learning class in the pursuit of a M.Ed in
@@ -29,7 +31,7 @@ class Home extends Component {
           <Heading color="primary-inverse" margin="0 0 x-small">
             What Will It Do?
           </Heading>
-          <Text as="p" textAlign="start" color="primary-inverse">
+          <Text as="p" color="primary-inverse">
             I have somewhat grand aspirations for what it will do eventually,
             but for now I hope to do the following things:
           </Text>
@@ -62,6 +64,11 @@ class Home extends Component {
               </Text>
             </ListItem>
           </List>
+        </Container>
+        <Container as="div" textAlign="center" margin="medium 0 0 0">
+          <Button as={Link} to="/cards">
+            Start
+          </Button>
         </Container>
       </div>
     );
