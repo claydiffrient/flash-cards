@@ -1,0 +1,416 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<Home>
+  <div
+    className="Home__root__2fUWydo"
+  >
+    <Heading
+      border="none"
+      color="primary-inverse"
+      ellipsis={false}
+      level="h1"
+    >
+      <Container
+        as="h1"
+        className="_3BZ02Bg _3eNxhb- _3VqD3Wt"
+        display={null}
+      >
+        <h1
+          className="_3BZ02Bg _3eNxhb- _3VqD3Wt"
+          style={
+            Object {
+              "margin": null,
+              "padding": null,
+            }
+          }
+        >
+          Flash Cards
+        </h1>
+      </Container>
+    </Heading>
+    <Container
+      as="div"
+      display={null}
+      textAlign="start"
+    >
+      <div
+        className="_2iJkRW"
+        style={
+          Object {
+            "margin": null,
+            "padding": null,
+          }
+        }
+      >
+        <Heading
+          border="none"
+          color="primary-inverse"
+          ellipsis={false}
+          level="h2"
+          margin="0 0 x-small"
+        >
+          <Container
+            as="h2"
+            className="_3BZ02Bg _1t9nPA1 _3VqD3Wt"
+            display={null}
+            margin="0 0 x-small"
+          >
+            <h2
+              className="_3BZ02Bg _1t9nPA1 _3VqD3Wt"
+              style={
+                Object {
+                  "margin": "0 0 0.5rem",
+                  "padding": null,
+                }
+              }
+            >
+              What is This?
+            </h2>
+          </Container>
+        </Heading>
+        <Text
+          as="p"
+          color="primary-inverse"
+          letterSpacing="normal"
+          size="medium"
+        >
+          <p
+            className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
+          >
+            Flash Cards is a web app being developed to help with learning things. 
+            It's
+             being developed by Clay Diffrient as a project for the EDPS 6560 Mulitimedia Learning class in the pursuit of a M.Ed in Instructional Design and Educational Technology.
+          </p>
+        </Text>
+        <Heading
+          border="none"
+          color="primary-inverse"
+          ellipsis={false}
+          level="h2"
+          margin="0 0 x-small"
+        >
+          <Container
+            as="h2"
+            className="_3BZ02Bg _1t9nPA1 _3VqD3Wt"
+            display={null}
+            margin="0 0 x-small"
+          >
+            <h2
+              className="_3BZ02Bg _1t9nPA1 _3VqD3Wt"
+              style={
+                Object {
+                  "margin": "0 0 0.5rem",
+                  "padding": null,
+                }
+              }
+            >
+              What Will It Do?
+            </h2>
+          </Container>
+        </Heading>
+        <Text
+          as="p"
+          color="primary-inverse"
+          letterSpacing="normal"
+          size="medium"
+        >
+          <p
+            className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
+          >
+            I have somewhat grand aspirations for what it will do eventually, but for now I hope to do the following things:
+          </p>
+        </Text>
+        <List
+          as="ul"
+          delimiter="none"
+          margin="none"
+          size="medium"
+          variant="default"
+        >
+          <Container
+            as="ul"
+            className="_2j92CzO QuihDiE _1eZWDls"
+            display={null}
+            margin="none"
+          >
+            <ul
+              className="_2j92CzO QuihDiE _1eZWDls"
+              style={
+                Object {
+                  "margin": "0",
+                  "padding": null,
+                }
+              }
+            >
+              <ListItem
+                as="ul"
+                delimiter="none"
+                key=".0"
+                size="medium"
+                variant="default"
+              >
+                <Container
+                  as="li"
+                  className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                  display={null}
+                >
+                  <li
+                    className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                    style={
+                      Object {
+                        "margin": null,
+                        "padding": null,
+                      }
+                    }
+                  >
+                    <Text
+                      as="span"
+                      color="primary-inverse"
+                      letterSpacing="normal"
+                      size="medium"
+                    >
+                      <span
+                        className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
+                      >
+                        Show a flash card and flip to the other side via user interaction.
+                      </span>
+                    </Text>
+                  </li>
+                </Container>
+              </ListItem>
+              <ListItem
+                as="ul"
+                delimiter="none"
+                key=".1"
+                size="medium"
+                variant="default"
+              >
+                <Container
+                  as="li"
+                  className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                  display={null}
+                >
+                  <li
+                    className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                    style={
+                      Object {
+                        "margin": null,
+                        "padding": null,
+                      }
+                    }
+                  >
+                    <Text
+                      as="span"
+                      color="primary-inverse"
+                      letterSpacing="normal"
+                      size="medium"
+                    >
+                      <span
+                        className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
+                      >
+                        Show a flash card and flip to the other side after a given time.
+                      </span>
+                    </Text>
+                  </li>
+                </Container>
+              </ListItem>
+              <ListItem
+                as="ul"
+                delimiter="none"
+                key=".2"
+                size="medium"
+                variant="default"
+              >
+                <Container
+                  as="li"
+                  className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                  display={null}
+                >
+                  <li
+                    className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                    style={
+                      Object {
+                        "margin": null,
+                        "padding": null,
+                      }
+                    }
+                  >
+                    <Text
+                      as="span"
+                      color="primary-inverse"
+                      letterSpacing="normal"
+                      size="medium"
+                    >
+                      <span
+                        className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
+                      >
+                        Track correct vs. incorrect answers by user input
+                      </span>
+                    </Text>
+                  </li>
+                </Container>
+              </ListItem>
+              <ListItem
+                as="ul"
+                delimiter="none"
+                key=".3"
+                size="medium"
+                variant="default"
+              >
+                <Container
+                  as="li"
+                  className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                  display={null}
+                >
+                  <li
+                    className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                    style={
+                      Object {
+                        "margin": null,
+                        "padding": null,
+                      }
+                    }
+                  >
+                    <Text
+                      as="span"
+                      color="primary-inverse"
+                      letterSpacing="normal"
+                      size="medium"
+                    >
+                      <span
+                        className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
+                      >
+                        Summarize stats at the end of a session
+                      </span>
+                    </Text>
+                  </li>
+                </Container>
+              </ListItem>
+              <ListItem
+                as="ul"
+                delimiter="none"
+                key=".4"
+                size="medium"
+                variant="default"
+              >
+                <Container
+                  as="li"
+                  className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                  display={null}
+                >
+                  <li
+                    className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                    style={
+                      Object {
+                        "margin": null,
+                        "padding": null,
+                      }
+                    }
+                  >
+                    <Text
+                      as="span"
+                      color="primary-inverse"
+                      letterSpacing="normal"
+                      size="medium"
+                    >
+                      <span
+                        className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
+                      >
+                        Allow import/export of flash cards in a file format (likely JSON)
+                      </span>
+                    </Text>
+                  </li>
+                </Container>
+              </ListItem>
+            </ul>
+          </Container>
+        </List>
+      </div>
+    </Container>
+    <Container
+      as="div"
+      display={null}
+      margin="medium 0 0 0"
+      textAlign="center"
+    >
+      <div
+        className="_6GWxrTR"
+        style={
+          Object {
+            "margin": "1.5rem 0 0 0",
+            "padding": null,
+          }
+        }
+      >
+        <Button
+          as={[Function]}
+          buttonRef={[Function]}
+          fluidWidth={false}
+          margin="0"
+          size="medium"
+          to="/cards"
+          type="button"
+          variant="default"
+        >
+          <Container
+            aria-disabled={null}
+            as={[Function]}
+            className="_922amOO _16-3B-L _3Gg19qR"
+            display={null}
+            elementRef={[Function]}
+            margin="0"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role={null}
+            tabIndex={null}
+            to="/cards"
+            type="button"
+          >
+            <Link
+              aria-disabled={null}
+              className="_922amOO _16-3B-L _3Gg19qR"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              replace={false}
+              role={null}
+              style={
+                Object {
+                  "margin": "0",
+                  "padding": null,
+                }
+              }
+              tabIndex={null}
+              to="/cards"
+              type="button"
+            >
+              <a
+                aria-disabled={null}
+                className="_922amOO _16-3B-L _3Gg19qR"
+                href="/cards"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role={null}
+                style={
+                  Object {
+                    "margin": "0",
+                    "padding": null,
+                  }
+                }
+                tabIndex={null}
+                type="button"
+              >
+                <span
+                  className="_2CUXt80"
+                >
+                  Start
+                </span>
+              </a>
+            </Link>
+          </Container>
+        </Button>
+      </div>
+    </Container>
+  </div>
+</Home>
+`;

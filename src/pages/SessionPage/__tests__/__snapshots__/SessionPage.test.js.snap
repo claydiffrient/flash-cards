@@ -1,0 +1,360 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<SessionPage
+  isEditing={false}
+>
+  <Grid
+    colSpacing="medium"
+    hAlign="start"
+    rowSpacing="medium"
+    startAt="small"
+    vAlign="top"
+    visualDebug={false}
+  >
+    <span
+      className="_1USmpIr _3JgELif"
+    >
+      <GridRow
+        colSpacing="medium"
+        hAlign="start"
+        isLastRow={false}
+        key=".0"
+        rowSpacing="medium"
+        startAt="small"
+        vAlign="top"
+        visualDebug={false}
+      >
+        <span
+          className="_3P46brR _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
+        >
+          <GridCol
+            colSpacing="medium"
+            hAlign="start"
+            isLastCol={true}
+            isLastRow={false}
+            key=".0"
+            rowSpacing="medium"
+            startAt="small"
+            textAlign="inherit"
+            vAlign="top"
+            visualDebug={false}
+          >
+            <span
+              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX dd1PwcH"
+            >
+              <Card
+                flipped={false}
+                id={1}
+                key="1"
+                text={
+                  Object {
+                    "back": "3",
+                    "front": "What is the square root of 9?",
+                  }
+                }
+              >
+                <div
+                  className="Card__card__2rORLZF"
+                >
+                  <Grid
+                    colSpacing="medium"
+                    hAlign="start"
+                    rowSpacing="medium"
+                    startAt="small"
+                    vAlign="top"
+                    visualDebug={false}
+                  >
+                    <span
+                      className="_1USmpIr _3JgELif"
+                    >
+                      <GridRow
+                        colSpacing="medium"
+                        hAlign="start"
+                        isLastRow={false}
+                        key=".0"
+                        rowSpacing="medium"
+                        startAt="small"
+                        vAlign="top"
+                        visualDebug={false}
+                      >
+                        <span
+                          className="_3P46brR _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
+                        >
+                          <GridCol
+                            colSpacing="medium"
+                            hAlign="start"
+                            isLastCol={true}
+                            isLastRow={false}
+                            key=".0"
+                            rowSpacing="medium"
+                            startAt="small"
+                            textAlign="inherit"
+                            vAlign="top"
+                            visualDebug={false}
+                          >
+                            <span
+                              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX dd1PwcH"
+                            >
+                              <Text
+                                as="span"
+                                letterSpacing="normal"
+                                size="medium"
+                              >
+                                <span
+                                  className="_3jLMUSh _3fy1EZS _2WOMSfA"
+                                >
+                                  What is the square root of 9?
+                                </span>
+                              </Text>
+                            </span>
+                          </GridCol>
+                        </span>
+                      </GridRow>
+                      <GridRow
+                        colSpacing="medium"
+                        hAlign="start"
+                        isLastRow={true}
+                        key=".1"
+                        rowSpacing="medium"
+                        startAt="small"
+                        vAlign="top"
+                        visualDebug={false}
+                      >
+                        <span
+                          className="_3P46brR M4KzJCD _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
+                        >
+                          <GridCol
+                            colSpacing="medium"
+                            hAlign="start"
+                            isLastCol={true}
+                            isLastRow={true}
+                            key=".0"
+                            rowSpacing="medium"
+                            startAt="small"
+                            textAlign="inherit"
+                            vAlign="top"
+                            visualDebug={false}
+                          >
+                            <span
+                              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D dd1PwcH"
+                            >
+                              <Button
+                                as="button"
+                                buttonRef={[Function]}
+                                fluidWidth={false}
+                                margin="0"
+                                onClick={[Function]}
+                                size="medium"
+                                type="button"
+                                variant="default"
+                              >
+                                <Container
+                                  aria-disabled={null}
+                                  as="button"
+                                  className="_922amOO _16-3B-L _3Gg19qR"
+                                  display={null}
+                                  elementRef={[Function]}
+                                  margin="0"
+                                  onClick={[Function]}
+                                  onKeyDown={[Function]}
+                                  role="button"
+                                  tabIndex="0"
+                                  type="button"
+                                >
+                                  <button
+                                    aria-disabled={null}
+                                    className="_922amOO _16-3B-L _3Gg19qR"
+                                    onClick={[Function]}
+                                    onKeyDown={[Function]}
+                                    role="button"
+                                    style={
+                                      Object {
+                                        "margin": "0",
+                                        "padding": null,
+                                      }
+                                    }
+                                    tabIndex="0"
+                                    type="button"
+                                  >
+                                    <span
+                                      className="_2CUXt80"
+                                    >
+                                      Flip
+                                    </span>
+                                  </button>
+                                </Container>
+                              </Button>
+                            </span>
+                          </GridCol>
+                        </span>
+                      </GridRow>
+                    </span>
+                  </Grid>
+                </div>
+              </Card>
+            </span>
+          </GridCol>
+        </span>
+      </GridRow>
+      <GridRow
+        colSpacing="medium"
+        hAlign="start"
+        isLastRow={true}
+        key=".1"
+        rowSpacing="medium"
+        startAt="small"
+        vAlign="top"
+        visualDebug={false}
+      >
+        <span
+          className="_3P46brR M4KzJCD _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
+        >
+          <GridCol
+            colSpacing="medium"
+            hAlign="start"
+            isLastCol={false}
+            isLastRow={true}
+            key=".0"
+            rowSpacing="medium"
+            startAt="small"
+            textAlign="inherit"
+            vAlign="top"
+            visualDebug={false}
+          >
+            <span
+              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D"
+            >
+              <Button
+                as="button"
+                buttonRef={[Function]}
+                fluidWidth={false}
+                margin="0"
+                onClick={[Function]}
+                size="medium"
+                type="button"
+                variant="default"
+              >
+                <Container
+                  aria-disabled={null}
+                  as="button"
+                  className="_922amOO _16-3B-L _3Gg19qR"
+                  display={null}
+                  elementRef={[Function]}
+                  margin="0"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <button
+                    aria-disabled={null}
+                    className="_922amOO _16-3B-L _3Gg19qR"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                    style={
+                      Object {
+                        "margin": "0",
+                        "padding": null,
+                      }
+                    }
+                    tabIndex="0"
+                    type="button"
+                  >
+                    <span
+                      className="_2CUXt80"
+                    >
+                      Previous
+                    </span>
+                  </button>
+                </Container>
+              </Button>
+            </span>
+          </GridCol>
+          <GridCol
+            colSpacing="medium"
+            hAlign="start"
+            isLastCol={false}
+            isLastRow={true}
+            key=".1"
+            rowSpacing="medium"
+            startAt="small"
+            textAlign="inherit"
+            vAlign="top"
+            visualDebug={false}
+          >
+            <span
+              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D"
+            />
+          </GridCol>
+          <GridCol
+            colSpacing="medium"
+            hAlign="start"
+            isLastCol={true}
+            isLastRow={true}
+            key=".2"
+            rowSpacing="medium"
+            startAt="small"
+            textAlign="inherit"
+            vAlign="top"
+            visualDebug={false}
+          >
+            <span
+              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D dd1PwcH"
+            >
+              <Button
+                as="button"
+                buttonRef={[Function]}
+                fluidWidth={false}
+                margin="0"
+                onClick={[Function]}
+                size="medium"
+                type="button"
+                variant="default"
+              >
+                <Container
+                  aria-disabled={null}
+                  as="button"
+                  className="_922amOO _16-3B-L _3Gg19qR"
+                  display={null}
+                  elementRef={[Function]}
+                  margin="0"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <button
+                    aria-disabled={null}
+                    className="_922amOO _16-3B-L _3Gg19qR"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                    style={
+                      Object {
+                        "margin": "0",
+                        "padding": null,
+                      }
+                    }
+                    tabIndex="0"
+                    type="button"
+                  >
+                    <span
+                      className="_2CUXt80"
+                    >
+                      Next
+                    </span>
+                  </button>
+                </Container>
+              </Button>
+            </span>
+          </GridCol>
+        </span>
+      </GridRow>
+    </span>
+  </Grid>
+</SessionPage>
+`;
