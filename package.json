@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html --public-url ./",
-    "deploy": "npm run build && gh-pages -a -d dist -r git@github.com:claydiffrient/flash-cards.git",
+    "build": "scripts/build.sh",
+    "deploy": "npm run build && gh-pages -d dist -r git@github.com:claydiffrient/flash-cards.git",
     "test": "jest"
   },
   "keywords": [
