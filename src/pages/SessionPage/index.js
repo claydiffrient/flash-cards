@@ -12,7 +12,7 @@ import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
 import theme from "./theme.js";
 
-class SessionPage extends Component {
+export class SessionPage extends Component {
   static propTypes = {
     isEditing: bool
   };
