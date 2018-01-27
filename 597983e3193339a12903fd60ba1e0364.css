@@ -1,15 +1,1 @@
-html {
-  background: url("d8daf4ad0bcf448fdf16f5869a1d1929.png") no-repeat center center fixed;
-  background-size: cover;
-}
-
-body,
-html,
-#main {
-  display: flex;
-  position: relative;
-  width: 100vw;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
+html{background:url(d8daf4ad0bcf448fdf16f5869a1d1929.png) no-repeat 50% fixed;background-size:cover}#main,body,html{display:flex;position:relative;width:100vw;text-align:center;justify-content:center;align-items:center}
