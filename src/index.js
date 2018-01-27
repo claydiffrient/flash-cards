@@ -34,6 +34,7 @@ const Container = () => (
         path="/cards"
         component={() => <LoadableSessionPage text={{}} />}
       />
+      <Route path="/edit" component={() => <LoadableSessionPage isEditing />} />
     </Switch>
   </Router>
 );
