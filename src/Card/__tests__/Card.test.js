@@ -1,32 +1,35 @@
 import React from "react";
-import { Card } from "../index";
-import { shallow } from "enzyme";
+import { default as ThemeableCard, Card } from "../index";
+import { shallow, mount } from "enzyme";
 
-it("shows the front of the card by default", () => {
-  const text = {
+const props = {
+  text: {
     front: "Front Side",
     back: "Back Side"
-  };
-  const wrapper = shallow(<Card text={text} />);
+  }
+};
+
+it("renders", () => {
+  expect(mount(<ThemeableCard {...props} />)).toMatchSnapshot();
+});
+
+it("shows the front of the card by default", () => {
+  const wrapper = shallow(<Card {...props} />);
   expect(
     wrapper
       .find("Text")
       .children()
       .text()
-  ).toEqual(text.front);
+  ).toEqual(props.text.front);
 });
 
 it("shows the back after clicking the flip button", () => {
-  const text = {
-    front: "Front Side",
-    back: "Back Side"
-  };
-  const wrapper = shallow(<Card text={text} />);
+  const wrapper = shallow(<Card {...props} />);
   wrapper.find("Button").simulate("click");
   expect(
     wrapper
       .find("Text")
       .children()
       .text()
-  ).toEqual(text.back);
+  ).toEqual(props.text.back);
 });
