@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Container from "@instructure/ui-core/lib/components/Container";
+import { connect } from "react-redux";
 import Button from "@instructure/ui-core/lib/components/Button";
 import Grid, {
   GridCol,
   GridRow
 } from "@instructure/ui-core/lib/components/Grid";
 import Card from "../../Card";
-import { bool } from "prop-types";
+import { bool, number, arrayOf, shape, string } from "prop-types";
 
 import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
@@ -14,7 +14,17 @@ import theme from "./theme.js";
 
 export class SessionPage extends Component {
   static propTypes = {
-    isEditing: bool
+    isEditing: bool,
+    cards: arrayOf(
+      shape({
+        id: number,
+        flipped: bool,
+        text: shape({
+          front: string,
+          back: string
+        })
+      })
+    )
   };
 
   static defaultProps = {
@@ -22,30 +32,12 @@ export class SessionPage extends Component {
   };
 
   state = {
-    cards: [
-      {
-        id: 1,
-        text: {
-          front: "What is the square root of 9?",
-          back: "3"
-        },
-        flipped: false
-      },
-      {
-        id: 2,
-        text: {
-          front: "What is the square root of 144?",
-          back: "12"
-        },
-        flipped: false
-      }
-    ],
     currentlyDisplayedIndex: 0
   };
 
   moveNext = () => {
     let nextVal = this.state.currentlyDisplayedIndex + 1;
-    if (nextVal > this.state.cards.length - 1) {
+    if (nextVal > this.props.cards.length - 1) {
       nextVal = 0;
     }
     this.setState({
@@ -56,7 +48,7 @@ export class SessionPage extends Component {
   movePrevious = () => {
     let nextVal = this.state.currentlyDisplayedIndex - 1;
     if (nextVal < 0) {
-      nextVal = this.state.cards.length - 1;
+      nextVal = this.props.cards.length - 1;
     }
     this.setState({
       currentlyDisplayedIndex: nextVal
@@ -64,7 +56,7 @@ export class SessionPage extends Component {
   };
 
   render() {
-    const card = this.state.cards[this.state.currentlyDisplayedIndex];
+    const card = this.props.cards[this.state.currentlyDisplayedIndex];
     return (
       <Grid>
         <GridRow>
@@ -86,4 +78,10 @@ export class SessionPage extends Component {
   }
 }
 
-export default themeable(theme, styles)(SessionPage);
+const mapStateToProps = state => ({
+  cards: state.cards
+});
+
+export const ConnectedSessionPage = connect(mapStateToProps)(SessionPage);
+
+export default themeable(theme, styles)(ConnectedSessionPage);

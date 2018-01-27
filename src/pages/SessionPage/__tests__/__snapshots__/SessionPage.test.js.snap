@@ -2,6 +2,27 @@
 
 exports[`renders 1`] = `
 <SessionPage
+  cards={
+    Array [
+      Object {
+        "flipped": false,
+        "id": 1,
+        "text": Object {
+          "back": "3",
+          "front": "What is the square root of 9?",
+        },
+      },
+      Object {
+        "flipped": false,
+        "id": 2,
+        "text": Object {
+          "back": "12",
+          "front": "What is the square root of 144?",
+        },
+      },
+    ]
+  }
+  dispatch={[Function]}
   isEditing={false}
 >
   <Grid
