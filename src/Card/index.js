@@ -11,7 +11,6 @@ import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
 import theme from "./theme.js";
 
-import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
 import xss from "xss";
 

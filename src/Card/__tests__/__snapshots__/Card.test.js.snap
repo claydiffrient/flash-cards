@@ -2,6 +2,7 @@
 
 exports[`renders 1`] = `
 <Card
+  editMode={false}
   text={
     Object {
       "back": "Back Side",
@@ -39,7 +40,7 @@ exports[`renders 1`] = `
             <GridCol
               colSpacing="medium"
               hAlign="start"
-              isLastCol={true}
+              isLastCol={false}
               isLastRow={false}
               key=".0"
               rowSpacing="medium"
@@ -49,7 +50,7 @@ exports[`renders 1`] = `
               visualDebug={false}
             >
               <span
-                className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX dd1PwcH"
+                className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX"
               >
                 <Text
                   as="span"
@@ -59,7 +60,13 @@ exports[`renders 1`] = `
                   <span
                     className="_3jLMUSh _3fy1EZS _2WOMSfA"
                   >
-                    Front Side
+                    <div
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Front Side",
+                        }
+                      }
+                    />
                   </span>
                 </Text>
               </span>

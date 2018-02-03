@@ -43,7 +43,7 @@ it("renders", () => {
 
 it("renders an edit button when isEditing prop is passed in", () => {
   const wrapper = shallow(<SessionPage isEditing {...testProps} />);
-  expect(wrapper.find('Button[children="Edit"]').exists()).toBe(true);
+  expect(wrapper.find('Button[children="Toggle Edit"]').exists()).toBe(true);
 });
 
 describe("Navigation", () => {

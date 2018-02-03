@@ -19,6 +19,7 @@ it("shows the front of the card by default", () => {
     wrapper
       .find("Text")
       .children()
+      .render()
       .text()
   ).toEqual(props.text.front);
 });
@@ -30,6 +31,7 @@ it("shows the back after clicking the flip button", () => {
     wrapper
       .find("Text")
       .children()
+      .render()
       .text()
   ).toEqual(props.text.back);
 });

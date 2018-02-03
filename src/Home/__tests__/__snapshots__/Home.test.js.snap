@@ -344,73 +344,85 @@ exports[`renders 1`] = `
         }
       >
         <Button
-          as={[Function]}
+          as="button"
           buttonRef={[Function]}
           fluidWidth={false}
           margin="0"
+          onClick={[Function]}
           size="medium"
-          to="/cards"
           type="button"
           variant="default"
         >
           <Container
             aria-disabled={null}
-            as={[Function]}
+            as="button"
             className="_922amOO _16-3B-L _3Gg19qR"
             display={null}
             elementRef={[Function]}
             margin="0"
             onClick={[Function]}
             onKeyDown={[Function]}
-            role={null}
-            tabIndex={null}
-            to="/cards"
+            role="button"
+            tabIndex="0"
             type="button"
           >
-            <Link
+            <button
               aria-disabled={null}
               className="_922amOO _16-3B-L _3Gg19qR"
               onClick={[Function]}
               onKeyDown={[Function]}
-              replace={false}
-              role={null}
+              role="button"
               style={
                 Object {
                   "margin": "0",
                   "padding": null,
                 }
               }
-              tabIndex={null}
-              to="/cards"
+              tabIndex="0"
               type="button"
             >
-              <a
-                aria-disabled={null}
-                className="_922amOO _16-3B-L _3Gg19qR"
-                href="/cards"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role={null}
-                style={
-                  Object {
-                    "margin": "0",
-                    "padding": null,
-                  }
-                }
-                tabIndex={null}
-                type="button"
+              <span
+                className="_2CUXt80"
               >
-                <span
-                  className="_2CUXt80"
-                >
-                  Start
-                </span>
-              </a>
-            </Link>
+                Start
+              </span>
+            </button>
           </Container>
         </Button>
       </div>
     </Container>
+    <Modal
+      applicationElement={[Function]}
+      closeButtonLabel="Close"
+      closeButtonRef={[Function]}
+      contentRef={[Function]}
+      defaultFocusElement={null}
+      insertAt="bottom"
+      label="Mode Selector"
+      mountNode={null}
+      onClose={[Function]}
+      onDismiss={[Function]}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      onOpen={[Function]}
+      open={false}
+      shouldCloseOnOverlayClick={true}
+      shouldReturnFocus={true}
+      size="auto"
+      transition="fade"
+    >
+      <Portal
+        insertAt="bottom"
+        mountNode={null}
+        onClose={[Function]}
+        onOpen={[Function]}
+        open={false}
+      />
+    </Modal>
   </div>
 </Home>
 `;

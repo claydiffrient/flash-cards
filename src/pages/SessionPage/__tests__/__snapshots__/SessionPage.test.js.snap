@@ -65,6 +65,7 @@ exports[`renders 1`] = `
               className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX dd1PwcH"
             >
               <Card
+                editMode={false}
                 flipped={false}
                 id={1}
                 key="1"
@@ -105,7 +106,7 @@ exports[`renders 1`] = `
                           <GridCol
                             colSpacing="medium"
                             hAlign="start"
-                            isLastCol={true}
+                            isLastCol={false}
                             isLastRow={false}
                             key=".0"
                             rowSpacing="medium"
@@ -115,7 +116,7 @@ exports[`renders 1`] = `
                             visualDebug={false}
                           >
                             <span
-                              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX dd1PwcH"
+                              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX"
                             >
                               <Text
                                 as="span"
@@ -125,7 +126,13 @@ exports[`renders 1`] = `
                                 <span
                                   className="_3jLMUSh _3fy1EZS _2WOMSfA"
                                 >
-                                  What is the square root of 9?
+                                  <div
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "What is the square root of 9?",
+                                      }
+                                    }
+                                  />
                                 </span>
                               </Text>
                             </span>
