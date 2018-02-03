@@ -32,7 +32,8 @@ export class SessionPage extends Component {
   };
 
   state = {
-    currentlyDisplayedIndex: 0
+    currentlyDisplayedIndex: 0,
+    showEditor: false
   };
 
   moveNext = () => {
@@ -55,20 +56,30 @@ export class SessionPage extends Component {
     });
   };
 
+  toggleEditing = () => {
+    this.setState({
+      showEditor: !this.state.showEditor
+    });
+  };
+
   render() {
     const card = this.props.cards[this.state.currentlyDisplayedIndex];
     return (
       <Grid>
         <GridRow>
           <GridCol>
-            <Card key={card.id} {...card} />
+            <Card key={card.id} {...card} editMode={this.state.showEditor} />
           </GridCol>
         </GridRow>
         <GridRow>
           <GridCol>
             <Button onClick={this.movePrevious}>Previous</Button>
           </GridCol>
-          <GridCol>{this.props.isEditing && <Button>Edit</Button>}</GridCol>
+          <GridCol>
+            {this.props.isEditing && (
+              <Button onClick={this.toggleEditing}>Toggle Edit</Button>
+            )}
+          </GridCol>
           <GridCol>
             <Button onClick={this.moveNext}>Next</Button>
           </GridCol>
