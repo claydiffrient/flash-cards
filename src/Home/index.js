@@ -4,13 +4,25 @@ import Text from "@instructure/ui-core/lib/components/Text";
 import Container from "@instructure/ui-core/lib/components/Container";
 import List, { ListItem } from "@instructure/ui-core/lib/components/List";
 import Button from "@instructure/ui-core/lib/components/Button";
-import { Link } from "react-router-dom";
+import Modal, {
+  ModalBody,
+  ModalHeader
+} from "@instructure/ui-core/lib/components/Modal";
+import Spinner from "@instructure/ui-core/lib/components/Spinner";
+import ModeSelector from "../ModeSelector";
 
 import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
 import theme from "./theme.js";
 
 class Home extends Component {
+  state = {
+    startModalOpen: false
+  };
+
+  openStartModal = () => this.setState({ startModalOpen: true });
+  closeStartModal = () => this.setState({ startModalOpen: false });
+
   render() {
     return (
       <div className={styles.root}>
@@ -66,10 +78,22 @@ class Home extends Component {
           </List>
         </Container>
         <Container as="div" textAlign="center" margin="medium 0 0 0">
-          <Button as={Link} to="/cards">
-            Start
-          </Button>
+          <Button onClick={this.openStartModal}>Start</Button>
         </Container>
+        <Modal
+          label="Mode Selector"
+          closeButtonLabel="Close"
+          open={this.state.startModalOpen}
+          applicationElement={() => document.getElementById("main")}
+          onDismiss={this.closeStartModal}
+        >
+          <ModalHeader>
+            <Heading>Choose a Mode</Heading>
+          </ModalHeader>
+          <ModalBody>
+            <ModeSelector />
+          </ModalBody>
+        </Modal>
       </div>
     );
   }
