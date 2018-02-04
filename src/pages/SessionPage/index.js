@@ -12,6 +12,8 @@ import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
 import theme from "./theme.js";
 
+import { saveCard, fetchCards } from "../../actions/cards";
+
 export class SessionPage extends Component {
   static propTypes = {
     isEditing: bool,
@@ -35,6 +37,10 @@ export class SessionPage extends Component {
     currentlyDisplayedIndex: 0,
     showEditor: false
   };
+
+  componentDidMount() {
+    this.props.fetchCards();
+  }
 
   moveNext = () => {
     let nextVal = this.state.currentlyDisplayedIndex + 1;
@@ -64,28 +70,37 @@ export class SessionPage extends Component {
 
   render() {
     const card = this.props.cards[this.state.currentlyDisplayedIndex];
-    return (
-      <Grid>
-        <GridRow>
-          <GridCol>
-            <Card key={card.id} {...card} editMode={this.state.showEditor} />
-          </GridCol>
-        </GridRow>
-        <GridRow>
-          <GridCol>
-            <Button onClick={this.movePrevious}>Previous</Button>
-          </GridCol>
-          <GridCol>
-            {this.props.isEditing && (
-              <Button onClick={this.toggleEditing}>Toggle Edit</Button>
-            )}
-          </GridCol>
-          <GridCol>
-            <Button onClick={this.moveNext}>Next</Button>
-          </GridCol>
-        </GridRow>
-      </Grid>
-    );
+    if (card) {
+      return (
+        <Grid>
+          <GridRow>
+            <GridCol>
+              <Card
+                key={card._id}
+                {...card}
+                handleSave={this.props.saveCard}
+                editMode={this.state.showEditor}
+              />
+            </GridCol>
+          </GridRow>
+          <GridRow>
+            <GridCol>
+              <Button onClick={this.movePrevious}>Previous</Button>
+            </GridCol>
+            <GridCol>
+              {this.props.isEditing && (
+                <Button onClick={this.toggleEditing}>Toggle Edit</Button>
+              )}
+            </GridCol>
+            <GridCol>
+              <Button onClick={this.moveNext}>Next</Button>
+            </GridCol>
+          </GridRow>
+        </Grid>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
@@ -93,6 +108,14 @@ const mapStateToProps = state => ({
   cards: state.cards
 });
 
-export const ConnectedSessionPage = connect(mapStateToProps)(SessionPage);
+const mapDispatchToProps = {
+  saveCard,
+  fetchCards
+};
+
+export const ConnectedSessionPage = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SessionPage);
 
 export default themeable(theme, styles)(ConnectedSessionPage);

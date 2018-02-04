@@ -42,7 +42,9 @@ it("renders", () => {
 });
 
 it("renders an edit button when isEditing prop is passed in", () => {
-  const wrapper = shallow(<SessionPage isEditing {...testProps} />);
+  const wrapper = shallow(
+    <SessionPage isEditing {...testProps} fetchCards={jest.fn()} />
+  );
   expect(wrapper.find('Button[children="Toggle Edit"]').exists()).toBe(true);
 });
 
@@ -81,28 +83,36 @@ describe("Navigation", () => {
   });
 
   it("goes to the next card when pressing next", () => {
-    const wrapper = shallow(<SessionPage {...testProps} />);
+    const wrapper = shallow(
+      <SessionPage {...testProps} fetchCards={jest.fn()} />
+    );
     wrapper.setState(sampleState);
     wrapper.find("Button[children='Next']").simulate("click");
     expect(wrapper.find("Card").props().id).toBe(2);
   });
 
   it("goes to the first card when pressing next on the last card", () => {
-    const wrapper = shallow(<SessionPage {...testProps} />);
+    const wrapper = shallow(
+      <SessionPage {...testProps} fetchCards={jest.fn()} />
+    );
     wrapper.setState({ currentlyDisplayedIndex: 2 });
     wrapper.find("Button[children='Next']").simulate("click");
     expect(wrapper.find("Card").props().id).toBe(1);
   });
 
   it("goes to the previous card when pressing previous", () => {
-    const wrapper = shallow(<SessionPage {...testProps} />);
+    const wrapper = shallow(
+      <SessionPage {...testProps} fetchCards={jest.fn()} />
+    );
     wrapper.setState({ currentlyDisplayedIndex: 2 });
     wrapper.find("Button[children='Previous']").simulate("click");
     expect(wrapper.find("Card").props().id).toBe(2);
   });
 
   it("goes to the last card when pressing previous on the first card", () => {
-    const wrapper = shallow(<SessionPage {...testProps} />);
+    const wrapper = shallow(
+      <SessionPage {...testProps} fetchCards={jest.fn()} />
+    );
     wrapper.setState({ currentlyDisplayedIndex: 0 });
     wrapper.find("Button[children='Previous']").simulate("click");
     expect(wrapper.find("Card").props().id).toBe(3);

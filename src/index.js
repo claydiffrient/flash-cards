@@ -1,4 +1,5 @@
 // require("react-hot-loader/patch");
+import "babel-polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
 // import { AppContainer } from "react-hot-loader";
@@ -25,24 +26,7 @@ const LoadableSessionPage = Loadable({
 });
 
 const iniialState = {
-  cards: [
-    {
-      id: 1,
-      text: {
-        front: "What is the square root of 9?",
-        back: "3"
-      },
-      flipped: false
-    },
-    {
-      id: 2,
-      text: {
-        front: "What is the square root of 144?",
-        back: "12"
-      },
-      flipped: false
-    }
-  ]
+  cards: []
 };
 
 const store = createConfiguredStore(iniialState);

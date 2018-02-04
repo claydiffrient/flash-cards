@@ -22,8 +22,9 @@ exports[`renders 1`] = `
       },
     ]
   }
-  dispatch={[Function]}
+  fetchCards={[Function]}
   isEditing={false}
+  saveCard={[Function]}
 >
   <Grid
     colSpacing="medium"
@@ -67,8 +68,8 @@ exports[`renders 1`] = `
               <Card
                 editMode={false}
                 flipped={false}
+                handleSave={[Function]}
                 id={1}
-                key="1"
                 text={
                   Object {
                     "back": "3",
