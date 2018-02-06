@@ -5,7 +5,7 @@ module.exports = {
     "prettier",
     "prettier/react"
   ],
-  plugins: ["react", "prettier"],
+  plugins: ["react", "prettier", "cypress"],
   parser: "babel-eslint",
   parserOptions: {
     ecmaVersion: 2017,
@@ -16,7 +16,8 @@ module.exports = {
   },
   env: {
     es6: true,
-    browser: true
+    browser: true,
+    "cypress/globals": true
   },
   rules: {
     "prettier/prettier": "error"
