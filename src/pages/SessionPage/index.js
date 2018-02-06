@@ -12,7 +12,7 @@ import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
 import theme from "./theme.js";
 
-import { saveCard, fetchCards } from "../../actions/cards";
+import { saveCard, fetchCards, addCard } from "../../actions/cards";
 
 export class SessionPage extends Component {
   static propTypes = {
@@ -68,6 +68,12 @@ export class SessionPage extends Component {
     });
   };
 
+  addCard = () => {
+    this.props.addCard({
+      text: { front: "New Card Front", back: "New Card Back" }
+    });
+  };
+
   render() {
     const card = this.props.cards[this.state.currentlyDisplayedIndex];
     if (card) {
@@ -93,13 +99,28 @@ export class SessionPage extends Component {
               )}
             </GridCol>
             <GridCol>
+              {this.props.isEditing && (
+                <Button onClick={this.addCard}>Add Card</Button>
+              )}
+            </GridCol>
+            <GridCol>
               <Button onClick={this.moveNext}>Next</Button>
             </GridCol>
           </GridRow>
         </Grid>
       );
     } else {
-      return null;
+      return (
+        <Grid>
+          <GridRow>
+            <GridCol>
+              {this.props.isEditing && (
+                <Button onClick={this.addCard}>Add Card</Button>
+              )}
+            </GridCol>
+          </GridRow>
+        </Grid>
+      );
     }
   }
 }
@@ -110,7 +131,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   saveCard,
-  fetchCards
+  fetchCards,
+  addCard
 };
 
 export const ConnectedSessionPage = connect(

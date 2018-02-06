@@ -1,10 +1,12 @@
+import uuid from "uuid/v4";
 import db from "../db";
 
 import { createActions } from "redux-actions";
 
-export const { savedCard, fetchedCards } = createActions(
+export const { savedCard, fetchedCards, newCardAdded } = createActions(
   "SAVED_CARD",
-  "FETCHED_CARDS"
+  "FETCHED_CARDS",
+  "NEW_CARD_ADDED"
 );
 
 export const saveCard = card => {
@@ -32,5 +34,20 @@ export const fetchCards = () => {
     }));
 
     dispatch(fetchedCards(cards));
+  };
+};
+
+export const addCard = details => {
+  return async dispatch => {
+    const card = { _id: uuid(), ...details };
+    const response = await db.put(card);
+    if (response.ok) {
+      const newCard = {
+        _id: response._id,
+        rev: response.rev,
+        text: card.text
+      };
+      dispatch(newCardAdded(newCard));
+    }
   };
 };

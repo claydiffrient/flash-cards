@@ -9,6 +9,9 @@ const cards = handleActions(
     FETCHED_CARDS: (state, action) => {
       console.log(action);
       return state.concat(action.payload);
+    },
+    NEW_CARD_ADDED: (state, action) => {
+      return state.concat(action.payload);
     }
   },
   []

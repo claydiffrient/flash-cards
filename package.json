@@ -10,7 +10,7 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "test": "run-p --print-label test:*",
-    "test:integration": "start-server-and-test start http://localhost:1234 cypress:run",
+    "test:integration": "NODE_ENV=test start-server-and-test start http://localhost:1234 cypress:run",
     "test:unit": "jest"
   },
   "keywords": [
@@ -67,6 +67,7 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-modules": "^1.1.0",
     "pouchdb": "^6.4.3",
+    "pouchdb-adapter-memory": "^6.4.3",
     "pouchdb-find": "^6.4.3",
     "prettier": "^1.10.2",
     "prop-types": "^15.6.0",
