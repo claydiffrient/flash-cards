@@ -5,7 +5,8 @@ install:
   - npm install
   - npm install -g codecov
 script:
-  - npm test -- --coverage && codecov
+  - npm run test:unit -- --coverage && codecov
+  - npm run test:integration
 # deploy:
 #   provider: pages
 #   skip-cleanup: true
