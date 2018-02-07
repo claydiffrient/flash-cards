@@ -7,11 +7,16 @@ const cards = handleActions(
       return state.concat(action.payload);
     },
     FETCHED_CARDS: (state, action) => {
-      console.log(action);
       return state.concat(action.payload);
     },
     NEW_CARD_ADDED: (state, action) => {
       return state.concat(action.payload);
+    },
+    SAVED_CARD: (state, action) => {
+      const index = state.findIndex(x => x._id === action.payload._id);
+      const newState = state.slice();
+      newState[index] = action.payload;
+      return newState;
     }
   },
   []

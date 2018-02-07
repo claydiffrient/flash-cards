@@ -1,5 +1,5 @@
-import db from "../db";
 import uuid from "uuid/v4";
+import db from "../db";
 
 afterEach(async () => {
   await db.destroy();

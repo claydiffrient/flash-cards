@@ -58,9 +58,12 @@ export class Card extends Component {
 
   handleSave = () => {
     const card = {
-      _id: this.props.id || uuid(),
-      front_text: this.props.text.front,
-      back_text: this.props.text.back
+      _id: this.props._id || uuid(),
+      rev: this.props.rev || null,
+      text: {
+        front: this.state.editedFrontText,
+        back: this.state.editedBackText
+      }
     };
     this.props.handleSave(card);
   };
@@ -137,7 +140,16 @@ export class Card extends Component {
               </GridCol>
               {!!this.props.editMode && (
                 <GridCol width={2}>
-                  <Button onClick={this.flipCard}>Flip</Button>
+                  <Button size="small" onClick={this.flipCard}>
+                    Flip
+                  </Button>
+                  <Button
+                    margin="x-small"
+                    size="small"
+                    onClick={this.handleSave}
+                  >
+                    Save
+                  </Button>
                 </GridCol>
               )}
             </GridRow>

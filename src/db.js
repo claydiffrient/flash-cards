@@ -1,18 +1,13 @@
 import PouchDB from "pouchdb";
 // import relationalPouch from "relational-pouch";
 import pouchdbFind from "pouchdb-find";
-import memoryDb from "pouchdb-adapter-memory";
+import eraseDb from "pouchdb-erase";
 
 // PouchDB.plugin(relationalPouch);
 PouchDB.plugin(pouchdbFind);
+PouchDB.plugin(eraseDb);
 
-let db;
-if (process.env.NODE_ENV === "test") {
-  PouchDB.plugin(memoryDb);
-  db = new PouchDB("flashcards", { adapter: "memory" });
-} else {
-  db = new PouchDB("flashcards");
-}
+const db = new PouchDB("flashcards");
 
 // db.setSchema([
 //   {

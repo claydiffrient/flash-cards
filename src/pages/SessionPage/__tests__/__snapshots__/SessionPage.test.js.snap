@@ -2,6 +2,7 @@
 
 exports[`renders 1`] = `
 <SessionPage
+  addCard={[Function]}
   cards={
     Array [
       Object {
@@ -321,9 +322,25 @@ exports[`renders 1`] = `
           <GridCol
             colSpacing="medium"
             hAlign="start"
-            isLastCol={true}
+            isLastCol={false}
             isLastRow={true}
             key=".2"
+            rowSpacing="medium"
+            startAt="small"
+            textAlign="inherit"
+            vAlign="top"
+            visualDebug={false}
+          >
+            <span
+              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D"
+            />
+          </GridCol>
+          <GridCol
+            colSpacing="medium"
+            hAlign="start"
+            isLastCol={true}
+            isLastRow={true}
+            key=".3"
             rowSpacing="medium"
             startAt="small"
             textAlign="inherit"

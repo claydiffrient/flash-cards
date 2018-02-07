@@ -72,6 +72,15 @@ export class SessionPage extends Component {
     this.props.addCard({
       text: { front: "New Card Front", back: "New Card Back" }
     });
+
+    this.setState({
+      currentlyDisplayedIndex: this.props.cards.length
+    });
+  };
+
+  handleSave = card => {
+    this.props.saveCard(card);
+    this.toggleEditing();
   };
 
   render() {
@@ -84,7 +93,7 @@ export class SessionPage extends Component {
               <Card
                 key={card._id}
                 {...card}
-                handleSave={this.props.saveCard}
+                handleSave={this.handleSave}
                 editMode={this.state.showEditor}
               />
             </GridCol>
