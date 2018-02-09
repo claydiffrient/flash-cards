@@ -15,6 +15,8 @@ import ReactQuill from "react-quill";
 import xss from "xss";
 import uuid from "uuid/v4";
 
+import ReactCardFlip from "../vendor/ReactCardFlip";
+
 export class Card extends Component {
   static propTypes = {
     text: shape({
@@ -35,7 +37,13 @@ export class Card extends Component {
   };
 
   flipCard = () => {
-    this.setState({ flipped: !this.state.flipped });
+    this.setState({ flipped: !this.state.flipped }, () => {
+      if (this.state.flipped) {
+        this.backBtn.focus();
+      } else {
+        this.frontBtn.focus();
+      }
+    });
   };
 
   handleBackTextChange = value => {
@@ -70,8 +78,11 @@ export class Card extends Component {
 
   render() {
     return (
-      <div className={styles.card}>
-        {this.state.flipped ? (
+      <ReactCardFlip
+        isFlipped={this.state.flipped}
+        cardStyles={{ front: { position: "relative" } }}
+      >
+        <div key="back" className={styles.card}>
           <Grid>
             <GridRow>
               <GridCol>
@@ -95,7 +106,13 @@ export class Card extends Component {
               </GridCol>
               {!!this.props.editMode && (
                 <GridCol width={2}>
-                  <Button size="small" onClick={this.flipCard}>
+                  <Button
+                    buttonRef={c => {
+                      this.backBtn = c;
+                    }}
+                    size="small"
+                    onClick={this.flipCard}
+                  >
                     Flip
                   </Button>
                   <Button
@@ -111,12 +128,18 @@ export class Card extends Component {
             {!this.props.editMode && (
               <GridRow>
                 <GridCol>
-                  <Button onClick={this.flipCard}>Flip</Button>
+                  <Button
+                    onClick={this.flipCard}
+                    buttonRef={c => (this.backBtn = c)}
+                  >
+                    Flip
+                  </Button>
                 </GridCol>
               </GridRow>
             )}
           </Grid>
-        ) : (
+        </div>
+        <div key="front" className={styles.card}>
           <Grid>
             <GridRow>
               <GridCol>
@@ -140,7 +163,11 @@ export class Card extends Component {
               </GridCol>
               {!!this.props.editMode && (
                 <GridCol width={2}>
-                  <Button size="small" onClick={this.flipCard}>
+                  <Button
+                    buttonRef={c => (this.frontBtn = c)}
+                    size="small"
+                    onClick={this.flipCard}
+                  >
                     Flip
                   </Button>
                   <Button
@@ -156,13 +183,18 @@ export class Card extends Component {
             {!this.props.editMode && (
               <GridRow>
                 <GridCol>
-                  <Button onClick={this.flipCard}>Flip</Button>
+                  <Button
+                    onClick={this.flipCard}
+                    buttonRef={c => (this.frontBtn = c)}
+                  >
+                    Flip
+                  </Button>
                 </GridCol>
               </GridRow>
             )}
           </Grid>
-        )}
-      </div>
+        </div>
+      </ReactCardFlip>
     );
   }
 }
