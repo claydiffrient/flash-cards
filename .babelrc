@@ -1,6 +1,7 @@
 {
   "presets": ["env", "react", "stage-0"],
   "plugins": [
+    "transform-class-properties",
     "@instructure/babel-plugin-transform-class-display-name",
     [
       "@instructure/babel-plugin-themeable-styles",
