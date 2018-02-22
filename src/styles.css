@@ -1,6 +1,10 @@
 html {
-  background: url("./img/IndexCards.png") no-repeat center center fixed;
-  background-size: cover;
+  /* background: url("./img/IndexCards.png") no-repeat center center fixed;
+  background-size: cover; */
+
+  /* parcel's latest version is having trouble with images... use this for now.
+  /* TODO: Fix when possible */
+  background: radial-gradient(#1e5799, #2989d8, #207cca, #7db9e8);
 }
 
 body,
