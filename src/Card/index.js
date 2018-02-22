@@ -15,7 +15,7 @@ import ReactQuill from "react-quill";
 import xss from "xss";
 import uuid from "uuid/v4";
 
-import ReactCardFlip from "../vendor/ReactCardFlip";
+import ReactCardFlip from "react-card-flip";
 
 export class Card extends Component {
   static propTypes = {
@@ -80,7 +80,9 @@ export class Card extends Component {
     return (
       <ReactCardFlip
         isFlipped={this.state.flipped}
-        cardStyles={{ front: { position: "relative" } }}
+        cardStyles={{
+          front: { position: "relative" }
+        }}
       >
         <div key="back" className={styles.card}>
           <Grid>
