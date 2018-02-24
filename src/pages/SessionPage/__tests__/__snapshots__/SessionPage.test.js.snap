@@ -78,150 +78,224 @@ exports[`renders 1`] = `
                   }
                 }
               >
-                <div
-                  className="Card__card__2rORLZF"
+                <ReactCardFlip
+                  cardStyles={
+                    Object {
+                      "front": Object {
+                        "position": "relative",
+                      },
+                    }
+                  }
+                  flipSpeedBackToFront={0.6}
+                  flipSpeedFrontToBack={0.6}
+                  infinite={false}
+                  isFlipped={false}
                 >
-                  <Grid
-                    colSpacing="medium"
-                    hAlign="start"
-                    rowSpacing="medium"
-                    startAt="small"
-                    vAlign="top"
-                    visualDebug={false}
+                  <div
+                    className="react-card-flip"
+                    style={
+                      Object {
+                        "perspective": "1000px",
+                        "transformStyle": "preserve-3d",
+                      }
+                    }
                   >
-                    <span
-                      className="_1USmpIr _3JgELif"
+                    <div
+                      className="react-card-flipper"
+                      style={
+                        Object {
+                          "position": "relative",
+                          "transform": "rotateY(0deg)",
+                          "transformStyle": "preserve-3d",
+                          "transition": "0.6s",
+                        }
+                      }
                     >
-                      <GridRow
-                        colSpacing="medium"
-                        hAlign="start"
-                        isLastRow={false}
-                        key=".0"
-                        rowSpacing="medium"
-                        startAt="small"
-                        vAlign="top"
-                        visualDebug={false}
+                      <div
+                        className="react-card-front"
+                        style={
+                          Object {
+                            "WebkitBackfaceVisibility": "hidden",
+                            "backfaceVisibility": "hidden",
+                            "left": "0",
+                            "position": "relative",
+                            "top": "0",
+                            "transform": "rotateY(0deg)",
+                            "transformStyle": "preserve-3d",
+                            "width": "100%",
+                            "zIndex": "2",
+                          }
+                        }
                       >
-                        <span
-                          className="_3P46brR _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
+                        <div
+                          className="Card__card__2rORLZF"
+                          key="front"
                         >
-                          <GridCol
+                          <Grid
                             colSpacing="medium"
                             hAlign="start"
-                            isLastCol={false}
-                            isLastRow={false}
-                            key=".0"
                             rowSpacing="medium"
                             startAt="small"
-                            textAlign="inherit"
                             vAlign="top"
                             visualDebug={false}
                           >
                             <span
-                              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX"
+                              className="_1USmpIr _3JgELif"
                             >
-                              <Text
-                                as="span"
-                                letterSpacing="normal"
-                                size="medium"
+                              <GridRow
+                                colSpacing="medium"
+                                hAlign="start"
+                                isLastRow={false}
+                                key=".0"
+                                rowSpacing="medium"
+                                startAt="small"
+                                vAlign="top"
+                                visualDebug={false}
                               >
                                 <span
-                                  className="_3jLMUSh _3fy1EZS _2WOMSfA"
+                                  className="_3P46brR _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
                                 >
-                                  <div
-                                    dangerouslySetInnerHTML={
-                                      Object {
-                                        "__html": "What is the square root of 9?",
-                                      }
-                                    }
-                                  />
-                                </span>
-                              </Text>
-                            </span>
-                          </GridCol>
-                        </span>
-                      </GridRow>
-                      <GridRow
-                        colSpacing="medium"
-                        hAlign="start"
-                        isLastRow={true}
-                        key=".1"
-                        rowSpacing="medium"
-                        startAt="small"
-                        vAlign="top"
-                        visualDebug={false}
-                      >
-                        <span
-                          className="_3P46brR M4KzJCD _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
-                        >
-                          <GridCol
-                            colSpacing="medium"
-                            hAlign="start"
-                            isLastCol={true}
-                            isLastRow={true}
-                            key=".0"
-                            rowSpacing="medium"
-                            startAt="small"
-                            textAlign="inherit"
-                            vAlign="top"
-                            visualDebug={false}
-                          >
-                            <span
-                              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D dd1PwcH"
-                            >
-                              <Button
-                                as="button"
-                                buttonRef={[Function]}
-                                fluidWidth={false}
-                                margin="0"
-                                onClick={[Function]}
-                                size="medium"
-                                type="button"
-                                variant="default"
-                              >
-                                <Container
-                                  aria-disabled={null}
-                                  as="button"
-                                  className="_922amOO _16-3B-L _3Gg19qR"
-                                  display={null}
-                                  elementRef={[Function]}
-                                  margin="0"
-                                  onClick={[Function]}
-                                  onKeyDown={[Function]}
-                                  role="button"
-                                  tabIndex="0"
-                                  type="button"
-                                >
-                                  <button
-                                    aria-disabled={null}
-                                    className="_922amOO _16-3B-L _3Gg19qR"
-                                    onClick={[Function]}
-                                    onKeyDown={[Function]}
-                                    role="button"
-                                    style={
-                                      Object {
-                                        "margin": "0",
-                                        "padding": null,
-                                      }
-                                    }
-                                    tabIndex="0"
-                                    type="button"
+                                  <GridCol
+                                    colSpacing="medium"
+                                    hAlign="start"
+                                    isLastCol={false}
+                                    isLastRow={false}
+                                    key=".0"
+                                    rowSpacing="medium"
+                                    startAt="small"
+                                    textAlign="inherit"
+                                    vAlign="top"
+                                    visualDebug={false}
                                   >
                                     <span
-                                      className="_2CUXt80"
+                                      className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX"
                                     >
-                                      Flip
+                                      <Text
+                                        as="span"
+                                        letterSpacing="normal"
+                                        size="medium"
+                                      >
+                                        <span
+                                          className="_3jLMUSh _3fy1EZS _2WOMSfA"
+                                        >
+                                          <div
+                                            dangerouslySetInnerHTML={
+                                              Object {
+                                                "__html": "What is the square root of 9?",
+                                              }
+                                            }
+                                          />
+                                        </span>
+                                      </Text>
                                     </span>
-                                  </button>
-                                </Container>
-                              </Button>
+                                  </GridCol>
+                                </span>
+                              </GridRow>
+                              <GridRow
+                                colSpacing="medium"
+                                hAlign="start"
+                                isLastRow={true}
+                                key=".1"
+                                rowSpacing="medium"
+                                startAt="small"
+                                vAlign="top"
+                                visualDebug={false}
+                              >
+                                <span
+                                  className="_3P46brR M4KzJCD _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
+                                >
+                                  <GridCol
+                                    colSpacing="medium"
+                                    hAlign="start"
+                                    isLastCol={true}
+                                    isLastRow={true}
+                                    key=".0"
+                                    rowSpacing="medium"
+                                    startAt="small"
+                                    textAlign="inherit"
+                                    vAlign="top"
+                                    visualDebug={false}
+                                  >
+                                    <span
+                                      className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D dd1PwcH"
+                                    >
+                                      <Button
+                                        as="button"
+                                        buttonRef={[Function]}
+                                        fluidWidth={false}
+                                        margin="0"
+                                        onClick={[Function]}
+                                        size="medium"
+                                        type="button"
+                                        variant="default"
+                                      >
+                                        <Container
+                                          aria-disabled={null}
+                                          as="button"
+                                          className="_922amOO _16-3B-L _3Gg19qR"
+                                          display={null}
+                                          elementRef={[Function]}
+                                          margin="0"
+                                          onClick={[Function]}
+                                          onKeyDown={[Function]}
+                                          role="button"
+                                          tabIndex="0"
+                                          type="button"
+                                        >
+                                          <button
+                                            aria-disabled={null}
+                                            className="_922amOO _16-3B-L _3Gg19qR"
+                                            onClick={[Function]}
+                                            onKeyDown={[Function]}
+                                            role="button"
+                                            style={
+                                              Object {
+                                                "margin": "0",
+                                                "padding": null,
+                                              }
+                                            }
+                                            tabIndex="0"
+                                            type="button"
+                                          >
+                                            <span
+                                              className="_2CUXt80"
+                                            >
+                                              Flip
+                                            </span>
+                                          </button>
+                                        </Container>
+                                      </Button>
+                                    </span>
+                                  </GridCol>
+                                </span>
+                              </GridRow>
                             </span>
-                          </GridCol>
-                        </span>
-                      </GridRow>
-                    </span>
-                  </Grid>
-                </div>
+                          </Grid>
+                        </div>
+                      </div>
+                      <div
+                        className="react-card-back"
+                        style={
+                          Object {
+                            "WebkitBackfaceVisibility": "hidden",
+                            "backfaceVisibility": "hidden",
+                            "left": "0",
+                            "position": "absolute",
+                            "top": "0",
+                            "transform": "rotateY(180deg)",
+                            "transformStyle": "preserve-3d",
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <div
+                          className="Card__card__2rORLZF"
+                          key="back"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </ReactCardFlip>
               </Card>
             </span>
           </GridCol>

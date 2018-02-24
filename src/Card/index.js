@@ -39,9 +39,9 @@ export class Card extends Component {
   flipCard = () => {
     this.setState({ flipped: !this.state.flipped }, () => {
       if (this.state.flipped) {
-        this.backBtn.focus();
+        if (this.backBtn) this.backBtn.focus();
       } else {
-        this.frontBtn.focus();
+        if (this.frontBtn) this.frontBtn.focus();
       }
     });
   };
@@ -77,124 +77,130 @@ export class Card extends Component {
   };
 
   render() {
+    const cardStyles = {
+      front: {
+        position: "relative"
+      }
+    };
+
     return (
-      <ReactCardFlip
-        isFlipped={this.state.flipped}
-        cardStyles={{
-          front: { position: "relative" }
-        }}
-      >
+      <ReactCardFlip isFlipped={this.state.flipped} cardStyles={cardStyles}>
         <div key="back" className={styles.card}>
-          <Grid>
-            <GridRow>
-              <GridCol>
-                {this.props.editMode ? (
-                  <ReactQuill
-                    key="back_editor"
-                    value={this.state.editedBackText}
-                    onChange={this.handleBackTextChange}
-                  >
-                    <div className={styles.editArea} />
-                  </ReactQuill>
-                ) : (
-                  <Text>
-                    <div
-                      dangerouslySetInnerHTML={this.renderMarkup(
-                        this.state.editedBackText
-                      )}
-                    />
-                  </Text>
-                )}
-              </GridCol>
-              {!!this.props.editMode && (
-                <GridCol width={2}>
-                  <Button
-                    buttonRef={c => {
-                      this.backBtn = c;
-                    }}
-                    size="small"
-                    onClick={this.flipCard}
-                  >
-                    Flip
-                  </Button>
-                  <Button
-                    margin="x-small"
-                    size="small"
-                    onClick={this.handleSave}
-                  >
-                    Save
-                  </Button>
-                </GridCol>
-              )}
-            </GridRow>
-            {!this.props.editMode && (
+          {this.state.flipped && (
+            <Grid>
               <GridRow>
                 <GridCol>
-                  <Button
-                    onClick={this.flipCard}
-                    buttonRef={c => (this.backBtn = c)}
-                  >
-                    Flip
-                  </Button>
+                  {this.props.editMode ? (
+                    <ReactQuill
+                      key="back_editor"
+                      value={this.state.editedBackText}
+                      onChange={this.handleBackTextChange}
+                    >
+                      <div className={styles.editArea} />
+                    </ReactQuill>
+                  ) : (
+                    <Text>
+                      <div
+                        dangerouslySetInnerHTML={this.renderMarkup(
+                          this.state.editedBackText
+                        )}
+                      />
+                    </Text>
+                  )}
                 </GridCol>
+                {!!this.props.editMode && (
+                  <GridCol width={2}>
+                    <Button
+                      buttonRef={c => {
+                        this.backBtn = c;
+                      }}
+                      size="small"
+                      onClick={this.flipCard}
+                    >
+                      Flip
+                    </Button>
+                    <Button
+                      margin="x-small"
+                      size="small"
+                      onClick={this.handleSave}
+                    >
+                      Save
+                    </Button>
+                  </GridCol>
+                )}
               </GridRow>
-            )}
-          </Grid>
+              {!this.props.editMode && (
+                <GridRow>
+                  <GridCol>
+                    <Button
+                      onClick={this.flipCard}
+                      buttonRef={c => (this.backBtn = c)}
+                    >
+                      Flip
+                    </Button>
+                  </GridCol>
+                </GridRow>
+              )}
+            </Grid>
+          )}
         </div>
+
         <div key="front" className={styles.card}>
-          <Grid>
-            <GridRow>
-              <GridCol>
-                {this.props.editMode ? (
-                  <ReactQuill
-                    key="front_editor"
-                    value={this.state.editedFrontText}
-                    onChange={this.handleFrontTextChange}
-                  >
-                    <div className={styles.editArea} />
-                  </ReactQuill>
-                ) : (
-                  <Text>
-                    <div
-                      dangerouslySetInnerHTML={this.renderMarkup(
-                        this.state.editedFrontText
-                      )}
-                    />
-                  </Text>
-                )}
-              </GridCol>
-              {!!this.props.editMode && (
-                <GridCol width={2}>
-                  <Button
-                    buttonRef={c => (this.frontBtn = c)}
-                    size="small"
-                    onClick={this.flipCard}
-                  >
-                    Flip
-                  </Button>
-                  <Button
-                    margin="x-small"
-                    size="small"
-                    onClick={this.handleSave}
-                  >
-                    Save
-                  </Button>
-                </GridCol>
-              )}
-            </GridRow>
-            {!this.props.editMode && (
+          {!this.state.flipped && (
+            <Grid>
               <GridRow>
                 <GridCol>
-                  <Button
-                    onClick={this.flipCard}
-                    buttonRef={c => (this.frontBtn = c)}
-                  >
-                    Flip
-                  </Button>
+                  {this.props.editMode ? (
+                    <ReactQuill
+                      key="front_editor"
+                      value={this.state.editedFrontText}
+                      onChange={this.handleFrontTextChange}
+                    >
+                      <div className={styles.editArea} />
+                    </ReactQuill>
+                  ) : (
+                    <Text>
+                      <div
+                        dangerouslySetInnerHTML={this.renderMarkup(
+                          this.state.editedFrontText
+                        )}
+                      />
+                    </Text>
+                  )}
                 </GridCol>
+                {!!this.props.editMode && (
+                  <GridCol width={2}>
+                    <Button
+                      buttonRef={c => (this.frontBtn = c)}
+                      size="small"
+                      onClick={this.flipCard}
+                    >
+                      Flip
+                    </Button>
+                    <Button
+                      margin="x-small"
+                      size="small"
+                      onClick={this.handleSave}
+                    >
+                      Save
+                    </Button>
+                  </GridCol>
+                )}
               </GridRow>
-            )}
-          </Grid>
+              {!this.props.editMode && (
+                <GridRow>
+                  <GridCol>
+                    <Button
+                      onClick={this.flipCard}
+                      buttonRef={c => (this.frontBtn = c)}
+                    >
+                      Flip
+                    </Button>
+                  </GridCol>
+                </GridRow>
+              )}
+            </Grid>
+          )}
         </div>
       </ReactCardFlip>
     );
