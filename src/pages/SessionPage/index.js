@@ -7,6 +7,7 @@ import Grid, {
 } from "@instructure/ui-core/lib/components/Grid";
 import Card from "../../Card";
 import { bool, number, arrayOf, shape, string } from "prop-types";
+import { Link } from "react-router-dom";
 
 import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
@@ -161,6 +162,13 @@ export class SessionPage extends Component {
             </GridCol>
             <GridCol>
               <Button onClick={this.moveNext}>Next</Button>
+            </GridCol>
+          </GridRow>
+          <GridRow>
+            <GridCol>
+              <Button as={Link} to={`/`}>
+                Go Home
+              </Button>
             </GridCol>
           </GridRow>
         </Grid>
