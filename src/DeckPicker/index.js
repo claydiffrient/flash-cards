@@ -12,6 +12,7 @@ import { connect } from "react-redux";
 
 import IconCollectionLine from "instructure-icons/lib/Line/IconCollectionLine";
 import IconEditLine from "instructure-icons/lib/Line/IconEditLine";
+import IconTrashLine from "instructure-icons/lib/Line/IconTrashLine";
 
 import Modal, {
   ModalHeader,
@@ -26,7 +27,7 @@ import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
 import theme from "./theme.js";
 
-import { fetchDecks, addDeck } from "../actions/decks";
+import { fetchDecks, addDeck, deleteDeck } from "../actions/decks";
 
 class DeckPicker extends Component {
   componentDidMount() {
@@ -49,6 +50,11 @@ class DeckPicker extends Component {
     });
   };
 
+  handleDelete = deck => {
+    if (window.confirm(`Are you sure you want to delete "${deck.name}"?`))
+      this.props.deleteDeck(deck._id);
+  };
+
   render() {
     return (
       <div>
@@ -66,11 +72,26 @@ class DeckPicker extends Component {
             </tr>
           </thead>
           <tbody>
+            {!this.props.decks.length && (
+              <tr>
+                <td>You have no decks, add one :)</td>
+                <td />
+              </tr>
+            )}
             {this.props.decks.map(deck => {
               return (
                 <tr key={deck._id}>
                   <td>{deck.name}</td>
                   <td style={{ textAlign: "right" }}>
+                    <Button
+                      variant="icon"
+                      margin="0 x-small 0 0"
+                      onClick={() => {
+                        this.handleDelete(deck);
+                      }}
+                    >
+                      <IconTrashLine title="Delete" />
+                    </Button>
                     <Button
                       variant="icon"
                       margin="0 x-small 0 0"
@@ -130,7 +151,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   fetchDecks,
-  addDeck
+  addDeck,
+  deleteDeck
 };
 
 export const ConnectedDeckPicker = connect(mapStateToProps, mapDispatchToProps)(

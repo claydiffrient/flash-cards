@@ -3,10 +3,16 @@ import db from "../db";
 
 import { createActions } from "redux-actions";
 
-export const { savedDeck, fetchedDecks, newDeckAdded } = createActions(
+export const {
+  savedDeck,
+  fetchedDecks,
+  newDeckAdded,
+  deckDeleted
+} = createActions(
   "SAVED_DECK",
   "FETCHED_DECKS",
-  "NEW_DECK_ADDED"
+  "NEW_DECK_ADDED",
+  "DECK_DELETED"
 );
 
 export const fetchDecks = () => {
@@ -38,6 +44,16 @@ export const addDeck = details => {
     if (response.ok) {
       const newDeck = await db.get(response.id);
       dispatch(newDeckAdded(newDeck));
+    }
+  };
+};
+
+export const deleteDeck = id => {
+  return async dispatch => {
+    const getResponse = await db.get(id);
+    const response = await db.remove(getResponse._id, getResponse._rev);
+    if (response.ok) {
+      dispatch(deckDeleted(response.id));
     }
   };
 };

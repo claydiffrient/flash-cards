@@ -29,6 +29,9 @@ const decks = handleActions(
     },
     FETCHED_DECKS: (state, action) => {
       return action.payload;
+    },
+    DECK_DELETED: (state, action) => {
+      return state.filter(x => x._id !== action.payload);
     }
   },
   []
