@@ -10,6 +10,7 @@ import Modal, {
 } from "@instructure/ui-core/lib/components/Modal";
 import Spinner from "@instructure/ui-core/lib/components/Spinner";
 import ModeSelector from "../ModeSelector";
+import DeckPicker from "../DeckPicker";
 
 import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
@@ -17,11 +18,15 @@ import theme from "./theme.js";
 
 class Home extends Component {
   state = {
-    startModalOpen: false
+    startModalOpen: false,
+    deckPickerModalOpen: false
   };
 
   openStartModal = () => this.setState({ startModalOpen: true });
   closeStartModal = () => this.setState({ startModalOpen: false });
+
+  openDeckPickerModal = () => this.setState({ deckPickerModalOpen: true });
+  closeDeckPickerModal = () => this.setState({ deckPickerModalOpen: false });
 
   render() {
     return (
@@ -78,7 +83,7 @@ class Home extends Component {
           </List>
         </Container>
         <Container as="div" textAlign="center" margin="medium 0 0 0">
-          <Button onClick={this.openStartModal}>Start</Button>
+          <Button onClick={this.openDeckPickerModal}>Start</Button>
         </Container>
         <Modal
           label="Mode Selector"
@@ -92,6 +97,21 @@ class Home extends Component {
           </ModalHeader>
           <ModalBody>
             <ModeSelector />
+          </ModalBody>
+        </Modal>
+        <Modal
+          label="Deck Selector"
+          closeButtonLabel="Close"
+          open={this.state.deckPickerModalOpen}
+          applicationElement={() => document.getElementById("main")}
+          onDismiss={this.closeDeckPickerModal}
+          size="medium"
+        >
+          <ModalHeader>
+            <Heading>Choose a Deck of Cards</Heading>
+          </ModalHeader>
+          <ModalBody>
+            <DeckPicker />
           </ModalBody>
         </Modal>
       </div>

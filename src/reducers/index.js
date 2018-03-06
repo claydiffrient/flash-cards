@@ -22,6 +22,19 @@ const cards = handleActions(
   []
 );
 
+const decks = handleActions(
+  {
+    NEW_DECK_ADDED: (state, action) => {
+      return state.concat(action.payload);
+    },
+    FETCHED_DECKS: (state, action) => {
+      return action.payload;
+    }
+  },
+  []
+);
+
 export default combineReducers({
-  cards
+  cards,
+  decks
 });

@@ -25,11 +25,19 @@ const LoadableSessionPage = Loadable({
   }
 });
 
-const iniialState = {
-  cards: []
+const LoadableDeckPicker = Loadable({
+  loader: () => import("./DeckPicker"),
+  loading() {
+    return <Spinner title="Loading" />;
+  }
+});
+
+const initialState = {
+  cards: [],
+  decks: []
 };
 
-const store = createConfiguredStore(iniialState);
+const store = createConfiguredStore(initialState);
 
 const Container = () => (
   <Provider store={store}>
@@ -37,13 +45,20 @@ const Container = () => (
       <Switch>
         <Route exact path="/" component={LoadableHome} />
         <Route
-          path="/cards"
-          component={() => <LoadableSessionPage text={{}} />}
+          exact
+          path="/decks/:deckId"
+          component={({ match }) => (
+            <LoadableSessionPage deckId={match.params.deckId} />
+          )}
         />
         <Route
-          path="/edit"
-          component={() => <LoadableSessionPage isEditing />}
+          exact
+          path="/decks/:deckId/edit"
+          component={({ match }) => (
+            <LoadableSessionPage deckId={match.params.deckId} isEditing />
+          )}
         />
+        <Route path="/decks" component={() => <LoadableDeckPicker />} />
       </Switch>
     </Router>
   </Provider>

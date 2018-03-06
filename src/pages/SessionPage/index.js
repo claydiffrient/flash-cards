@@ -13,10 +13,12 @@ import styles from "./styles.css";
 import theme from "./theme.js";
 
 import { saveCard, fetchCards, addCard } from "../../actions/cards";
+import { fetchDecks } from "../../actions/decks";
 
 export class SessionPage extends Component {
   static propTypes = {
     isEditing: bool,
+    deckId: string,
     cards: arrayOf(
       shape({
         id: number,
@@ -26,25 +28,70 @@ export class SessionPage extends Component {
           back: string
         })
       })
+    ),
+    decks: arrayOf(
+      shape({
+        id: number,
+        cards: arrayOf(
+          shape({
+            id: number,
+            flipped: bool,
+            text: shape({
+              front: string,
+              back: string
+            })
+          })
+        )
+      })
     )
   };
 
   static defaultProps = {
-    isEditing: false
+    isEditing: false,
+    decks: []
   };
 
-  state = {
-    currentlyDisplayedIndex: 0,
-    showEditor: false
-  };
-
-  componentDidMount() {
-    this.props.fetchCards();
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentlyDisplayedIndex: 0,
+      showEditor: false,
+      ...this.getDeckProperties(props.decks)
+    };
   }
+
+  componentWillMount() {
+    this.props.fetchDecks();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props !== nextProps) {
+      const { selectedDeck, cards } = this.getDeckProperties(nextProps.decks);
+      this.setState({
+        selectedDeck,
+        cards
+      });
+    }
+  }
+
+  getDeckProperties = decks => {
+    const selectedDeck = decks.find(d => d._id === this.props.deckId);
+    if (selectedDeck) {
+      return {
+        selectedDeck,
+        cards: selectedDeck.cards
+      };
+    } else {
+      return {
+        selectedDeck: {},
+        cards: []
+      };
+    }
+  };
 
   moveNext = () => {
     let nextVal = this.state.currentlyDisplayedIndex + 1;
-    if (nextVal > this.props.cards.length - 1) {
+    if (nextVal > this.state.cards.length - 1) {
       nextVal = 0;
     }
     this.setState({
@@ -55,7 +102,7 @@ export class SessionPage extends Component {
   movePrevious = () => {
     let nextVal = this.state.currentlyDisplayedIndex - 1;
     if (nextVal < 0) {
-      nextVal = this.props.cards.length - 1;
+      nextVal = this.state.cards.length - 1;
     }
     this.setState({
       currentlyDisplayedIndex: nextVal
@@ -74,7 +121,7 @@ export class SessionPage extends Component {
     });
 
     this.setState({
-      currentlyDisplayedIndex: this.props.cards.length
+      currentlyDisplayedIndex: this.state.cards.length
     });
   };
 
@@ -84,7 +131,7 @@ export class SessionPage extends Component {
   };
 
   render() {
-    const card = this.props.cards[this.state.currentlyDisplayedIndex];
+    const card = this.state.cards[this.state.currentlyDisplayedIndex];
     if (card) {
       return (
         <Grid>
@@ -134,14 +181,18 @@ export class SessionPage extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  cards: state.cards
-});
+const mapStateToProps = state => {
+  return {
+    cards: state.cards,
+    decks: state.decks
+  };
+};
 
 const mapDispatchToProps = {
   saveCard,
   fetchCards,
-  addCard
+  addCard,
+  fetchDecks
 };
 
 export const ConnectedSessionPage = connect(
