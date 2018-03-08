@@ -36,7 +36,7 @@ class Home extends Component {
         </Heading>
 
         <Container as="div" textAlign="start">
-          <Heading color="primary-inverse" margin="0 0 x-small">
+          <Heading color="primary-inverse" level="h1" margin="0 0 x-small">
             What is This?
           </Heading>
           <Text as="p" color="primary-inverse">

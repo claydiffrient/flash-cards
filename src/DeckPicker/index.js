@@ -51,8 +51,16 @@ class DeckPicker extends Component {
   };
 
   handleDelete = deck => {
-    if (window.confirm(`Are you sure you want to delete "${deck.name}"?`))
+    if (window.confirm(`Are you sure you want to delete "${deck.name}"?`)) {
       this.props.deleteDeck(deck._id);
+    }
+  };
+
+  handleSubmitNewForm = e => {
+    e.preventDefault();
+    this.setState({
+      newDeckInputValue: ""
+    });
   };
 
   render() {
@@ -112,34 +120,37 @@ class DeckPicker extends Component {
                 </tr>
               );
             })}
-            <tr>
-              <td>
-                <Grid>
-                  <GridRow>
-                    <GridCol vAlign="middle">
-                      <TextInput
-                        label={
-                          <ScreenReaderContent>
-                            New Deck Name
-                          </ScreenReaderContent>
-                        }
-                        placeholder="ex. Awesome New Deck"
-                        value={this.state.newDeckInputValue}
-                        onChange={this.handleNewDeckInputChange}
-                      />
-                    </GridCol>
-                    <GridCol vAlign="middle">
-                      <Button size="small" onClick={this.handleAddNewDeck}>
-                        Save
-                      </Button>
-                    </GridCol>
-                  </GridRow>
-                </Grid>
-              </td>
-              <td />
-            </tr>
           </tbody>
         </Table>
+        <form onSubmit={this.handleSubmitNewForm}>
+          <Container textAlign="start" display="block" margin="small 0 0 0">
+            <Heading margin="x-small 0" level="h3" as="h2">
+              Add/Import Deck
+            </Heading>
+            <Grid>
+              <GridRow>
+                <GridCol width={10} vAlign="bottom">
+                  <TextInput
+                    layout="inline"
+                    label={<Text>New Deck Name</Text>}
+                    placeholder="ex. Awesome New Deck"
+                    value={this.state.newDeckInputValue}
+                    onChange={this.handleNewDeckInputChange}
+                  />
+                </GridCol>
+                <GridCol width={2}>
+                  <Button
+                    size="medium"
+                    type="submit"
+                    onClick={this.handleAddNewDeck}
+                  >
+                    Save
+                  </Button>
+                </GridCol>
+              </GridRow>
+            </Grid>
+          </Container>
+        </form>
       </div>
     );
   }
