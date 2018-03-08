@@ -20,6 +20,8 @@ import IconCollectionLine from "instructure-icons/lib/Line/IconCollectionLine";
 import IconEditLine from "instructure-icons/lib/Line/IconEditLine";
 import IconTrashLine from "instructure-icons/lib/Line/IconTrashLine";
 import IconMoreLine from "instructure-icons/lib/Line/IconMoreLine";
+import IconExportLine from "instructure-icons/lib/Line/IconExportLine";
+import IconPlus from "instructure-icons/lib/Line/IconPlusLine";
 
 import Modal, {
   ModalHeader,
@@ -29,10 +31,14 @@ import Grid, {
   GridCol,
   GridRow
 } from "@instructure/ui-core/lib/components/Grid";
+import FileDrop from "@instructure/ui-core/lib/components/FileDrop";
+import Billboard from "@instructure/ui-core/lib/components/Billboard";
 
 import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
 import theme from "./theme.js";
+
+import exportDeck from "../utils/export";
 
 import { fetchDecks, addDeck, deleteDeck } from "../actions/decks";
 
@@ -68,6 +74,29 @@ class DeckPicker extends Component {
     this.setState({
       newDeckInputValue: ""
     });
+  };
+
+  handleExport = deck => {
+    exportDeck(deck);
+  };
+
+  parseDeckObject = deckFileResult => {
+    try {
+      return JSON.parse(deckFileResult).decks;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  handleUploadedFile = file => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const decksToImport = this.parseDeckObject(reader.result);
+      decksToImport.forEach(deck => {
+        this.props.addDeck(deck);
+      });
+    };
+    reader.readAsText(file);
   };
 
   render() {
@@ -130,6 +159,16 @@ class DeckPicker extends Component {
                                 <IconEditLine title="Edit" /> &nbsp; Edit
                               </Link>
                             </ListItem>
+                            <MenuItemSeparator />
+                            <ListItem>
+                              <Link
+                                onClick={() => {
+                                  this.handleExport(deck);
+                                }}
+                              >
+                                <IconExportLine title="Export" /> &nbsp; Export
+                              </Link>
+                            </ListItem>
                           </List>
                         </Container>
                       </PopoverContent>
@@ -164,6 +203,31 @@ class DeckPicker extends Component {
                   >
                     Save
                   </Button>
+                </GridCol>
+              </GridRow>
+              <GridRow>
+                <GridCol>
+                  <FileDrop
+                    accept=".json"
+                    onDropAccepted={([file]) => {
+                      this.handleUploadedFile(file);
+                    }}
+                    onDropRejected={() => {
+                      this.setState({
+                        uploadErrorMessages: [
+                          { text: "Invalid file type", type: "error" }
+                        ]
+                      });
+                    }}
+                    messages={this.state.uploadErrorMessages}
+                    label={
+                      <Billboard
+                        size="small"
+                        message="Drag a .json file here, or click to upload one"
+                        hero={<IconPlus />}
+                      />
+                    }
+                  />
                 </GridCol>
               </GridRow>
             </Grid>
