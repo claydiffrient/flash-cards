@@ -4,15 +4,22 @@ import Text from "@instructure/ui-core/lib/components/Text";
 import Container from "@instructure/ui-core/lib/components/Container";
 import List, { ListItem } from "@instructure/ui-core/lib/components/List";
 import Button from "@instructure/ui-core/lib/components/Button";
-import { Link } from "react-router-dom";
+import { Link as RRLink } from "react-router-dom";
+import Link from "@instructure/ui-core/lib/components/Link";
 import Table from "@instructure/ui-core/lib/components/Table";
 import TextInput from "@instructure/ui-core/lib/components/TextInput";
 import ScreenReaderContent from "@instructure/ui-core/lib/components/ScreenReaderContent";
+import Popover, {
+  PopoverTrigger,
+  PopoverContent
+} from "@instructure/ui-core/lib/components/Popover";
 import { connect } from "react-redux";
+import { MenuItemSeparator } from "@instructure/ui-core/lib/components/Menu";
 
 import IconCollectionLine from "instructure-icons/lib/Line/IconCollectionLine";
 import IconEditLine from "instructure-icons/lib/Line/IconEditLine";
 import IconTrashLine from "instructure-icons/lib/Line/IconTrashLine";
+import IconMoreLine from "instructure-icons/lib/Line/IconMoreLine";
 
 import Modal, {
   ModalHeader,
@@ -89,33 +96,44 @@ class DeckPicker extends Component {
             {this.props.decks.map(deck => {
               return (
                 <tr key={deck._id}>
-                  <td>{deck.name}</td>
+                  <td>
+                    <Link as={RRLink} to={`/decks/${deck._id}/`}>
+                      {deck.name}
+                    </Link>
+                  </td>
                   <td style={{ textAlign: "right" }}>
-                    <Button
-                      variant="icon"
-                      margin="0 x-small 0 0"
-                      onClick={() => {
-                        this.handleDelete(deck);
-                      }}
+                    <Popover
+                      shouldContainFocus
+                      shouldReturnFocus
+                      applicationElement={() => document.getElementById("main")}
+                      on="click"
                     >
-                      <IconTrashLine title="Delete" />
-                    </Button>
-                    <Button
-                      variant="icon"
-                      margin="0 x-small 0 0"
-                      as={Link}
-                      to={`/decks/${deck._id}/edit`}
-                    >
-                      <IconEditLine title="Edit" />
-                    </Button>
-                    <Button
-                      variant="icon"
-                      margin="0 x-small 0 0"
-                      as={Link}
-                      to={`/decks/${deck._id}/`}
-                    >
-                      <IconCollectionLine title="View" />
-                    </Button>
+                      <PopoverTrigger>
+                        <Button variant="icon">
+                          <IconMoreLine title="More Actions" />
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent>
+                        <Container padding="x-small" display="block">
+                          <List itemSpacing="small" variant="unstyled">
+                            <ListItem>
+                              <Link
+                                onClick={() => {
+                                  this.handleDelete(deck);
+                                }}
+                              >
+                                <IconTrashLine title="Delete" /> &nbsp; Delete
+                              </Link>
+                            </ListItem>
+                            <ListItem>
+                              <Link as={RRLink} to={`/decks/${deck._id}/edit`}>
+                                <IconEditLine title="Edit" /> &nbsp; Edit
+                              </Link>
+                            </ListItem>
+                          </List>
+                        </Container>
+                      </PopoverContent>
+                    </Popover>
                   </td>
                 </tr>
               );
