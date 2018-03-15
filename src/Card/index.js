@@ -66,8 +66,7 @@ export class Card extends Component {
 
   handleSave = () => {
     const card = {
-      _id: this.props._id || uuid(),
-      rev: this.props.rev || null,
+      id: this.props.id || uuid(),
       text: {
         front: this.state.editedFrontText,
         back: this.state.editedBackText

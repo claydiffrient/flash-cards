@@ -6,30 +6,20 @@ import Grid, {
   GridRow
 } from "@instructure/ui-core/lib/components/Grid";
 import Card from "../../Card";
-import { bool, number, arrayOf, shape, string } from "prop-types";
+import { bool, number, arrayOf, shape, string, func } from "prop-types";
 import { Link } from "react-router-dom";
 
 import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
 import theme from "./theme.js";
 
-import { saveCard, fetchCards, addCard } from "../../actions/cards";
+import { saveCard, addCard } from "../../actions/cards";
 import { fetchDecks } from "../../actions/decks";
 
 export class SessionPage extends Component {
   static propTypes = {
     isEditing: bool,
     deckId: string,
-    cards: arrayOf(
-      shape({
-        id: number,
-        flipped: bool,
-        text: shape({
-          front: string,
-          back: string
-        })
-      })
-    ),
     decks: arrayOf(
       shape({
         id: number,
@@ -44,7 +34,10 @@ export class SessionPage extends Component {
           })
         )
       })
-    )
+    ),
+    fetchDecks: func.isRequired,
+    addCard: func,
+    saveCard: func
   };
 
   static defaultProps = {
@@ -66,7 +59,10 @@ export class SessionPage extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props !== nextProps) {
+    if (
+      this.props !== nextProps &&
+      !this.compareCardCounts(this.props.decks, nextProps.decks)
+    ) {
       const { selectedDeck, cards } = this.getDeckProperties(nextProps.decks);
       this.setState({
         selectedDeck,
@@ -74,6 +70,22 @@ export class SessionPage extends Component {
       });
     }
   }
+
+  compareCardCounts = (originalDecks, newDecks) => {
+    if (newDecks.length === originalDecks.length) {
+      const oDLength = originalDecks.reduce(
+        (acc, curVal) => acc + curVal.cards.length,
+        0
+      );
+      const nDLength = newDecks.reduce(
+        (acc, curVal) => acc + curVal.cards.length,
+        0
+      );
+      return oDLength === nDLength;
+    } else {
+      return false;
+    }
+  };
 
   getDeckProperties = decks => {
     const selectedDeck = decks.find(d => d._id === this.props.deckId);
@@ -117,17 +129,13 @@ export class SessionPage extends Component {
   };
 
   addCard = () => {
-    this.props.addCard({
+    this.props.addCard(this.state.selectedDeck._id, {
       text: { front: "New Card Front", back: "New Card Back" }
-    });
-
-    this.setState({
-      currentlyDisplayedIndex: this.state.cards.length
     });
   };
 
   handleSave = card => {
-    this.props.saveCard(card);
+    this.props.saveCard(this.state.selectedDeck._id, card);
     this.toggleEditing();
   };
 
@@ -139,7 +147,7 @@ export class SessionPage extends Component {
           <GridRow>
             <GridCol>
               <Card
-                key={card._id}
+                key={card.id}
                 {...card}
                 handleSave={this.handleSave}
                 editMode={this.state.showEditor}
@@ -198,7 +206,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
   saveCard,
-  fetchCards,
   addCard,
   fetchDecks
 };

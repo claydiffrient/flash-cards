@@ -47,17 +47,17 @@ exports[`renders 1`] = `
           border="none"
           color="primary-inverse"
           ellipsis={false}
-          level="h2"
+          level="h1"
           margin="0 0 x-small"
         >
           <Container
-            as="h2"
-            className="_3BZ02Bg _1t9nPA1 _3VqD3Wt"
+            as="h1"
+            className="_3BZ02Bg _3eNxhb- _3VqD3Wt"
             display={null}
             margin="0 0 x-small"
           >
-            <h2
-              className="_3BZ02Bg _1t9nPA1 _3VqD3Wt"
+            <h1
+              className="_3BZ02Bg _3eNxhb- _3VqD3Wt"
               style={
                 Object {
                   "margin": "0 0 0.5rem",
@@ -66,7 +66,7 @@ exports[`renders 1`] = `
               }
             >
               What is This?
-            </h2>
+            </h1>
           </Container>
         </Heading>
         <Text
@@ -413,6 +413,38 @@ exports[`renders 1`] = `
       shouldCloseOnOverlayClick={true}
       shouldReturnFocus={true}
       size="auto"
+      transition="fade"
+    >
+      <Portal
+        insertAt="bottom"
+        mountNode={null}
+        onClose={[Function]}
+        onOpen={[Function]}
+        open={false}
+      />
+    </Modal>
+    <Modal
+      applicationElement={[Function]}
+      closeButtonLabel="Close"
+      closeButtonRef={[Function]}
+      contentRef={[Function]}
+      defaultFocusElement={null}
+      insertAt="bottom"
+      label="Deck Selector"
+      mountNode={null}
+      onClose={[Function]}
+      onDismiss={[Function]}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      onOpen={[Function]}
+      open={false}
+      shouldCloseOnOverlayClick={true}
+      shouldReturnFocus={true}
+      size="medium"
       transition="fade"
     >
       <Portal

@@ -3,27 +3,32 @@
 exports[`renders 1`] = `
 <SessionPage
   addCard={[Function]}
-  cards={
+  cards={Array []}
+  decks={
     Array [
       Object {
-        "flipped": false,
-        "id": 1,
-        "text": Object {
-          "back": "3",
-          "front": "What is the square root of 9?",
-        },
-      },
-      Object {
-        "flipped": false,
-        "id": 2,
-        "text": Object {
-          "back": "12",
-          "front": "What is the square root of 144?",
-        },
+        "cards": Array [
+          Object {
+            "flipped": false,
+            "id": 1,
+            "text": Object {
+              "back": "3",
+              "front": "What is the square root of 9?",
+            },
+          },
+          Object {
+            "flipped": false,
+            "id": 2,
+            "text": Object {
+              "back": "12",
+              "front": "What is the square root of 144?",
+            },
+          },
+        ],
       },
     ]
   }
-  fetchCards={[Function]}
+  fetchDecks={[Function]}
   isEditing={false}
   saveCard={[Function]}
 >
@@ -71,6 +76,7 @@ exports[`renders 1`] = `
                 flipped={false}
                 handleSave={[Function]}
                 id={1}
+                key="1"
                 text={
                   Object {
                     "back": "3",
@@ -304,7 +310,7 @@ exports[`renders 1`] = `
       <GridRow
         colSpacing="medium"
         hAlign="start"
-        isLastRow={true}
+        isLastRow={false}
         key=".1"
         rowSpacing="medium"
         startAt="small"
@@ -312,13 +318,13 @@ exports[`renders 1`] = `
         visualDebug={false}
       >
         <span
-          className="_3P46brR M4KzJCD _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
+          className="_3P46brR _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
         >
           <GridCol
             colSpacing="medium"
             hAlign="start"
             isLastCol={false}
-            isLastRow={true}
+            isLastRow={false}
             key=".0"
             rowSpacing="medium"
             startAt="small"
@@ -327,7 +333,7 @@ exports[`renders 1`] = `
             visualDebug={false}
           >
             <span
-              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D"
+              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX"
             >
               <Button
                 as="button"
@@ -381,7 +387,7 @@ exports[`renders 1`] = `
             colSpacing="medium"
             hAlign="start"
             isLastCol={false}
-            isLastRow={true}
+            isLastRow={false}
             key=".1"
             rowSpacing="medium"
             startAt="small"
@@ -390,14 +396,14 @@ exports[`renders 1`] = `
             visualDebug={false}
           >
             <span
-              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D"
+              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX"
             />
           </GridCol>
           <GridCol
             colSpacing="medium"
             hAlign="start"
             isLastCol={false}
-            isLastRow={true}
+            isLastRow={false}
             key=".2"
             rowSpacing="medium"
             startAt="small"
@@ -406,14 +412,14 @@ exports[`renders 1`] = `
             visualDebug={false}
           >
             <span
-              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D"
+              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX"
             />
           </GridCol>
           <GridCol
             colSpacing="medium"
             hAlign="start"
             isLastCol={true}
-            isLastRow={true}
+            isLastRow={false}
             key=".3"
             rowSpacing="medium"
             startAt="small"
@@ -422,7 +428,7 @@ exports[`renders 1`] = `
             visualDebug={false}
           >
             <span
-              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D dd1PwcH"
+              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX dd1PwcH"
             >
               <Button
                 as="button"
@@ -468,6 +474,104 @@ exports[`renders 1`] = `
                       Next
                     </span>
                   </button>
+                </Container>
+              </Button>
+            </span>
+          </GridCol>
+        </span>
+      </GridRow>
+      <GridRow
+        colSpacing="medium"
+        hAlign="start"
+        isLastRow={true}
+        key=".2"
+        rowSpacing="medium"
+        startAt="small"
+        vAlign="top"
+        visualDebug={false}
+      >
+        <span
+          className="_3P46brR M4KzJCD _2fgcv6I _35Ws9jw _2lflNF1 EaLykbQ _2E7xkbD"
+        >
+          <GridCol
+            colSpacing="medium"
+            hAlign="start"
+            isLastCol={true}
+            isLastRow={true}
+            key=".0"
+            rowSpacing="medium"
+            startAt="small"
+            textAlign="inherit"
+            vAlign="top"
+            visualDebug={false}
+          >
+            <span
+              className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX _1X9b06D dd1PwcH"
+            >
+              <Button
+                as={[Function]}
+                buttonRef={[Function]}
+                fluidWidth={false}
+                margin="0"
+                size="medium"
+                to="/"
+                type="button"
+                variant="default"
+              >
+                <Container
+                  aria-disabled={null}
+                  as={[Function]}
+                  className="_922amOO _16-3B-L _3Gg19qR"
+                  display={null}
+                  elementRef={[Function]}
+                  margin="0"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role={null}
+                  tabIndex={null}
+                  to="/"
+                  type="button"
+                >
+                  <Link
+                    aria-disabled={null}
+                    className="_922amOO _16-3B-L _3Gg19qR"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    replace={false}
+                    role={null}
+                    style={
+                      Object {
+                        "margin": "0",
+                        "padding": null,
+                      }
+                    }
+                    tabIndex={null}
+                    to="/"
+                    type="button"
+                  >
+                    <a
+                      aria-disabled={null}
+                      className="_922amOO _16-3B-L _3Gg19qR"
+                      href="/"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role={null}
+                      style={
+                        Object {
+                          "margin": "0",
+                          "padding": null,
+                        }
+                      }
+                      tabIndex={null}
+                      type="button"
+                    >
+                      <span
+                        className="_2CUXt80"
+                      >
+                        Go Home
+                      </span>
+                    </a>
+                  </Link>
                 </Container>
               </Button>
             </span>

@@ -9,11 +9,20 @@ describe("Creating", () => {
     return db.erase();
   });
 
-  it("should add a new card", () => {
+  const createNewDeck = (deckName = "New Deck Yay") => {
     cy.contains("Start").click();
-    cy.contains("Edit Mode").click();
-    cy.wait(500);
-    cy.contains("Add Card").click();
+    cy.get('input[type="text"]').type(deckName);
+    cy.contains("Save").click();
+  };
+
+  const editDeck = () => {
+    cy.contains("More Actions").click();
+    cy.contains("Edit").click();
+  };
+
+  it("should create a new deck", () => {
+    createNewDeck();
+    editDeck();
     const cardFront = cy.contains("New Card Front");
     cardFront.should("be.visible");
   });

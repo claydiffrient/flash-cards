@@ -4,8 +4,11 @@ describe("Editing", () => {
   beforeEach(() => {
     cy.visit("http://localhost:1234");
     cy.contains("Start").click();
-    cy.contains("Edit Mode").click();
-    cy.wait(500);
+    cy.get('input[type="text"]').type("Spec Deck");
+    cy.contains("Save").click();
+    cy.contains("More Actions").click();
+    cy.contains("Edit").click();
+
     cy.contains("Add Card").click();
     cy.contains("Toggle Edit").click();
   });
