@@ -13,7 +13,7 @@ beforeEach(() => {
       {
         cards: [
           {
-            id: 1,
+            id: "1",
             text: {
               front: "What is the square root of 9?",
               back: "3"
@@ -21,7 +21,7 @@ beforeEach(() => {
             flipped: false
           },
           {
-            id: 2,
+            id: "2",
             text: {
               front: "What is the square root of 144?",
               back: "12"
@@ -66,7 +66,7 @@ describe("Navigation", () => {
         {
           cards: [
             {
-              id: 1,
+              id: "1",
               text: {
                 front: "What is the square root of 9?",
                 back: "3"
@@ -74,7 +74,7 @@ describe("Navigation", () => {
               flipped: false
             },
             {
-              id: 2,
+              id: "2",
               text: {
                 front: "What is the square root of 144?",
                 back: "12"
@@ -82,7 +82,7 @@ describe("Navigation", () => {
               flipped: false
             },
             {
-              id: 3,
+              id: "3",
               text: {
                 front: "What is the capital of Mississippi?",
                 back: "Jackson"
@@ -103,7 +103,7 @@ describe("Navigation", () => {
     );
     wrapper.setState(sampleState);
     wrapper.find("Button[children='Next']").simulate("click");
-    expect(wrapper.find("Card").props().id).toBe(2);
+    expect(wrapper.find("Card").props().id).toBe("2");
   });
 
   it("goes to the first card when pressing next on the last card", () => {
@@ -112,7 +112,7 @@ describe("Navigation", () => {
     );
     wrapper.setState({ currentlyDisplayedIndex: 2 });
     wrapper.find("Button[children='Next']").simulate("click");
-    expect(wrapper.find("Card").props().id).toBe(1);
+    expect(wrapper.find("Card").props().id).toBe("1");
   });
 
   it("goes to the previous card when pressing previous", () => {
@@ -121,7 +121,7 @@ describe("Navigation", () => {
     );
     wrapper.setState({ currentlyDisplayedIndex: 2 });
     wrapper.find("Button[children='Previous']").simulate("click");
-    expect(wrapper.find("Card").props().id).toBe(2);
+    expect(wrapper.find("Card").props().id).toBe("2");
   });
 
   it("goes to the last card when pressing previous on the first card", () => {
@@ -130,6 +130,6 @@ describe("Navigation", () => {
     );
     wrapper.setState({ currentlyDisplayedIndex: 0 });
     wrapper.find("Button[children='Previous']").simulate("click");
-    expect(wrapper.find("Card").props().id).toBe(3);
+    expect(wrapper.find("Card").props().id).toBe("3");
   });
 });

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { func, arrayOf, shape, string } from "prop-types";
 import Heading from "@instructure/ui-core/lib/components/Heading";
 import Text from "@instructure/ui-core/lib/components/Text";
 import Container from "@instructure/ui-core/lib/components/Container";
@@ -16,17 +17,12 @@ import Popover, {
 import { connect } from "react-redux";
 import { MenuItemSeparator } from "@instructure/ui-core/lib/components/Menu";
 
-import IconCollectionLine from "instructure-icons/lib/Line/IconCollectionLine";
 import IconEditLine from "instructure-icons/lib/Line/IconEditLine";
 import IconTrashLine from "instructure-icons/lib/Line/IconTrashLine";
 import IconMoreLine from "instructure-icons/lib/Line/IconMoreLine";
 import IconExportLine from "instructure-icons/lib/Line/IconExportLine";
 import IconPlus from "instructure-icons/lib/Line/IconPlusLine";
 
-import Modal, {
-  ModalHeader,
-  ModalBody
-} from "@instructure/ui-core/lib/components/Modal";
 import Grid, {
   GridCol,
   GridRow
@@ -43,6 +39,27 @@ import exportDeck from "../utils/export";
 import { fetchDecks, addDeck, deleteDeck } from "../actions/decks";
 
 class DeckPicker extends Component {
+  static propTypes = {
+    fetchDecks: func.isRequired,
+    addDeck: func.isRequired,
+    deleteDeck: func.isRequired,
+    decks: arrayOf(
+      shape({
+        _id: string,
+        name: string,
+        cards: arrayOf(
+          shape({
+            id: string,
+            text: shape({
+              front: string,
+              back: string
+            })
+          })
+        )
+      })
+    )
+  };
+
   componentDidMount() {
     this.props.fetchDecks();
   }
@@ -57,7 +74,7 @@ class DeckPicker extends Component {
     });
   };
 
-  handleAddNewDeck = e => {
+  handleAddNewDeck = () => {
     this.props.addDeck({
       name: this.state.newDeckInputValue
     });
@@ -84,7 +101,7 @@ class DeckPicker extends Component {
     try {
       return JSON.parse(deckFileResult).decks;
     } catch (e) {
-      console.log(e);
+      // Intentially empty
     }
   };
 

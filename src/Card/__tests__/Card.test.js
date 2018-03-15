@@ -3,6 +3,8 @@ import { default as ThemeableCard, Card } from "../index";
 import { shallow, mount } from "enzyme";
 
 const props = {
+  handleSave() {},
+  id: "id123",
   text: {
     front: "Front Side",
     back: "Back Side"

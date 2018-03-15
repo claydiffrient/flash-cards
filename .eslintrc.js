@@ -22,10 +22,15 @@ module.exports = {
   rules: {
     "prettier/prettier": "error"
   },
-  overrides: {
+  overrides: [{
     files: ["**/__tests__/**/*"],
     env: {
       jest: true
     }
-  }
+  }, {
+    files: ["createConfiguredStore.js", "src/index.js"],
+    globals: {
+      "process": true
+    }
+  }]
 };

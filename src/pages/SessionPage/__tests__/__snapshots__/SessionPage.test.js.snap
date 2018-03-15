@@ -10,7 +10,7 @@ exports[`renders 1`] = `
         "cards": Array [
           Object {
             "flipped": false,
-            "id": 1,
+            "id": "1",
             "text": Object {
               "back": "3",
               "front": "What is the square root of 9?",
@@ -18,7 +18,7 @@ exports[`renders 1`] = `
           },
           Object {
             "flipped": false,
-            "id": 2,
+            "id": "2",
             "text": Object {
               "back": "12",
               "front": "What is the square root of 144?",
@@ -76,7 +76,7 @@ exports[`renders 1`] = `
                 editMode={false}
                 flipped={false}
                 handleSave={[Function]}
-                id={1}
+                id="1"
                 key="1"
                 text={
                   Object {

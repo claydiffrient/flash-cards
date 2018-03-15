@@ -398,38 +398,6 @@ exports[`renders 1`] = `
       contentRef={[Function]}
       defaultFocusElement={null}
       insertAt="bottom"
-      label="Mode Selector"
-      mountNode={null}
-      onClose={[Function]}
-      onDismiss={[Function]}
-      onEnter={[Function]}
-      onEntered={[Function]}
-      onEntering={[Function]}
-      onExit={[Function]}
-      onExited={[Function]}
-      onExiting={[Function]}
-      onOpen={[Function]}
-      open={false}
-      shouldCloseOnOverlayClick={true}
-      shouldReturnFocus={true}
-      size="auto"
-      transition="fade"
-    >
-      <Portal
-        insertAt="bottom"
-        mountNode={null}
-        onClose={[Function]}
-        onOpen={[Function]}
-        open={false}
-      />
-    </Modal>
-    <Modal
-      applicationElement={[Function]}
-      closeButtonLabel="Close"
-      closeButtonRef={[Function]}
-      contentRef={[Function]}
-      defaultFocusElement={null}
-      insertAt="bottom"
       label="Deck Selector"
       mountNode={null}
       onClose={[Function]}

@@ -5,7 +5,7 @@ import Grid, {
   GridCol,
   GridRow
 } from "@instructure/ui-core/lib/components/Grid";
-import { shape, string, bool } from "prop-types";
+import { shape, string, bool, func } from "prop-types";
 
 import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
@@ -19,15 +19,19 @@ import ReactCardFlip from "react-card-flip";
 
 export class Card extends Component {
   static propTypes = {
+    id: string.isRequired,
     text: shape({
       front: string,
       back: string
     }),
-    editMode: bool
+    editMode: bool,
+    handleSave: func.isRequired,
+    cardCountPosition: string
   };
 
   static defaultProps = {
-    editMode: false
+    editMode: false,
+    cardCountPosition: ""
   };
 
   state = {

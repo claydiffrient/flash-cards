@@ -6,7 +6,7 @@ import Grid, {
   GridRow
 } from "@instructure/ui-core/lib/components/Grid";
 import Card from "../../Card";
-import { bool, number, arrayOf, shape, string, func } from "prop-types";
+import { bool, arrayOf, shape, string, func } from "prop-types";
 import { Link } from "react-router-dom";
 
 import themeable from "@instructure/ui-themeable";
@@ -22,10 +22,10 @@ export class SessionPage extends Component {
     deckId: string,
     decks: arrayOf(
       shape({
-        id: number,
+        id: string,
         cards: arrayOf(
           shape({
-            id: number,
+            id: string,
             flipped: bool,
             text: shape({
               front: string,
