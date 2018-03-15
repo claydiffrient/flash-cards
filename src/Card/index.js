@@ -142,6 +142,9 @@ export class Card extends Component {
               )}
             </Grid>
           )}
+          <div className={styles.countContainer}>
+            <Text>{this.props.cardCountPosition}</Text>
+          </div>
         </div>
 
         <div key="front" className={styles.card}>
@@ -200,6 +203,9 @@ export class Card extends Component {
               )}
             </Grid>
           )}
+          <div className={styles.countContainer}>
+            <Text>{this.props.cardCountPosition}</Text>
+          </div>
         </div>
       </ReactCardFlip>
     );

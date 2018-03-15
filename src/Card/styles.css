@@ -8,3 +8,9 @@
 .editArea {
   height: 80%;
 }
+
+.countContainer {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}

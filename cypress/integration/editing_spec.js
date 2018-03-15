@@ -9,7 +9,6 @@ describe("Editing", () => {
     cy.contains("More Actions").click();
     cy.contains("Edit").click();
 
-    cy.contains("Add Card").click();
     cy.contains("Toggle Edit").click();
   });
 

@@ -203,6 +203,17 @@ exports[`renders 1`] = `
                 </GridRow>
               </span>
             </Grid>
+            <div>
+              <Text
+                as="span"
+                letterSpacing="normal"
+                size="medium"
+              >
+                <span
+                  className="_3jLMUSh _3fy1EZS _2WOMSfA"
+                />
+              </Text>
+            </div>
           </div>
         </div>
         <div
@@ -223,7 +234,19 @@ exports[`renders 1`] = `
           <div
             className="Card__card__2rORLZF"
             key="back"
-          />
+          >
+            <div>
+              <Text
+                as="span"
+                letterSpacing="normal"
+                size="medium"
+              >
+                <span
+                  className="_3jLMUSh _3fy1EZS _2WOMSfA"
+                />
+              </Text>
+            </div>
+          </div>
         </div>
       </div>
     </div>

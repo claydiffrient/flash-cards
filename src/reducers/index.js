@@ -32,6 +32,12 @@ const decks = handleActions(
     },
     DECK_DELETED: (state, action) => {
       return state.filter(x => x._id !== action.payload);
+    },
+    DECK_UPDATED: (state, action) => {
+      const index = state.findIndex(x => x._id === action.payload._id);
+      const newState = state.slice();
+      newState[index] = action.payload;
+      return newState;
     }
   },
   []

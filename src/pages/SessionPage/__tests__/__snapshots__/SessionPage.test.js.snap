@@ -72,6 +72,7 @@ exports[`renders 1`] = `
               className="zlFFAtO _2hZ32yM _1XANqzl _1j7zLHc _2nFm4GG _23makCX dd1PwcH"
             >
               <Card
+                cardCountPosition="1 / 2"
                 editMode={false}
                 flipped={false}
                 handleSave={[Function]}
@@ -277,6 +278,19 @@ exports[`renders 1`] = `
                               </GridRow>
                             </span>
                           </Grid>
+                          <div>
+                            <Text
+                              as="span"
+                              letterSpacing="normal"
+                              size="medium"
+                            >
+                              <span
+                                className="_3jLMUSh _3fy1EZS _2WOMSfA"
+                              >
+                                1 / 2
+                              </span>
+                            </Text>
+                          </div>
                         </div>
                       </div>
                       <div
@@ -297,7 +311,21 @@ exports[`renders 1`] = `
                         <div
                           className="Card__card__2rORLZF"
                           key="back"
-                        />
+                        >
+                          <div>
+                            <Text
+                              as="span"
+                              letterSpacing="normal"
+                              size="medium"
+                            >
+                              <span
+                                className="_3jLMUSh _3fy1EZS _2WOMSfA"
+                              >
+                                1 / 2
+                              </span>
+                            </Text>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

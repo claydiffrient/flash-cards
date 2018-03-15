@@ -59,14 +59,17 @@ export class SessionPage extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (
-      this.props !== nextProps &&
-      !this.compareCardCounts(this.props.decks, nextProps.decks)
-    ) {
+    if (this.props !== nextProps) {
       const { selectedDeck, cards } = this.getDeckProperties(nextProps.decks);
+      let currentlyDisplayedIndex = this.state.currentlyDisplayedIndex;
+      if (this.state.addingCard) {
+        currentlyDisplayedIndex = selectedDeck.cards.length - 1;
+      }
       this.setState({
         selectedDeck,
-        cards
+        cards,
+        currentlyDisplayedIndex,
+        addingCard: false
       });
     }
   }
@@ -129,9 +132,16 @@ export class SessionPage extends Component {
   };
 
   addCard = () => {
-    this.props.addCard(this.state.selectedDeck._id, {
-      text: { front: "New Card Front", back: "New Card Back" }
-    });
+    this.setState(
+      {
+        addingCard: true
+      },
+      () => {
+        this.props.addCard(this.state.selectedDeck._id, {
+          text: { front: "New Card Front", back: "New Card Back" }
+        });
+      }
+    );
   };
 
   handleSave = card => {
@@ -141,6 +151,9 @@ export class SessionPage extends Component {
 
   render() {
     const card = this.state.cards[this.state.currentlyDisplayedIndex];
+    const position = `${this.state.currentlyDisplayedIndex + 1} / ${
+      this.state.cards.length
+    }`;
     if (card) {
       return (
         <Grid>
@@ -151,6 +164,7 @@ export class SessionPage extends Component {
                 {...card}
                 handleSave={this.handleSave}
                 editMode={this.state.showEditor}
+                cardCountPosition={position}
               />
             </GridCol>
           </GridRow>
