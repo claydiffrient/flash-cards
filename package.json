@@ -10,14 +10,14 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "test": "run-p --print-label test:*",
-    "test:integration": "NODE_ENV=test start-server-and-test start http://localhost:1234 cypress:run",
-    "test:unit": "jest"
+    "test:integration":
+      "NODE_ENV=test start-server-and-test start http://localhost:1234 cypress:run",
+    "test:unit": "jest",
+    "test:lint": "eslint --no-inline-config \"./src/**/*.js\"",
+    "test:prettier": "prettier --list-different \"{src, cypress}/**/*.js\"",
+    "precommit": "lint-staged"
   },
-  "keywords": [
-    "flash",
-    "cards",
-    "learning"
-  ],
+  "keywords": ["flash", "cards", "learning"],
   "author": "Clay Diffrient",
   "license": "MIT",
   "dependencies": {
@@ -62,8 +62,10 @@
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.5.1",
     "gh-pages": "^1.1.0",
+    "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.1.4",
+    "lint-staged": "^7.0.0",
     "moment": "^2.20.1",
     "npm-run-all": "^4.1.2",
     "parcel-bundler": "^1.6.2",
@@ -80,5 +82,9 @@
     "relational-pouch": "^3.0.1",
     "shelljs": "^0.8.1",
     "start-server-and-test": "^1.0.0"
+  },
+  "lint-staged": {
+    "*.{json,css,md}": ["prettier --write", "git add"],
+    "*.js": ["eslint --fix", "git add"]
   }
 }
