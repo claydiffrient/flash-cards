@@ -5,6 +5,7 @@ import Grid, {
   GridCol,
   GridRow
 } from "@instructure/ui-core/lib/components/Grid";
+import RangeInput from "@instructure/ui-core/lib/components/RangeInput";
 import Card from "../../Card";
 import { bool, arrayOf, shape, string, func } from "prop-types";
 import { Link } from "react-router-dom";
@@ -50,6 +51,7 @@ export class SessionPage extends Component {
     this.state = {
       currentlyDisplayedIndex: 0,
       showEditor: false,
+      timerValue: 0,
       ...this.getDeckProperties(props.decks)
     };
   }
@@ -71,6 +73,26 @@ export class SessionPage extends Component {
         currentlyDisplayedIndex,
         addingCard: false
       });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      prevState.timerValue !== this.state.timerValue ||
+      prevState.currentlyDisplayedIndex !== this.state.currentlyDisplayedIndex
+    ) {
+      if (this.state.timerValue === 0 && this.timerId) {
+        clearTimeout(this.timerId);
+        this.timerId = undefined;
+      } else {
+        this.timerId = setTimeout(() => {
+          if (this.card) {
+            this.card.flipCard();
+            clearTimeout(this.timerId);
+            this.timerId = undefined;
+          }
+        }, this.state.timerValue * 1000);
+      }
     }
   }
 
@@ -149,6 +171,12 @@ export class SessionPage extends Component {
     this.toggleEditing();
   };
 
+  handleTimerValueChange = val => {
+    this.setState({
+      timerValue: parseInt(val, 10)
+    });
+  };
+
   render() {
     const card = this.state.cards[this.state.currentlyDisplayedIndex];
     const position = `${this.state.currentlyDisplayedIndex + 1} / ${
@@ -165,16 +193,30 @@ export class SessionPage extends Component {
                 handleSave={this.handleSave}
                 editMode={this.state.showEditor}
                 cardCountPosition={position}
+                ref={c => {
+                  this.card = c;
+                }}
               />
             </GridCol>
           </GridRow>
           <GridRow>
-            <GridCol>
+            <GridCol width={3}>
               <Button onClick={this.movePrevious}>Previous</Button>
             </GridCol>
-            <GridCol>
-              {this.props.isEditing && (
+            <GridCol width={this.props.isEditing ? 3 : 6}>
+              {this.props.isEditing ? (
                 <Button onClick={this.toggleEditing}>Toggle Edit</Button>
+              ) : (
+                <RangeInput
+                  min={5}
+                  max={60}
+                  step={5}
+                  value={this.state.timerValue}
+                  onChange={this.handleTimerValueChange}
+                  label="Time"
+                  layout="inline"
+                  size="medium"
+                />
               )}
             </GridCol>
             <GridCol>
@@ -182,7 +224,7 @@ export class SessionPage extends Component {
                 <Button onClick={this.addCard}>Add Card</Button>
               )}
             </GridCol>
-            <GridCol>
+            <GridCol width={3}>
               <Button onClick={this.moveNext}>Next</Button>
             </GridCol>
           </GridRow>

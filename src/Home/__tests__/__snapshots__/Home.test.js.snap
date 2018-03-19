@@ -209,7 +209,7 @@ exports[`renders 1`] = `
                       <span
                         className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
                       >
-                        Show a flash card and flip to the other side after a given time.
+                        [DONE] Show a flash card and flip to the other side after a given time.
                       </span>
                     </Text>
                   </li>

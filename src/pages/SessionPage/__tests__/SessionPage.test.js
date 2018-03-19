@@ -1,11 +1,8 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
-import { default as ThemeableSessionPage, SessionPage } from "../index";
-import createConfiguredStore from "../../../createConfiguredStore";
+import { SessionPage } from "../index";
 import { MemoryRouter } from "react-router";
-import { Provider } from "react-redux";
 
-let store;
 let testProps;
 beforeEach(() => {
   testProps = {
@@ -32,20 +29,6 @@ beforeEach(() => {
       }
     ]
   };
-  store = createConfiguredStore({
-    ...testProps
-  });
-});
-
-it("renders", () => {
-  const wrapper = mount(
-    <MemoryRouter>
-      <Provider store={store}>
-        <ThemeableSessionPage />
-      </Provider>
-    </MemoryRouter>
-  );
-  expect(wrapper.find(SessionPage)).toMatchSnapshot();
 });
 
 it("renders an edit button when isEditing prop is passed in", () => {

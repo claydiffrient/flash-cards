@@ -55,7 +55,8 @@ class Home extends Component {
             </ListItem>
             <ListItem>
               <Text color="primary-inverse">
-                Show a flash card and flip to the other side after a given time.
+                [DONE] Show a flash card and flip to the other side after a
+                given time.
               </Text>
             </ListItem>
             <ListItem>
