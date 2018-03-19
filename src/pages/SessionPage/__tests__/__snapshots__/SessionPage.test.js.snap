@@ -278,7 +278,9 @@ exports[`renders 1`] = `
                               </GridRow>
                             </span>
                           </Grid>
-                          <div>
+                          <div
+                            className="Card__countContainer__2TUzHqo"
+                          >
                             <Text
                               as="span"
                               letterSpacing="normal"
@@ -312,7 +314,9 @@ exports[`renders 1`] = `
                           className="Card__card__2rORLZF"
                           key="back"
                         >
-                          <div>
+                          <div
+                            className="Card__countContainer__2TUzHqo"
+                          >
                             <Text
                               as="span"
                               letterSpacing="normal"
