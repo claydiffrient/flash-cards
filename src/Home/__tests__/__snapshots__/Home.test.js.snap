@@ -173,7 +173,7 @@ exports[`renders 1`] = `
                       <span
                         className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
                       >
-                        Show a flash card and flip to the other side via user interaction.
+                        [DONE] Show a flash card and flip to the other side via user interaction.
                       </span>
                     </Text>
                   </li>
@@ -317,7 +317,7 @@ exports[`renders 1`] = `
                       <span
                         className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
                       >
-                        Allow import/export of flash cards in a file format (likely JSON)
+                        [DONE] Allow import/export of flash cards in a file format (likely JSON)
                       </span>
                     </Text>
                   </li>

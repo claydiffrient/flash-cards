@@ -49,7 +49,7 @@ class Home extends Component {
           <List>
             <ListItem>
               <Text color="primary-inverse">
-                Show a flash card and flip to the other side via user
+                [DONE] Show a flash card and flip to the other side via user
                 interaction.
               </Text>
             </ListItem>
@@ -70,8 +70,8 @@ class Home extends Component {
             </ListItem>
             <ListItem>
               <Text color="primary-inverse">
-                Allow import/export of flash cards in a file format (likely
-                JSON)
+                [DONE] Allow import/export of flash cards in a file format
+                (likely JSON)
               </Text>
             </ListItem>
           </List>
