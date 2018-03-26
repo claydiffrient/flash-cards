@@ -149,6 +149,9 @@ export class Card extends Component {
           <div className={styles.countContainer}>
             <Text>{this.props.cardCountPosition}</Text>
           </div>
+          <div className={styles.sideIndicatorContainer}>
+            <Text>Back</Text>
+          </div>
         </div>
 
         <div key="front" className={styles.card}>
@@ -207,6 +210,9 @@ export class Card extends Component {
               )}
             </Grid>
           )}
+          <div className={styles.sideIndicatorContainer}>
+            <Text>Front</Text>
+          </div>
           <div className={styles.countContainer}>
             <Text>{this.props.cardCountPosition}</Text>
           </div>

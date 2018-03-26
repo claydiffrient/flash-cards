@@ -14,3 +14,9 @@
   right: 5px;
   bottom: 5px;
 }
+
+.sideIndicatorContainer {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
