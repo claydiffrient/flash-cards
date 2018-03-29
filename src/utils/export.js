@@ -17,7 +17,12 @@
  *   ]
  * }
  */
-export default function exportDeck(deck) {
+export default function exportDeck(
+  deck,
+  linkElement = document.createElement("a"),
+  click = true,
+  removeLink = true
+) {
   const boxedDeck = Array.isArray(deck) ? deck : [deck];
   const decksExport = boxedDeck.map(deckObj => ({
     name: deckObj.name,
@@ -30,8 +35,33 @@ export default function exportDeck(deck) {
     dataStr
   )}`;
 
-  const linkElement = document.createElement("a");
+  attachHiddenLinkIfNecessary(linkElement);
+
   linkElement.setAttribute("href", dataUri);
   linkElement.setAttribute("download", "decks.json");
-  linkElement.click();
+  if (click) {
+    linkElement.click();
+  }
+  if (removeLink) {
+    removeLinkIfNecessary(linkElement);
+  }
 }
+
+const isAnchorElement = linkElement => linkElement instanceof HTMLAnchorElement;
+
+const attachHiddenLinkIfNecessary = linkElement => {
+  if (!isAnchorElement(linkElement)) {
+    return;
+  } else {
+    linkElement.style.display = "none";
+    document.body.appendChild(linkElement);
+  }
+};
+
+const removeLinkIfNecessary = linkElement => {
+  if (!isAnchorElement(linkElement)) {
+    return;
+  } else {
+    document.body.removeChild(linkElement);
+  }
+};
