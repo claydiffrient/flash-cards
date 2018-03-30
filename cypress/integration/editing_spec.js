@@ -40,4 +40,11 @@ describe("Editing", () => {
     cy.wait(500);
     cy.contains("Updated Card Front").should("be.visible");
   });
+
+  it("should add a card", () => {
+    cy.contains("Toggle Edit").click();
+    cy.contains("1 / 1").should("be.visible");
+    cy.contains("Add Card").click();
+    cy.contains("2 / 2").should("be.visible");
+  });
 });
