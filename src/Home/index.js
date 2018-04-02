@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import Heading from "@instructure/ui-core/lib/components/Heading";
-import Text from "@instructure/ui-core/lib/components/Text";
-import Container from "@instructure/ui-core/lib/components/Container";
-import List, { ListItem } from "@instructure/ui-core/lib/components/List";
-import Button from "@instructure/ui-core/lib/components/Button";
+import Heading from "@instructure/ui-elements/lib/components/Heading";
+import Text from "@instructure/ui-elements/lib/components/Text";
+import Container from "@instructure/ui-container/lib/components/Container";
+import List, { ListItem } from "@instructure/ui-elements/lib/components/List";
+import Button from "@instructure/ui-buttons/lib/components/Button";
 import Modal, {
   ModalBody,
   ModalHeader
-} from "@instructure/ui-core/lib/components/Modal";
+} from "@instructure/ui-overlays/lib/components/Modal";
 import DeckPicker from "../DeckPicker";
 
 import themeable from "@instructure/ui-themeable";

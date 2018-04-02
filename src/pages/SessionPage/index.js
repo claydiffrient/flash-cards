@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Button from "@instructure/ui-core/lib/components/Button";
+import Button from "@instructure/ui-buttons/lib/components/Button";
 import Grid, {
   GridCol,
   GridRow
-} from "@instructure/ui-core/lib/components/Grid";
-import RangeInput from "@instructure/ui-core/lib/components/RangeInput";
+} from "@instructure/ui-layout/lib/components/Grid";
+import RangeInput from "@instructure/ui-forms/lib/components/RangeInput";
 import Card from "../../Card";
 import { bool, arrayOf, shape, string, func } from "prop-types";
 import { Link } from "react-router-dom";

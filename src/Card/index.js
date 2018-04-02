@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Text from "@instructure/ui-core/lib/components/Text";
-import Button from "@instructure/ui-core/lib/components/Button";
+import Text from "@instructure/ui-elements/lib/components/Text";
+import Button from "@instructure/ui-buttons/lib/components/Button";
 import Grid, {
   GridCol,
   GridRow
-} from "@instructure/ui-core/lib/components/Grid";
+} from "@instructure/ui-layout/lib/components/Grid";
 import { shape, string, bool, func } from "prop-types";
 
 import themeable from "@instructure/ui-themeable";

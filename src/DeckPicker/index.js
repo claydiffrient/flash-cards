@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import { func, arrayOf, shape, string } from "prop-types";
-import Heading from "@instructure/ui-core/lib/components/Heading";
-import Text from "@instructure/ui-core/lib/components/Text";
-import Container from "@instructure/ui-core/lib/components/Container";
-import List, { ListItem } from "@instructure/ui-core/lib/components/List";
-import Button from "@instructure/ui-core/lib/components/Button";
+import Heading from "@instructure/ui-elements/lib/components/Heading";
+import Text from "@instructure/ui-elements/lib/components/Text";
+import Container from "@instructure/ui-container/lib/components/Container";
+import List, { ListItem } from "@instructure/ui-elements/lib/components/List";
+import Button from "@instructure/ui-buttons/lib/components/Button";
 import { Link as RRLink } from "react-router-dom";
-import Link from "@instructure/ui-core/lib/components/Link";
-import Table from "@instructure/ui-core/lib/components/Table";
-import TextInput from "@instructure/ui-core/lib/components/TextInput";
-import ScreenReaderContent from "@instructure/ui-core/lib/components/ScreenReaderContent";
+import Link from "@instructure/ui-elements/lib/components/Link";
+import Table from "@instructure/ui-elements/lib/components/Table";
+import TextInput from "@instructure/ui-forms/lib/components/TextInput";
+import ScreenReaderContent from "@instructure/ui-a11y/lib/components/ScreenReaderContent";
 import Popover, {
   PopoverTrigger,
   PopoverContent
-} from "@instructure/ui-core/lib/components/Popover";
+} from "@instructure/ui-overlays/lib/components/Popover";
 import { connect } from "react-redux";
-import { MenuItemSeparator } from "@instructure/ui-core/lib/components/Menu";
+import { MenuItemSeparator } from "@instructure/ui-menu/lib/components/Menu";
 
 import IconEditLine from "instructure-icons/lib/Line/IconEditLine";
 import IconTrashLine from "instructure-icons/lib/Line/IconTrashLine";
@@ -26,9 +26,9 @@ import IconPlus from "instructure-icons/lib/Line/IconPlusLine";
 import Grid, {
   GridCol,
   GridRow
-} from "@instructure/ui-core/lib/components/Grid";
-import FileDrop from "@instructure/ui-core/lib/components/FileDrop";
-import Billboard from "@instructure/ui-core/lib/components/Billboard";
+} from "@instructure/ui-layout/lib/components/Grid";
+import FileDrop from "@instructure/ui-forms/lib/components/FileDrop";
+import Billboard from "@instructure/ui-billboard/lib/components/Billboard";
 
 import themeable from "@instructure/ui-themeable";
 import styles from "./styles.css";
