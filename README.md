@@ -1,5 +1,7 @@
 # Flash Cards
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/claydiffrient/flash-cards.svg)](https://greenkeeper.io/)
+
 Check it out live at https://claydiffrient.github.io/flash-cards
 
 This is a project for my EDPS 6560 Mulitimedia Learning class.
