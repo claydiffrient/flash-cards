@@ -85,13 +85,17 @@ export class SessionPage extends Component {
         clearTimeout(this.timerId);
         this.timerId = undefined;
       } else {
-        this.timerId = setTimeout(() => {
-          if (this.card) {
-            this.card.flipCard();
-            clearTimeout(this.timerId);
-            this.timerId = undefined;
-          }
-        }, this.state.timerValue * 1000);
+        if (this.state.timerValue === 0) {
+          return;
+        } else {
+          this.timerId = setTimeout(() => {
+            if (this.card) {
+              this.card.flipCard();
+              clearTimeout(this.timerId);
+              this.timerId = undefined;
+            }
+          }, this.state.timerValue * 1000);
+        }
       }
     }
   }
