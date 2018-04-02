@@ -23,6 +23,7 @@
   "dependencies": {
     "@instructure/ui-core": "^5.0.0",
     "@instructure/ui-themes": "^5.0.0",
+    "@instructure/ui-themeable": "^5.0.0",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "instructure-icons": "^4.3.2",
