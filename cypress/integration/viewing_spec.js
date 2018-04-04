@@ -53,6 +53,17 @@ describe("Viewing", () => {
       cy.contains("1 / 3").should("be.visible");
     });
 
+    it("should maintain the front side of the card when moving to a different card", () => {
+      cy.contains("Next").click();
+      cy.contains("Front").should("be.visible");
+    });
+
+    it.only("should flip to the front of the next card when moving to a different card", () => {
+      cy.contains("Flip").click();
+      cy.contains("Next").click();
+      cy.contains("Front").should("be.visible");
+    });
+
     it("should flip between cards automatically when a time is set", () => {
       cy.clock();
       cy.contains("1 / 3").should("be.visible");
