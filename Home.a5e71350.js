@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({656:[function(require,module,exports) {
+})({699:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -93,7 +93,7 @@ exports.default = function (_ref) {
     padding: spacing.medium
   };
 };
-},{}],555:[function(require,module,exports) {
+},{}],612:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -103,7 +103,29 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dec, _class, _class2, _temp;
+var _dec, _class, _class2, _temp; /*
+                                   * The MIT License (MIT)
+                                   *
+                                   * Copyright (c) 2015 - present Instructure, Inc.
+                                   *
+                                   * Permission is hereby granted, free of charge, to any person obtaining a copy
+                                   * of this software and associated documentation files (the "Software"), to deal
+                                   * in the Software without restriction, including without limitation the rights
+                                   * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                                   * copies of the Software, and to permit persons to whom the Software is
+                                   * furnished to do so, subject to the following conditions:
+                                   *
+                                   * The above copyright notice and this permission notice shall be included in all
+                                   * copies or substantial portions of the Software.
+                                   *
+                                   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                                   * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                                   * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                                   * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                                   * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                                   * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                                   * SOFTWARE.
+                                   */
 
 var _react = require('react');
 
@@ -132,7 +154,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var styles = {
   template: function template(theme) {
     var tmpl = function tmpl() {
-      return '/*  imported from styles.css  */\n\n._3HUSG6e {\n  box-sizing: border-box;\n  padding: ' + theme.padding + ';\n  -webkit-padding-end: calc(' + theme.padding + ' * 2 + 1em);\n          padding-right: calc(' + theme.padding + ' * 2 + 1em);\n  -webkit-padding-start: ' + theme.padding + ';\n          padding-left: ' + theme.padding + ';\n  flex: 0 0 auto;\n  border-bottom: 1px solid ' + theme.borderColor + ';\n}\n\nhtml[dir="rtl"] ._3HUSG6e {\n          padding-left: calc(' + theme.padding + ' * 2 + 1em);\n          padding-right: ' + theme.padding + ';\n}\n';
+      return '/*  imported from styles.css  */\n\n._3HUSG6e {\n  box-sizing: border-box;\n  padding: ' + theme.padding + ';\n  padding-right: calc(' + theme.padding + ' * 2 + 1em);\n  padding-left: ' + theme.padding + ';\n  flex: 0 0 auto;\n  border-bottom: 0.0625rem solid ' + theme.borderColor + ';\n}\n\nhtml[dir="rtl"] ._3HUSG6e {\n  padding-left: calc(' + theme.padding + ' * 2 + 1em);\n  padding-right: ' + theme.padding + ';\n}\n';
     };
 
     return tmpl.call(theme, theme);
@@ -170,10 +192,10 @@ var ModalHeader = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _
   ;
   return ModalHeader;
 }(_react.Component), _class2.propTypes = {
-  children: _propTypes2.default.node // eslint-disable-line react/require-default-props
+  children: _propTypes2.default.node
 }, _temp)) || _class);
 exports.default = ModalHeader;
-},{"react":8,"prop-types":229,"@instructure/ui-themeable":305,"./theme":656}],659:[function(require,module,exports) {
+},{"react":8,"prop-types":226,"@instructure/ui-themeable":319,"./theme":699}],700:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -183,7 +205,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function () {
   return {};
 };
-},{}],556:[function(require,module,exports) {
+},{}],614:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -193,7 +215,29 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dec, _class, _class2, _temp;
+var _dec, _class, _class2, _temp; /*
+                                   * The MIT License (MIT)
+                                   *
+                                   * Copyright (c) 2015 - present Instructure, Inc.
+                                   *
+                                   * Permission is hereby granted, free of charge, to any person obtaining a copy
+                                   * of this software and associated documentation files (the "Software"), to deal
+                                   * in the Software without restriction, including without limitation the rights
+                                   * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                                   * copies of the Software, and to permit persons to whom the Software is
+                                   * furnished to do so, subject to the following conditions:
+                                   *
+                                   * The above copyright notice and this permission notice shall be included in all
+                                   * copies or substantial portions of the Software.
+                                   *
+                                   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                                   * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                                   * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                                   * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                                   * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                                   * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                                   * SOFTWARE.
+                                   */
 
 var _react = require('react');
 
@@ -203,17 +247,17 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _Container = require('@instructure/ui-container/lib/components/Container');
+
+var _Container2 = _interopRequireDefault(_Container);
+
 var _uiThemeable = require('@instructure/ui-themeable');
 
 var _uiThemeable2 = _interopRequireDefault(_uiThemeable);
 
-var _CustomPropTypes = require('@instructure/ui-utils/lib/react/CustomPropTypes');
+var _ThemeablePropTypes = require('@instructure/ui-themeable/lib/utils/ThemeablePropTypes');
 
-var _CustomPropTypes2 = _interopRequireDefault(_CustomPropTypes);
-
-var _Container = require('../../Container');
-
-var _Container2 = _interopRequireDefault(_Container);
+var _ThemeablePropTypes2 = _interopRequireDefault(_ThemeablePropTypes);
 
 var _theme = require('./theme');
 
@@ -256,8 +300,6 @@ var ModalBody = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _de
 
   _createClass(ModalBody, [{
     key: 'render',
-
-    /* eslint-disable react/require-default-props */
     value: function render() {
       return _react2.default.createElement(
         _Container2.default,
@@ -273,8 +315,6 @@ var ModalBody = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _de
         )
       );
     }
-    /* eslint-enable react/require-default-props */
-
   }]);
 
   ModalBody.displayName = 'ModalBody'
@@ -282,11 +322,12 @@ var ModalBody = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _de
   return ModalBody;
 }(_react.Component), _class2.propTypes = {
   children: _propTypes2.default.node,
-  padding: _CustomPropTypes2.default.spacing }, _class2.defaultProps = {
+  padding: _ThemeablePropTypes2.default.spacing
+}, _class2.defaultProps = {
   padding: 'medium'
 }, _temp)) || _class);
 exports.default = ModalBody;
-},{"react":8,"prop-types":229,"@instructure/ui-themeable":305,"@instructure/ui-utils/lib/react/CustomPropTypes":326,"../../Container":454,"./theme":659}],657:[function(require,module,exports) {
+},{"react":8,"prop-types":226,"@instructure/ui-container/lib/components/Container":389,"@instructure/ui-themeable":319,"@instructure/ui-themeable/lib/utils/ThemeablePropTypes":332,"./theme":700}],695:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -306,7 +347,7 @@ exports.default = function (_ref) {
     padding: spacing.small
   };
 };
-},{}],557:[function(require,module,exports) {
+},{}],613:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -316,7 +357,29 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dec, _class, _class2, _temp;
+var _dec, _class, _class2, _temp; /*
+                                   * The MIT License (MIT)
+                                   *
+                                   * Copyright (c) 2015 - present Instructure, Inc.
+                                   *
+                                   * Permission is hereby granted, free of charge, to any person obtaining a copy
+                                   * of this software and associated documentation files (the "Software"), to deal
+                                   * in the Software without restriction, including without limitation the rights
+                                   * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                                   * copies of the Software, and to permit persons to whom the Software is
+                                   * furnished to do so, subject to the following conditions:
+                                   *
+                                   * The above copyright notice and this permission notice shall be included in all
+                                   * copies or substantial portions of the Software.
+                                   *
+                                   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                                   * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                                   * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                                   * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                                   * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                                   * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                                   * SOFTWARE.
+                                   */
 
 var _react = require('react');
 
@@ -345,7 +408,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var styles = {
   template: function template(theme) {
     var tmpl = function tmpl() {
-      return '/*  imported from styles.css  */\n\n._34cqD_t {\n  flex: 0 0 auto;\n  background: ' + theme.background + ';\n  border-top: ' + theme.borderWidth + ' solid ' + theme.borderColor + ';\n  box-sizing: border-box;\n  padding: ' + theme.padding + ';\n\n  border-bottom-right-radius: ' + theme.borderRadius + ';\n  border-bottom-left-radius: ' + theme.borderRadius + ';\n\n  display: flex;\n  justify-content: flex-end;\n}\n';
+      return '/*  imported from styles.css  */\n\n._34cqD_t {\n  flex: 0 0 auto;\n  background: ' + theme.background + ';\n  border-top: ' + theme.borderWidth + ' solid ' + theme.borderColor + ';\n  box-sizing: border-box;\n  padding: ' + theme.padding + ';\n  border-bottom-right-radius: ' + theme.borderRadius + ';\n  border-bottom-left-radius: ' + theme.borderRadius + ';\n  display: flex;\n  justify-content: flex-end;\n}\n';
     };
 
     return tmpl.call(theme, theme);
@@ -370,8 +433,6 @@ var ModalFooter = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _
 
   _createClass(ModalFooter, [{
     key: 'render',
-
-    /* eslint-enable react/require-default-props */
     value: function render() {
       return _react2.default.createElement(
         'div',
@@ -379,459 +440,88 @@ var ModalFooter = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _
         this.props.children
       );
     }
-    /* eslint-disable react/require-default-props */
-
   }]);
 
   ModalFooter.displayName = 'ModalFooter'
   ;
   return ModalFooter;
 }(_react.Component), _class2.propTypes = {
-  children: _propTypes2.default.node }, _temp)) || _class);
-exports.default = ModalFooter;
-},{"react":8,"prop-types":229,"@instructure/ui-themeable":305,"./theme":657}],734:[function(require,module,exports) {
-(function(root) {
-  var isOn = false;
-  var scrollbarSize;
-  var scrollTop;
-
-  function getScrollbarSize() {
-    if (typeof scrollbarSize !== 'undefined') return scrollbarSize;
-
-    var doc = document.documentElement;
-    var dummyScroller = document.createElement('div');
-    dummyScroller.setAttribute('style', 'width:99px;height:99px;' + 'position:absolute;top:-9999px;overflow:scroll;');
-    doc.appendChild(dummyScroller);
-    scrollbarSize = dummyScroller.offsetWidth - dummyScroller.clientWidth;
-    doc.removeChild(dummyScroller);
-    return scrollbarSize;
-  }
-
-  function hasScrollbar() {
-    return document.documentElement.scrollHeight > window.innerHeight;
-  }
-
-  function on(options) {
-    if (typeof document === 'undefined') return;
-    var doc = document.documentElement;
-    scrollTop = window.pageYOffset;
-    if (hasScrollbar()) {
-      doc.style.width = 'calc(100% - '+ getScrollbarSize() +'px)';
-    } else {
-      doc.style.width = '100%';
-    }
-    doc.style.position = 'fixed';
-    doc.style.top = -scrollTop + 'px';
-    doc.style.overflow = 'hidden';
-    isOn = true;
-  }
-
-  function off() {
-    if (typeof document === 'undefined') return;
-    var doc = document.documentElement;
-    doc.style.width = '';
-    doc.style.position = '';
-    doc.style.top = '';
-    doc.style.overflow = '';
-    window.scroll(0, scrollTop);
-    isOn = false;
-  }
-
-  function toggle() {
-    if (isOn) {
-      off();
-      return;
-    }
-    on();
-  }
-
-  var noScroll = {
-    on: on,
-    off: off,
-    toggle: toggle,
-  };
-
-  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = noScroll;
-  } else {
-    root.noScroll = noScroll;
-  }
-})(this);
-
-},{}],732:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = generator;
-function generator(_ref) {
-  var colors = _ref.colors,
-      borders = _ref.borders,
-      stacking = _ref.stacking;
-
-  return {
-    zIndex: stacking.topmost,
-    background: 'rgba(255, 255, 255, 0.75)',
-    borderColor: 'transparent',
-    focusBorderColor: colors.brand,
-    borderRadius: borders.radiusMedium,
-    borderWidth: borders.widthSmall
-  };
-}
-
-generator.canvas = function (variables) {
-  return {
-    focusBorderColor: variables['ic-brand-primary']
-  };
-};
-},{}],651:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _dec, _class, _class2, _temp2;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _keycode = require('keycode');
-
-var _keycode2 = _interopRequireDefault(_keycode);
-
-var _classnames2 = require('classnames');
-
-var _classnames3 = _interopRequireDefault(_classnames2);
-
-var _noScroll = require('no-scroll');
-
-var _noScroll2 = _interopRequireDefault(_noScroll);
-
-var _uiThemeable = require('@instructure/ui-themeable');
-
-var _uiThemeable2 = _interopRequireDefault(_uiThemeable);
-
-var _createChainedFunction = require('@instructure/ui-utils/lib/createChainedFunction');
-
-var _createChainedFunction2 = _interopRequireDefault(_createChainedFunction);
-
-var _ensureSingleChild = require('@instructure/ui-utils/lib/react/ensureSingleChild');
-
-var _ensureSingleChild2 = _interopRequireDefault(_ensureSingleChild);
-
-var _contains = require('@instructure/ui-utils/lib/dom/contains');
-
-var _contains2 = _interopRequireDefault(_contains);
-
-var _passthroughProps = require('@instructure/ui-utils/lib/react/passthroughProps');
-
-var _theme = require('./theme');
-
-var _theme2 = _interopRequireDefault(_theme);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var styles = {
-  template: function template(theme) {
-    var tmpl = function tmpl() {
-      return '/*  imported from styles.css  */\n\n._1fwijBj {\n  box-sizing: border-box;\n  background: ' + theme.background + ';\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: auto;\n\n  display: flex;\n  justify-content: center;\n\n  outline: none;\n  border: ' + theme.borderWidth + ' solid ' + theme.borderColor + ';\n  border-radius: ' + theme.borderRadius + ';\n\n  z-index: ' + theme.zIndex + ';\n}\n\n  ._1fwijBj:focus {\n    border-color: ' + theme.focusBorderColor + ';\n  }\n\n._35wEe1Q {\n  position: fixed;\n}\n\n.YlfH74y {\n  align-items: flex-start;\n}\n\n.KNI-Mem {\n  align-items: center;\n}\n\n.KIHI1rO {\n  align-items: flex-end;\n}\n';
-    };
-
-    return tmpl.call(theme, theme);
-  },
-  'root': '_1fwijBj',
-  'fullScreen': '_35wEe1Q',
-  'top': 'YlfH74y',
-  'center': 'KNI-Mem',
-  'bottom': 'KIHI1rO'
-};
-
-
-/**
----
-category: components/utilities
----
-**/
-var Mask = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _dec(_class = (_temp2 = _class2 = function (_Component) {
-  _inherits(Mask, _Component);
-
-  function Mask() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, Mask);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Mask.__proto__ || Object.getPrototypeOf(Mask)).call.apply(_ref, [this].concat(args))), _this), _this.dismiss = function (event) {
-      if (typeof _this.props.onDismiss === 'function') {
-        event.preventDefault();
-        _this.props.onDismiss(event);
-      }
-    }, _this.handleKeyUp = function (event) {
-      if (event.keyCode === _keycode2.default.codes.esc && !event.defaultPrevented) {
-        _this.dismiss(event);
-      }
-    }, _this.handleClick = function (event) {
-      if (!(0, _contains2.default)(_this._content, event.target)) {
-        _this.dismiss(event);
-      }
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(Mask, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      if (this.props.fullScreen) {
-        _noScroll2.default.on();
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      if (this.props.fullScreen) {
-        _noScroll2.default.off();
-      }
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this,
-          _classnames;
-
-      var content = (0, _ensureSingleChild2.default)(this.props.children, {
-        ref: function ref(el) {
-          _this2._content = el;
-        }
-      });
-
-      var classes = (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, styles.root, true), _defineProperty(_classnames, styles[this.props.placement], true), _defineProperty(_classnames, styles.fullScreen, this.props.fullScreen), _classnames));
-
-      var props = (0, _passthroughProps.omitProps)(this.props, Mask.propTypes);
-
-      if (typeof this.props.onDismiss === 'function' || typeof this.props.onClick === 'function' || typeof this.props.onKeyUp === 'function') {
-        props = Object.assign({}, props, {
-          onClick: (0, _createChainedFunction2.default)(this.handleClick, this.props.onClick),
-          onKeyUp: (0, _createChainedFunction2.default)(this.handleKeyUp, this.props.onKeyUp),
-          tabIndex: -1
-        });
-      }
-
-      return _react2.default.createElement(
-        'span',
-        Object.assign({}, props, { className: classes }),
-        content
-      );
-    }
-  }]);
-
-  Mask.displayName = 'Mask'
-  ;
-  return Mask;
-}(_react.Component), _class2.propTypes = {
-  onDismiss: _propTypes2.default.func,
-  placement: _propTypes2.default.oneOf(['top', 'center', 'bottom']),
-  fullScreen: _propTypes2.default.bool,
-  children: _propTypes2.default.node,
-  onClick: _propTypes2.default.func,
-  onKeyUp: _propTypes2.default.func
-}, _class2.defaultProps = {
-  children: undefined,
-  onClick: undefined,
-  onKeyUp: undefined,
-  onDismiss: undefined,
-  placement: 'center',
-  fullScreen: false
-}, _temp2)) || _class);
-exports.default = Mask;
-},{"react":8,"prop-types":229,"keycode":545,"classnames":325,"no-scroll":734,"@instructure/ui-themeable":305,"@instructure/ui-utils/lib/createChainedFunction":524,"@instructure/ui-utils/lib/react/ensureSingleChild":691,"@instructure/ui-utils/lib/dom/contains":614,"@instructure/ui-utils/lib/react/passthroughProps":519,"./theme":732}],649:[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function (_ref) {
-  var colors = _ref.colors,
-      borders = _ref.borders,
-      breakpoints = _ref.breakpoints,
-      shadows = _ref.shadows,
-      stacking = _ref.stacking;
-
-  return {
-    background: colors.white,
-    borderColor: colors.tiara,
-    borderRadius: borders.radiusMedium,
-
-    autoMinWidth: breakpoints.xSmall,
-    smallMaxWidth: breakpoints.small,
-    mediumMaxWidth: breakpoints.medium,
-    largeMaxWidth: breakpoints.large,
-
-    boxShadow: shadows.depth3,
-
-    zIndex: stacking.topmost
-  };
-};
-},{}],558:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _dec, _class, _class2, _temp;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _classnames2 = require('classnames');
-
-var _classnames3 = _interopRequireDefault(_classnames2);
-
-var _bowser = require('bowser');
-
-var _bowser2 = _interopRequireDefault(_bowser);
-
-var _uiThemeable = require('@instructure/ui-themeable');
-
-var _uiThemeable2 = _interopRequireDefault(_uiThemeable);
-
-var _passthroughProps = require('@instructure/ui-utils/lib/react/passthroughProps');
-
-var _Mask = require('../../Mask');
-
-var _Mask2 = _interopRequireDefault(_Mask);
-
-var _theme = require('./theme');
-
-var _theme2 = _interopRequireDefault(_theme);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var styles = {
-  template: function template(theme) {
-    var tmpl = function tmpl() {
-      return '/*  imported from styles.css  */\n\n._2jZzLHW {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  box-sizing: border-box;\n  background: ' + theme.background + ';\n  box-shadow: ' + theme.boxShadow + ';\n  border: 1px solid ' + theme.borderColor + ';\n  border-radius: ' + theme.borderRadius + ';\n  z-index: ' + theme.zIndex + ';\n}\n\n  ._2jZzLHW._20ow8Oz {\n    display: block;\n    overflow: auto;\n  }\n\n._22Dq6g6,\n._30XFsGm,\n._3z9JqbI,\n.k49EVPr {\n  max-width: 95vw;\n  max-height: 95vh;\n}\n\n._22Dq6g6._20ow8Oz, ._30XFsGm._20ow8Oz, ._3z9JqbI._20ow8Oz, .k49EVPr._20ow8Oz {\n    max-height: none;\n  }\n\n._22Dq6g6 {\n  flex: 0 1 auto;\n  min-width: ' + theme.autoMinWidth + ';\n}\n\n._30XFsGm {\n  flex: 0 1 ' + theme.smallMaxWidth + ';\n}\n\n._3z9JqbI {\n  flex: 0 1 ' + theme.mediumMaxWidth + ';\n}\n\n.k49EVPr {\n  flex: 0 1 ' + theme.largeMaxWidth + ';\n}\n\n._3HDtkoD {\n  flex: 1;\n  width: 100%;\n  height: 100%;\n  box-shadow: none;\n  border: none;\n}\n';
-    };
-
-    return tmpl.call(theme, theme);
-  },
-  'content': '_2jZzLHW',
-  'ie11': '_20ow8Oz',
-  'auto': '_22Dq6g6',
-  'small': '_30XFsGm',
-  'medium': '_3z9JqbI',
-  'large': 'k49EVPr',
-  'fullscreen': '_3HDtkoD'
-};
-
-
-/**
----
-parent: Modal
----
-**/
-var ModalContent = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _dec(_class = (_temp = _class2 = function (_Component) {
-  _inherits(ModalContent, _Component);
-
-  function ModalContent() {
-    _classCallCheck(this, ModalContent);
-
-    return _possibleConstructorReturn(this, (ModalContent.__proto__ || Object.getPrototypeOf(ModalContent)).apply(this, arguments));
-  }
-
-  _createClass(ModalContent, [{
-    key: 'render',
-    value: function render() {
-      var _classnames;
-
-      var _props = this.props,
-          size = _props.size,
-          children = _props.children,
-          shouldCloseOnOverlayClick = _props.shouldCloseOnOverlayClick,
-          onDismiss = _props.onDismiss,
-          props = _objectWithoutProperties(_props, ['size', 'children', 'shouldCloseOnOverlayClick', 'onDismiss']);
-
-      var ie11 = _bowser2.default.msie && _bowser2.default.version > 10;
-
-      return _react2.default.createElement(
-        _Mask2.default,
-        {
-          onDismiss: shouldCloseOnOverlayClick ? onDismiss : undefined,
-          placement: ie11 ? 'top' : 'center',
-          fullScreen: true
-        },
-        _react2.default.createElement(
-          'span',
-          Object.assign({}, (0, _passthroughProps.omitProps)(this.props, ModalContent.propTypes), {
-            className: (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, styles.content, true), _defineProperty(_classnames, styles[size], true), _defineProperty(_classnames, this.props.className, this.props.className), _defineProperty(_classnames, styles.ie11, ie11), _classnames)),
-            ref: this.props.contentRef
-          }),
-          this.props.children
-        )
-      );
-    }
-  }]);
-
-  ModalContent.displayName = 'ModalContent'
-  ;
-  return ModalContent;
-}(_react.Component), _class2.propTypes = {
-  children: _propTypes2.default.node, // eslint-disable-line react/require-default-props
-  size: _propTypes2.default.oneOf(['auto', 'small', 'medium', 'large', 'fullscreen']),
-  contentRef: _propTypes2.default.func,
-  className: _propTypes2.default.string,
-  shouldCloseOnOverlayClick: _propTypes2.default.bool,
-  onDismiss: _propTypes2.default.func
-}, _class2.defaultProps = {
-  contentRef: function contentRef(el) {},
-  size: 'auto',
-  children: undefined,
-  className: undefined,
-  shouldCloseOnOverlayClick: true,
-  onDismiss: function onDismiss(event) {}
+  children: _propTypes2.default.node
 }, _temp)) || _class);
-exports.default = ModalContent;
-},{"react":8,"prop-types":229,"classnames":325,"bowser":640,"@instructure/ui-themeable":305,"@instructure/ui-utils/lib/react/passthroughProps":519,"../../Mask":651,"./theme":649}],727:[function(require,module,exports) {
+exports.default = ModalFooter;
+},{"react":8,"prop-types":226,"@instructure/ui-themeable":319,"./theme":695}],748:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }(); /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * The MIT License (MIT)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * Copyright (c) 2015 - present Instructure, Inc.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * Permission is hereby granted, free of charge, to any person obtaining a copy
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * of this software and associated documentation files (the "Software"), to deal
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * in the Software without restriction, including without limitation the rights
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * copies of the Software, and to permit persons to whom the Software is
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * furnished to do so, subject to the following conditions:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * The above copyright notice and this permission notice shall be included in all
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * copies or substantial portions of the Software.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * SOFTWARE.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          */
+
+exports.default = ms;
+
+var _parseUnit3 = require('./parseUnit');
+
+var _parseUnit4 = _interopRequireDefault(_parseUnit3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * ---
+ * category: utilities
+ * ---
+ * Converts a unit value time combination (s, ms) to a number representing ms
+ *
+ * @module ms
+ *
+ * Example inputs:
+ *  - '100s'
+ *  - '20ms'
+ *
+ * @param {String} val
+ * @returns {Number} Returns numerical representation of milliseconds
+*/
+function ms(val) {
+  if (!val || typeof val === 'number') {
+    return val;
+  }
+
+  var _parseUnit = (0, _parseUnit4.default)(val),
+      _parseUnit2 = _slicedToArray(_parseUnit, 2),
+      num = _parseUnit2[0],
+      unit = _parseUnit2[1];
+
+  if (unit === 'ms') {
+    return num;
+  } else if (unit === 's') {
+    return num * 1000;
+  } else {
+    return num;
+  }
+}
+},{"./parseUnit":558}],826:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -860,6 +550,30 @@ var classListShimmed = false;
  * @param {ReactComponent|DomNode} element - component or DOM node
  * @return {Object} object containing classList functions 'contains', 'add', and 'remove'
  */
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2015 - present Instructure, Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
 function getClassList(element) {
   var node = (0, _findDOMNode2.default)(element);
 
@@ -907,7 +621,7 @@ function shimClassListForIE() {
     classListShimmed = true;
   }
 }
-},{"./findDOMNode":523}],613:[function(require,module,exports) {
+},{"./findDOMNode":482}],742:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -917,7 +631,29 @@ exports.default = exports.EXITING = exports.ENTERED = exports.ENTERING = exports
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _class, _temp, _initialiseProps;
+var _class, _temp, _initialiseProps; /*
+                                      * The MIT License (MIT)
+                                      *
+                                      * Copyright (c) 2015 - present Instructure, Inc.
+                                      *
+                                      * Permission is hereby granted, free of charge, to any person obtaining a copy
+                                      * of this software and associated documentation files (the "Software"), to deal
+                                      * in the Software without restriction, including without limitation the rights
+                                      * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                                      * copies of the Software, and to permit persons to whom the Software is
+                                      * furnished to do so, subject to the following conditions:
+                                      *
+                                      * The above copyright notice and this permission notice shall be included in all
+                                      * copies or substantial portions of the Software.
+                                      *
+                                      * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                                      * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                                      * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                                      * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                                      * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                                      * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                                      * SOFTWARE.
+                                      */
 
 var _react = require('react');
 
@@ -956,7 +692,6 @@ var EXITING = exports.EXITING = 4;
 var Transition = (_temp = _class = function (_React$Component) {
   _inherits(Transition, _React$Component);
 
-  /* eslint-disable react/require-default-props */
   function Transition(props, context) {
     _classCallCheck(this, Transition);
 
@@ -973,7 +708,6 @@ var Transition = (_temp = _class = function (_React$Component) {
     };
     return _this;
   }
-  /* eslint-enable react/require-default-props */
 
   _createClass(Transition, [{
     key: 'componentDidMount',
@@ -1252,7 +986,8 @@ var Transition = (_temp = _class = function (_React$Component) {
 
   children: _propTypes2.default.node,
 
-  className: _propTypes2.default.string }, _class.defaultProps = {
+  className: _propTypes2.default.string
+}, _class.defaultProps = {
   in: false,
   component: 'div',
   unmountOnExit: false,
@@ -1303,7 +1038,21 @@ var Transition = (_temp = _class = function (_React$Component) {
   };
 }, _temp);
 exports.default = Transition;
-},{"react":8,"prop-types":229,"@instructure/ui-utils/lib/dom/getClassList":727,"@instructure/ui-utils/lib/react/ensureSingleChild":691}],550:[function(require,module,exports) {
+},{"react":8,"prop-types":226,"@instructure/ui-utils/lib/dom/getClassList":826,"@instructure/ui-utils/lib/react/ensureSingleChild":570}],741:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (_ref) {
+  var transitions = _ref.transitions;
+
+  return {
+    duration: transitions.duration
+  };
+};
+},{}],646:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1313,7 +1062,29 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dec, _class, _class2, _temp;
+var _dec, _class, _class2, _temp; /*
+                                   * The MIT License (MIT)
+                                   *
+                                   * Copyright (c) 2015 - present Instructure, Inc.
+                                   *
+                                   * Permission is hereby granted, free of charge, to any person obtaining a copy
+                                   * of this software and associated documentation files (the "Software"), to deal
+                                   * in the Software without restriction, including without limitation the rights
+                                   * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                                   * copies of the Software, and to permit persons to whom the Software is
+                                   * furnished to do so, subject to the following conditions:
+                                   *
+                                   * The above copyright notice and this permission notice shall be included in all
+                                   * copies or substantial portions of the Software.
+                                   *
+                                   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                                   * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                                   * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                                   * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                                   * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                                   * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                                   * SOFTWARE.
+                                   */
 
 var _react = require('react');
 
@@ -1327,9 +1098,17 @@ var _uiThemeable = require('@instructure/ui-themeable');
 
 var _uiThemeable2 = _interopRequireDefault(_uiThemeable);
 
+var _ms = require('@instructure/ui-utils/lib/ms');
+
+var _ms2 = _interopRequireDefault(_ms);
+
 var _BaseTransition = require('./BaseTransition');
 
 var _BaseTransition2 = _interopRequireDefault(_BaseTransition);
+
+var _theme = require('./theme');
+
+var _theme2 = _interopRequireDefault(_theme);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1344,7 +1123,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var styles = {
   template: function template(theme) {
     var tmpl = function tmpl() {
-      return '/*  imported from styles.css  */\n\n._1-1d3yZ {\n  /* trigger hardware acceleration for smoother animation */\n  transform: translate3d(0, 0, 0);\n}\n\n/* Animation type: fade */\n\n._1IHSq_f {\n  transition: opacity 300ms, transform 300ms ease-out;\n}\n\n._2kCpSSh,\n.a-zPWi- {\n  opacity: 0.01;\n}\n\n.tOJX2IO,\n._1rROD17 {\n  opacity: 1;\n}\n\n/* Animation type: scale */\n\n._3HOWsgp {\n  transition:\n    opacity 300ms,\n    transform 300ms cubic-bezier(0.175, 0.885, 0.320, 1.275);\n}\n\n._3Jge7Ga,\n._2LN7qdw {\n  transform: scale(0.01) translate3d(0, 0, 0);\n  opacity: 0.01;\n}\n\n._1SJZbsM,\n._1uPVe2I {\n  transform: scale(1) translate3d(0, 0, 0);\n  opacity: 1;\n}\n\n/* Animation type: slide */\n\n/*\n  Note: the transitions for slide are:\n  from EXITED to ENTERING and from ENTERED to EXITING.\n\n  ENTERED and EXITED will be set directly when enter or exit transitions are disabled and they reset the \'stage\'\n  for the next transition.\n\n  The base transition class enables/disables transitions from one state to another, so transitions should be\n  set there.\n*/\n\n._1VTSTxL,\n.pQaqUQx,\n.cOmSmIQ,\n._1XMg-9I {\n  transition: opacity 300ms, transform 300ms;\n}\n\n._3O7Eui2,\n._1Xe2ZQh,\n.yQGc2tF,\n._1jAG_ri,\n._1QrfKhU,\n._3FqEZck,\n._3l2vVtB,\n._2fh4svf {\n  opacity: 1;\n  transform: translate3d(0, 0, 0);\n}\n\n._1k5s7s1,\n._2_wMRZP,\n._3UwRVZS,\n._3I-1oXs,\n._3u0FhZN,\n._1MjJcAy,\n._2yg-gPj,\n._378W8OY {\n  opacity: 0.01;\n}\n\n._1k5s7s1 {\n  transform: translate3d(-50%, 0, 0);\n}\n\n._3u0FhZN {\n  transform: translate3d(50%, 0, 0);\n}\n\n._2_wMRZP {\n  transform: translate3d(50%, 0, 0);\n}\n\n._1MjJcAy {\n  transform: translate3d(-50%, 0, 0);\n}\n\n._3UwRVZS {\n  transform: translate3d(0, -50%, 0);\n}\n\n._2yg-gPj {\n  transform: translate3d(0, 50%, 0);\n}\n\n._3I-1oXs {\n  transform: translate3d(0, 50%, 0);\n}\n\n._378W8OY {\n  transform: translate3d(0, -50%, 0);\n}\n\n';
+      return '/*  imported from styles.css  */\n\n._1-1d3yZ {\n  /* trigger hardware acceleration for smoother animation */\n  transform: translate3d(0, 0, 0);\n}\n\n/* Animation type: fade */\n\n._1IHSq_f {\n  transition: opacity ' + theme.duration + ', transform ' + theme.duration + ' ease-out;\n}\n\n._2kCpSSh,\n.a-zPWi- {\n  opacity: 0.01;\n}\n\n.tOJX2IO,\n._1rROD17 {\n  opacity: 1;\n}\n\n/* Animation type: scale */\n\n._3HOWsgp {\n  transition:\n    opacity ' + theme.duration + ',\n    transform ' + theme.duration + ' cubic-bezier(0.175, 0.885, 0.32, 1.275);\n}\n\n._3Jge7Ga,\n._2LN7qdw {\n  transform: scale(0.01) translate3d(0, 0, 0);\n  opacity: 0.01;\n}\n\n._1SJZbsM,\n._1uPVe2I {\n  transform: scale(1) translate3d(0, 0, 0);\n  opacity: 1;\n}\n\n/* Animation type: slide */\n\n/*\n  Note: the transitions for slide are:\n  from EXITED to ENTERING and from ENTERED to EXITING.\n\n  ENTERED and EXITED will be set directly when enter or exit transitions are disabled and they reset the \'stage\'\n  for the next transition.\n\n  The base transition class enables/disables transitions from one state to another, so transitions should be\n  set there.\n*/\n\n._1VTSTxL,\n.pQaqUQx,\n.cOmSmIQ,\n._1XMg-9I {\n  transition: opacity ' + theme.duration + ', transform ' + theme.duration + ';\n}\n\n._3O7Eui2,\n._1Xe2ZQh,\n.yQGc2tF,\n._1jAG_ri,\n._1QrfKhU,\n._3FqEZck,\n._3l2vVtB,\n._2fh4svf {\n  opacity: 1;\n  transform: translate3d(0, 0, 0);\n}\n\n._1k5s7s1,\n._2_wMRZP,\n._3UwRVZS,\n._3I-1oXs,\n._3u0FhZN,\n._1MjJcAy,\n._2yg-gPj,\n._378W8OY {\n  opacity: 0.01;\n}\n\n._1k5s7s1 {\n  transform: translate3d(-50%, 0, 0);\n}\n\n._3u0FhZN {\n  transform: translate3d(50%, 0, 0);\n}\n\n._2_wMRZP {\n  transform: translate3d(50%, 0, 0);\n}\n\n._1MjJcAy {\n  transform: translate3d(-50%, 0, 0);\n}\n\n._3UwRVZS {\n  transform: translate3d(0, -50%, 0);\n}\n\n._2yg-gPj {\n  transform: translate3d(0, 50%, 0);\n}\n\n._3I-1oXs {\n  transform: translate3d(0, 50%, 0);\n}\n\n._378W8OY {\n  transform: translate3d(0, -50%, 0);\n}\n';
     };
 
     return tmpl.call(theme, theme);
@@ -1382,13 +1161,13 @@ var styles = {
   'slide-down--exited': '_378W8OY'
 };
 
+
 /**
 ---
 category: components/utilities
 ---
 **/
-
-var Transition = (_dec = (0, _uiThemeable2.default)(null, styles), _dec(_class = (_temp = _class2 = function (_Component) {
+var Transition = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _dec(_class = (_temp = _class2 = function (_Component) {
   _inherits(Transition, _Component);
 
   function Transition() {
@@ -1399,21 +1178,19 @@ var Transition = (_dec = (0, _uiThemeable2.default)(null, styles), _dec(_class =
 
   _createClass(Transition, [{
     key: 'render',
-    // needs to match the times in the CSS
-
-    /* eslint-enable react/require-default-props */
-
     value: function render() {
       var _props = this.props,
           type = _props.type,
           children = _props.children,
           props = _objectWithoutProperties(_props, ['type', 'children']);
 
+      var duration = (0, _ms2.default)(this.theme.duration);
+
       return type ? _react2.default.createElement(
         _BaseTransition2.default,
         Object.assign({}, props, {
-          enterDelay: Transition.duration,
-          exitDelay: Transition.duration,
+          enterDelay: duration,
+          exitDelay: duration,
           transitionClassName: styles[type],
           exitedClassName: styles[type + '--exited'],
           exitingClassName: styles[type + '--exiting'],
@@ -1423,8 +1200,6 @@ var Transition = (_dec = (0, _uiThemeable2.default)(null, styles), _dec(_class =
         children
       ) : children;
     }
-    /* eslint-disable react/require-default-props */
-
   }]);
 
   Transition.displayName = 'Transition'
@@ -1480,7 +1255,8 @@ var Transition = (_dec = (0, _uiThemeable2.default)(null, styles), _dec(_class =
   /**
    * Callback fired after the "exited" classes are applied
    */
-  onExited: _propTypes2.default.func }, _class2.defaultProps = {
+  onExited: _propTypes2.default.func
+}, _class2.defaultProps = {
   type: 'fade',
   in: false,
   unmountOnExit: false,
@@ -1494,9 +1270,328 @@ var Transition = (_dec = (0, _uiThemeable2.default)(null, styles), _dec(_class =
   onExit: function onExit() {},
   onExiting: function onExiting() {},
   onExited: function onExited() {}
-}, _class2.duration = 300, _temp)) || _class);
+}, _temp)) || _class);
 exports.default = Transition;
-},{"react":8,"prop-types":229,"@instructure/ui-themeable":305,"./BaseTransition":613}],455:[function(require,module,exports) {
+},{"react":8,"prop-types":226,"@instructure/ui-themeable":319,"@instructure/ui-utils/lib/ms":748,"./BaseTransition":742,"./theme":741}],712:[function(require,module,exports) {
+(function(root) {
+  var isOn = false;
+  var scrollbarSize;
+  var scrollTop;
+
+  function getScrollbarSize() {
+    if (typeof scrollbarSize !== 'undefined') return scrollbarSize;
+
+    var doc = document.documentElement;
+    var dummyScroller = document.createElement('div');
+    dummyScroller.setAttribute('style', 'width:99px;height:99px;' + 'position:absolute;top:-9999px;overflow:scroll;');
+    doc.appendChild(dummyScroller);
+    scrollbarSize = dummyScroller.offsetWidth - dummyScroller.clientWidth;
+    doc.removeChild(dummyScroller);
+    return scrollbarSize;
+  }
+
+  function hasScrollbar() {
+    return document.documentElement.scrollHeight > window.innerHeight;
+  }
+
+  function on(options) {
+    if (typeof document === 'undefined') return;
+    var doc = document.documentElement;
+    scrollTop = window.pageYOffset;
+    if (hasScrollbar()) {
+      doc.style.width = 'calc(100% - '+ getScrollbarSize() +'px)';
+    } else {
+      doc.style.width = '100%';
+    }
+    doc.style.position = 'fixed';
+    doc.style.top = -scrollTop + 'px';
+    doc.style.overflow = 'hidden';
+    isOn = true;
+  }
+
+  function off() {
+    if (typeof document === 'undefined') return;
+    var doc = document.documentElement;
+    doc.style.width = '';
+    doc.style.position = '';
+    doc.style.top = '';
+    doc.style.overflow = '';
+    window.scroll(0, scrollTop);
+    isOn = false;
+  }
+
+  function toggle() {
+    if (isOn) {
+      off();
+      return;
+    }
+    on();
+  }
+
+  var noScroll = {
+    on: on,
+    off: off,
+    toggle: toggle,
+  };
+
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = noScroll;
+  } else {
+    root.noScroll = noScroll;
+  }
+})(this);
+
+},{}],684:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = generator;
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2015 - present Instructure, Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+function generator(_ref) {
+  var colors = _ref.colors,
+      borders = _ref.borders,
+      stacking = _ref.stacking;
+
+  return {
+    zIndex: stacking.topmost,
+    background: 'rgba(255, 255, 255, 0.75)',
+    borderColor: 'transparent',
+    focusBorderColor: colors.brand,
+    borderRadius: borders.radiusMedium,
+    borderWidth: borders.widthSmall
+  };
+}
+
+generator.canvas = function (variables) {
+  return {
+    focusBorderColor: variables['ic-brand-primary']
+  };
+};
+},{}],605:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _dec2, _class, _class2, _temp; /*
+                                          * The MIT License (MIT)
+                                          *
+                                          * Copyright (c) 2015 - present Instructure, Inc.
+                                          *
+                                          * Permission is hereby granted, free of charge, to any person obtaining a copy
+                                          * of this software and associated documentation files (the "Software"), to deal
+                                          * in the Software without restriction, including without limitation the rights
+                                          * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                                          * copies of the Software, and to permit persons to whom the Software is
+                                          * furnished to do so, subject to the following conditions:
+                                          *
+                                          * The above copyright notice and this permission notice shall be included in all
+                                          * copies or substantial portions of the Software.
+                                          *
+                                          * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                                          * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                                          * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                                          * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                                          * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                                          * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                                          * SOFTWARE.
+                                          */
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames2 = require('classnames');
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _noScroll = require('no-scroll');
+
+var _noScroll2 = _interopRequireDefault(_noScroll);
+
+var _uiThemeable = require('@instructure/ui-themeable');
+
+var _uiThemeable2 = _interopRequireDefault(_uiThemeable);
+
+var _ensureSingleChild = require('@instructure/ui-utils/lib/react/ensureSingleChild');
+
+var _ensureSingleChild2 = _interopRequireDefault(_ensureSingleChild);
+
+var _deprecated = require('@instructure/ui-utils/lib/react/deprecated');
+
+var _deprecated2 = _interopRequireDefault(_deprecated);
+
+var _passthroughProps = require('@instructure/ui-utils/lib/react/passthroughProps');
+
+var _theme = require('./theme');
+
+var _theme2 = _interopRequireDefault(_theme);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var styles = {
+  template: function template(theme) {
+    var tmpl = function tmpl() {
+      return '/*  imported from styles.css  */\n\n._1fwijBj {\n  box-sizing: border-box;\n  background: ' + theme.background + ';\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: auto;\n  display: flex;\n  justify-content: center;\n  outline: none;\n  border: ' + theme.borderWidth + ' solid ' + theme.borderColor + ';\n  border-radius: ' + theme.borderRadius + ';\n\n  z-index: ' + theme.zIndex + ';\n}\n\n  ._1fwijBj:focus {\n    border-color: ' + theme.focusBorderColor + ';\n  }\n\n._3FAivnT {\n  position: fixed;\n}\n\n.YlfH74y {\n  align-items: flex-start;\n}\n\n.KNI-Mem {\n  align-items: center;\n}\n\n.KIHI1rO {\n  align-items: flex-end;\n}\n';
+    };
+
+    return tmpl.call(theme, theme);
+  },
+  'root': '_1fwijBj',
+  'fullscreen': '_3FAivnT',
+  'top': 'YlfH74y',
+  'center': 'KNI-Mem',
+  'bottom': 'KIHI1rO'
+};
+
+
+/**
+---
+category: components/utilities
+---
+**/
+var Mask = (_dec = (0, _deprecated2.default)('5.0.0', {
+  fullScreen: 'fullscreen'
+}), _dec2 = (0, _uiThemeable2.default)(_theme2.default, styles), _dec(_class = _dec2(_class = (_temp = _class2 = function (_Component) {
+  _inherits(Mask, _Component);
+
+  function Mask() {
+    _classCallCheck(this, Mask);
+
+    return _possibleConstructorReturn(this, (Mask.__proto__ || Object.getPrototypeOf(Mask)).apply(this, arguments));
+  }
+
+  _createClass(Mask, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (this.props.fullscreen || this.props.fullScreen) {
+        // eslint-disable-line react/prop-types
+        _noScroll2.default.on();
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.props.fullscreen || this.props.fullScreen) {
+        // eslint-disable-line react/prop-types
+        _noScroll2.default.off();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this,
+          _classnames;
+
+      var content = (0, _ensureSingleChild2.default)(this.props.children, {
+        ref: function ref(el) {
+          _this2._content = el;
+        }
+      });
+
+      var classes = (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, styles.root, true), _defineProperty(_classnames, styles[this.props.placement], true), _defineProperty(_classnames, styles.fullscreen, this.props.fullscreen || this.props.fullScreen), _classnames));
+
+      var props = (0, _passthroughProps.omitProps)(this.props, Mask.propTypes);
+
+      if (typeof this.props.onClick === 'function') {
+        props = Object.assign({}, props, {
+          onClick: this.props.onClick,
+          tabIndex: -1
+        });
+      }
+
+      return _react2.default.createElement(
+        'span',
+        Object.assign({}, props, { className: classes }),
+        content
+      );
+    }
+  }]);
+
+  Mask.displayName = 'Mask'
+  ;
+  return Mask;
+}(_react.Component), _class2.propTypes = {
+  onDismiss: _propTypes2.default.func,
+  placement: _propTypes2.default.oneOf(['top', 'center', 'bottom']),
+  fullscreen: _propTypes2.default.bool,
+  children: _propTypes2.default.node,
+  onClick: _propTypes2.default.func
+}, _class2.defaultProps = {
+  placement: 'center',
+  fullscreen: false
+}, _temp)) || _class) || _class);
+exports.default = Mask;
+},{"react":8,"prop-types":226,"classnames":340,"no-scroll":712,"@instructure/ui-themeable":319,"@instructure/ui-utils/lib/react/ensureSingleChild":570,"@instructure/ui-utils/lib/react/deprecated":479,"@instructure/ui-utils/lib/react/passthroughProps":478,"./theme":684}],498:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (_ref) {
+  var colors = _ref.colors,
+      borders = _ref.borders,
+      breakpoints = _ref.breakpoints,
+      shadows = _ref.shadows,
+      stacking = _ref.stacking;
+
+  return {
+    background: colors.white,
+    borderColor: colors.tiara,
+    borderRadius: borders.radiusMedium,
+
+    autoMinWidth: breakpoints.xSmall,
+    smallMaxWidth: breakpoints.small,
+    mediumMaxWidth: breakpoints.medium,
+    largeMaxWidth: breakpoints.large,
+
+    boxShadow: shadows.depth3,
+
+    zIndex: stacking.topmost
+  };
+};
+},{}],391:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1506,7 +1601,29 @@ exports.ModalFooter = exports.ModalBody = exports.ModalHeader = exports.default 
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dec, _class, _class2, _temp;
+var _dec, _dec2, _dec3, _class, _class2, _temp; /*
+                                                 * The MIT License (MIT)
+                                                 *
+                                                 * Copyright (c) 2015 - present Instructure, Inc.
+                                                 *
+                                                 * Permission is hereby granted, free of charge, to any person obtaining a copy
+                                                 * of this software and associated documentation files (the "Software"), to deal
+                                                 * in the Software without restriction, including without limitation the rights
+                                                 * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                                                 * copies of the Software, and to permit persons to whom the Software is
+                                                 * furnished to do so, subject to the following conditions:
+                                                 *
+                                                 * The above copyright notice and this permission notice shall be included in all
+                                                 * copies or substantial portions of the Software.
+                                                 *
+                                                 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                                                 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                                                 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                                                 * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                                                 * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                                                 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                                                 * SOFTWARE.
+                                                 */
 
 var _ModalHeader = require('./ModalHeader');
 
@@ -1543,6 +1660,18 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _classnames2 = require('classnames');
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _Dialog = require('@instructure/ui-a11y/lib/components/Dialog');
+
+var _Dialog2 = _interopRequireDefault(_Dialog);
+
+var _CloseButton = require('@instructure/ui-buttons/lib/components/CloseButton');
+
+var _CloseButton2 = _interopRequireDefault(_CloseButton);
+
 var _CustomPropTypes = require('@instructure/ui-utils/lib/react/CustomPropTypes');
 
 var _CustomPropTypes2 = _interopRequireDefault(_CustomPropTypes);
@@ -1557,9 +1686,29 @@ var _deprecated = require('@instructure/ui-utils/lib/react/deprecated');
 
 var _deprecated2 = _interopRequireDefault(_deprecated);
 
-var _ModalContent = require('./ModalContent');
+var _Transition = require('@instructure/ui-motion/lib/components/Transition');
 
-var _ModalContent2 = _interopRequireDefault(_ModalContent);
+var _Transition2 = _interopRequireDefault(_Transition);
+
+var _Portal = require('@instructure/ui-portal/lib/components/Portal');
+
+var _Portal2 = _interopRequireDefault(_Portal);
+
+var _uiThemeable = require('@instructure/ui-themeable');
+
+var _uiThemeable2 = _interopRequireDefault(_uiThemeable);
+
+var _Browser = require('@instructure/ui-utils/lib/Browser');
+
+var _Browser2 = _interopRequireDefault(_Browser);
+
+var _Mask = require('../Mask');
+
+var _Mask2 = _interopRequireDefault(_Mask);
+
+var _theme = require('./theme');
+
+var _theme2 = _interopRequireDefault(_theme);
 
 var _ModalHeader2 = _interopRequireDefault(_ModalHeader);
 
@@ -1567,23 +1716,9 @@ var _ModalBody2 = _interopRequireDefault(_ModalBody);
 
 var _ModalFooter2 = _interopRequireDefault(_ModalFooter);
 
-var _Portal = require('../Portal');
-
-var _Portal2 = _interopRequireDefault(_Portal);
-
-var _Dialog = require('../Dialog');
-
-var _Dialog2 = _interopRequireDefault(_Dialog);
-
-var _Transition = require('../Transition');
-
-var _Transition2 = _interopRequireDefault(_Transition);
-
-var _CloseButton = require('../CloseButton');
-
-var _CloseButton2 = _interopRequireDefault(_CloseButton);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -1592,6 +1727,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var styles = {
+  template: function template(theme) {
+    var tmpl = function tmpl() {
+      return '/*  imported from styles.css  */\n\n._3qdrn-i {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  box-sizing: border-box;\n  background: ' + theme.background + ';\n  box-shadow: ' + theme.boxShadow + ';\n  border: 0.0625rem solid ' + theme.borderColor + ';\n  border-radius: ' + theme.borderRadius + ';\n  z-index: ' + theme.zIndex + ';\n}\n\n  ._3qdrn-i._3B-nQFA {\n    display: block;\n    overflow: auto;\n  }\n\n._1AmzsfS,\n._3-Aa5yS,\n._287b-H6,\n._327Qp41 {\n  max-width: 95vw;\n  max-height: 95vh;\n}\n\n._1AmzsfS._3B-nQFA, ._3-Aa5yS._3B-nQFA, ._287b-H6._3B-nQFA, ._327Qp41._3B-nQFA {\n    max-height: none;\n  }\n\n._1AmzsfS {\n  flex: 0 1 auto;\n  min-width: ' + theme.autoMinWidth + ';\n}\n\n._3-Aa5yS {\n  flex: 0 1 ' + theme.smallMaxWidth + ';\n}\n\n._287b-H6 {\n  flex: 0 1 ' + theme.mediumMaxWidth + ';\n}\n\n._327Qp41 {\n  flex: 0 1 ' + theme.largeMaxWidth + ';\n}\n\n.Y3VOYml {\n  box-sizing: border-box;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: auto;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n}\n\n._2K4GvNd {\n  flex: 1;\n  width: 100%;\n  height: 100%;\n  box-shadow: none;\n  border: none;\n}\n';
+    };
+
+    return tmpl.call(theme, theme);
+  },
+  'content': '_3qdrn-i',
+  'ie11': '_3B-nQFA',
+  'auto': '_1AmzsfS',
+  'small': '_3-Aa5yS',
+  'medium': '_287b-H6',
+  'large': '_327Qp41',
+  'layout': 'Y3VOYml',
+  'fullscreen': '_2K4GvNd'
+};
+
 
 /**
 ---
@@ -1607,7 +1761,12 @@ var Modal = (_dec = (0, _deprecated2.default)('3.0.0', {
   getDefaultFocusElement: 'defaultFocusElement',
   closeButtonVariant: true,
   padding: true
-}), _dec(_class = (_temp = _class2 = function (_Component) {
+}), _dec2 = (0, _deprecated2.default)('5.0.0', {
+  closeButtonLabel: true,
+  closeButtonRef: true,
+  applicationElement: true,
+  shouldCloseOnOverlayClick: 'shouldCloseOnDocumentClick'
+}), _dec3 = (0, _uiThemeable2.default)(_theme2.default, styles), _dec(_class = _dec2(_class = _dec3(_class = (_temp = _class2 = function (_Component) {
   _inherits(Modal, _Component);
 
   function Modal(props) {
@@ -1665,14 +1824,63 @@ var Modal = (_dec = (0, _deprecated2.default)('3.0.0', {
       });
     }
   }, {
-    key: 'render',
-    value: function render() {
+    key: 'renderCloseButton',
+    value: function renderCloseButton() {
       var _this2 = this;
 
+      return this.props.closeButtonLabel ? _react2.default.createElement(
+        _CloseButton2.default,
+        {
+          buttonRef: function buttonRef(el) {
+            _this2._closeButton = el;
+            if (typeof _this2.props.closeButtonRef === 'function') {
+              _this2.props.closeButtonRef(el);
+            }
+          },
+          placement: 'end',
+          offset: 'medium',
+          onClick: this.props.onDismiss
+        },
+        this.props.closeButtonLabel
+      ) : null;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _classnames,
+          _this3 = this;
+
       var _props = this.props,
+          shouldCloseOnDocumentClick = _props.shouldCloseOnDocumentClick,
+          shouldCloseOnOverlayClick = _props.shouldCloseOnOverlayClick,
           children = _props.children,
-          _contentRef = _props.contentRef,
-          props = _objectWithoutProperties(_props, ['children', 'contentRef']);
+          contentRef = _props.contentRef,
+          onDismiss = _props.onDismiss,
+          size = _props.size,
+          props = _objectWithoutProperties(_props, ['shouldCloseOnDocumentClick', 'shouldCloseOnOverlayClick', 'children', 'contentRef', 'onDismiss', 'size']);
+
+      var ie11 = _Browser2.default.msie && _Browser2.default.version > 10;
+
+      var dialog = _react2.default.createElement(
+        _Dialog2.default,
+        Object.assign({}, (0, _passthroughProps.omitProps)(props, Modal.propTypes), (0, _passthroughProps.pickProps)(this.props, _Dialog2.default.propTypes), {
+          label: this.props.label,
+          defaultFocusElement: this.defaultFocusElement,
+          shouldCloseOnDocumentClick: shouldCloseOnOverlayClick === undefined ? shouldCloseOnDocumentClick : shouldCloseOnOverlayClick,
+          shouldCloseOnEscape: true,
+          shouldContainFocus: true,
+          open: this.state.open,
+          className: (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, styles.content, true), _defineProperty(_classnames, styles[size], true), _defineProperty(_classnames, styles.ie11, ie11), _classnames)),
+          ref: function ref(el) {
+            _this3._content = el;
+            if (typeof contentRef === 'function') {
+              contentRef(el);
+            }
+          }
+        }),
+        this.renderCloseButton(),
+        children
+      );
 
       return _react2.default.createElement(
         _Portal2.default,
@@ -1689,44 +1897,17 @@ var Modal = (_dec = (0, _deprecated2.default)('3.0.0', {
             type: this.props.transition,
             onExited: (0, _createChainedFunction2.default)(this.handleTransitionExited, this.props.onExited)
           }),
-          _react2.default.createElement(
-            _Dialog2.default,
-            Object.assign({}, (0, _passthroughProps.pickProps)(this.props, _Dialog2.default.propTypes), {
-              defaultFocusElement: this.defaultFocusElement,
-              contentElement: function contentElement() {
-                return _this2._content;
-              },
-              shouldCloseOnDocumentClick: false,
-              shouldCloseOnEscape: true,
-              shouldContainFocus: true,
-              open: this.state.open,
-              role: 'region'
-            }),
-            _react2.default.createElement(
-              _ModalContent2.default,
-              Object.assign({}, (0, _passthroughProps.omitProps)(props, Modal.propTypes), (0, _passthroughProps.pickProps)(props, _ModalContent2.default.propTypes), {
-                contentRef: function contentRef(el) {
-                  _this2._content = el;
-                  if (typeof _contentRef === 'function') {
-                    _contentRef(el);
-                  }
-                }
-              }),
-              _react2.default.createElement(
-                _CloseButton2.default,
-                {
-                  buttonRef: function buttonRef(el) {
-                    _this2._closeButton = el;
-                    _this2.props.closeButtonRef(el);
-                  },
-                  placement: 'end',
-                  offset: 'medium',
-                  onClick: this.props.onDismiss
-                },
-                this.props.closeButtonLabel
-              ),
-              children
-            )
+          size === 'fullscreen' ? _react2.default.createElement(
+            'span',
+            { className: styles.layout },
+            dialog
+          ) : _react2.default.createElement(
+            _Mask2.default,
+            {
+              placement: ie11 ? 'top' : 'center',
+              fullscreen: true
+            },
+            dialog
           )
         )
       );
@@ -1734,10 +1915,10 @@ var Modal = (_dec = (0, _deprecated2.default)('3.0.0', {
   }, {
     key: 'defaultFocusElement',
     get: function get() {
-      var _this3 = this;
+      var _this4 = this;
 
       return this.props.defaultFocusElement || function () {
-        return _this3._closeButton;
+        return _this4._closeButton;
       };
     }
   }]);
@@ -1754,7 +1935,7 @@ var Modal = (_dec = (0, _deprecated2.default)('3.0.0', {
   /**
    * An accessible label for the close button. The close button won't display without this label.
    */
-  closeButtonLabel: _propTypes2.default.string.isRequired,
+  closeButtonLabel: _propTypes2.default.string,
 
   /**
    * The children to be rendered within the `<Modal />`
@@ -1775,10 +1956,6 @@ var Modal = (_dec = (0, _deprecated2.default)('3.0.0', {
    * An element or a function returning an element to focus by default
    */
   defaultFocusElement: _propTypes2.default.oneOfType([_propTypes2.default.element, _propTypes2.default.func]),
-  /**
-   * An element or a function returning an element to apply `aria-hidden` to
-   */
-  applicationElement: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.element), _propTypes2.default.element, _propTypes2.default.func]),
 
   /**
    * Whether focus should be returned to the trigger when the `<Modal/>` is closed
@@ -1786,9 +1963,9 @@ var Modal = (_dec = (0, _deprecated2.default)('3.0.0', {
   shouldReturnFocus: _propTypes2.default.bool,
 
   /**
-   * Whether the `<Modal/>` should request close when the overlay is clicked
+   * Whether the `<Modal/>` should request close when the document is clicked
    */
-  shouldCloseOnOverlayClick: _propTypes2.default.bool,
+  shouldCloseOnDocumentClick: _propTypes2.default.bool,
 
   /**
    * Callback fired when `<Modal />` content has been mounted in the DOM
@@ -1826,6 +2003,12 @@ var Modal = (_dec = (0, _deprecated2.default)('3.0.0', {
    * Insert the element at the 'top' of the mountNode or at the 'bottom'
    */
   insertAt: _propTypes2.default.oneOf(['bottom', 'top']),
+
+  /**
+   * An element, function returning an element, or array of elements that will not be hidden from
+   * the screen reader when the `<Modal />` is open
+   */
+  liveRegion: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.element), _propTypes2.default.element, _propTypes2.default.func]),
 
   transition: _Transition2.default.propTypes.type,
 
@@ -1868,16 +2051,15 @@ var Modal = (_dec = (0, _deprecated2.default)('3.0.0', {
   onExited: function onExited() {},
   mountNode: null,
   insertAt: 'bottom',
+  liveRegion: null,
   contentRef: function contentRef(el) {},
-  closeButtonRef: function closeButtonRef(el) {},
-  shouldCloseOnOverlayClick: true,
+  shouldCloseOnDocumentClick: true,
   shouldReturnFocus: true,
-  applicationElement: null,
   defaultFocusElement: null,
   children: null
-}, _temp)) || _class);
+}, _temp)) || _class) || _class) || _class);
 exports.default = Modal;
-},{"./ModalHeader":555,"./ModalBody":556,"./ModalFooter":557,"react":8,"prop-types":229,"@instructure/ui-utils/lib/react/CustomPropTypes":326,"@instructure/ui-utils/lib/react/passthroughProps":519,"@instructure/ui-utils/lib/createChainedFunction":524,"@instructure/ui-utils/lib/react/deprecated":525,"./ModalContent":558,"../Portal":547,"../Dialog":548,"../Transition":550,"../CloseButton":549}],298:[function(require,module,exports) {
+},{"./ModalHeader":612,"./ModalBody":614,"./ModalFooter":613,"react":8,"prop-types":226,"classnames":340,"@instructure/ui-a11y/lib/components/Dialog":636,"@instructure/ui-buttons/lib/components/CloseButton":635,"@instructure/ui-utils/lib/react/CustomPropTypes":476,"@instructure/ui-utils/lib/react/passthroughProps":478,"@instructure/ui-utils/lib/createChainedFunction":507,"@instructure/ui-utils/lib/react/deprecated":479,"@instructure/ui-motion/lib/components/Transition":646,"@instructure/ui-portal/lib/components/Portal":645,"@instructure/ui-themeable":319,"@instructure/ui-utils/lib/Browser":341,"../Mask":605,"./theme":498}],311:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1887,7 +2069,7 @@ exports.default = generator;
 function generator() {
   return {};
 }
-},{}],274:[function(require,module,exports) {
+},{}],289:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1900,27 +2082,27 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Heading = require("@instructure/ui-core/lib/components/Heading");
+var _Heading = require("@instructure/ui-elements/lib/components/Heading");
 
 var _Heading2 = _interopRequireDefault(_Heading);
 
-var _Text = require("@instructure/ui-core/lib/components/Text");
+var _Text = require("@instructure/ui-elements/lib/components/Text");
 
 var _Text2 = _interopRequireDefault(_Text);
 
-var _Container = require("@instructure/ui-core/lib/components/Container");
+var _Container = require("@instructure/ui-container/lib/components/Container");
 
 var _Container2 = _interopRequireDefault(_Container);
 
-var _List = require("@instructure/ui-core/lib/components/List");
+var _List = require("@instructure/ui-elements/lib/components/List");
 
 var _List2 = _interopRequireDefault(_List);
 
-var _Button = require("@instructure/ui-core/lib/components/Button");
+var _Button = require("@instructure/ui-buttons/lib/components/Button");
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _Modal = require("@instructure/ui-core/lib/components/Modal");
+var _Modal = require("@instructure/ui-overlays/lib/components/Modal");
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
@@ -2111,7 +2293,7 @@ var Home = function (_Component) {
 }(_react.Component);
 
 exports.default = (0, _uiThemeable2.default)(_theme2.default, styles)(Home);
-},{"react":8,"@instructure/ui-core/lib/components/Heading":450,"@instructure/ui-core/lib/components/Text":451,"@instructure/ui-core/lib/components/Container":454,"@instructure/ui-core/lib/components/List":452,"@instructure/ui-core/lib/components/Button":453,"@instructure/ui-core/lib/components/Modal":455,"../DeckPicker":275,"@instructure/ui-themeable":305,"./theme.js":298}],1105:[function(require,module,exports) {
+},{"react":8,"@instructure/ui-elements/lib/components/Heading":380,"@instructure/ui-elements/lib/components/Text":381,"@instructure/ui-container/lib/components/Container":389,"@instructure/ui-elements/lib/components/List":382,"@instructure/ui-buttons/lib/components/Button":390,"@instructure/ui-overlays/lib/components/Modal":391,"../DeckPicker":290,"@instructure/ui-themeable":319,"./theme.js":311}],928:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -2141,7 +2323,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60450' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60585' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -2280,5 +2462,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[1105,274])
+},{}]},{},[928,289])
 //# sourceMappingURL=/Home.a5e71350.map
