@@ -92,4 +92,5 @@ function createTag() {
   } else {
     newTag += "1";
   }
+  return newTag
 }
