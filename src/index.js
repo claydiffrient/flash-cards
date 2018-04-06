@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Spinner from "@instructure/ui-elements/lib/components/Spinner";
 import { Provider } from "react-redux";
 import Raven from "raven-js";
+import consolePlugin from "raven-js/plugins/console";
 
 import Loadable from "react-loadable";
 import createConfiguredStore from "./createConfiguredStore";
@@ -38,9 +39,15 @@ const initialState = {
   decks: []
 };
 
-Raven.config(
-  "https://ebc630d172414f37955311fbace952e3@sentry.io/885879"
-).install();
+Raven.config("https://ebc630d172414f37955311fbace952e3@sentry.io/885879", {
+  release:
+    process.env.RELEASE_TAG ||
+    `development-${new Date().toISOString().split("T")[0]}`
+}).install();
+
+consolePlugin(Raven, console, {
+  levels: ["warn", "error"]
+});
 
 const store = createConfiguredStore(initialState);
 

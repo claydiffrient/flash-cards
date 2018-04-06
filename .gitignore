@@ -5,3 +5,4 @@ coverage/
 # Parcel's cache
 .cache
 flashcards
+.env

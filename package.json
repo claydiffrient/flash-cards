@@ -5,16 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "build": "scripts/build.sh",
-    "deploy": "npm run build && node scripts/deploy.js",
+    "build": "scripts/run.js build",
+    "deploy": "scripts/run.js deploy",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "test": "run-p --print-label test:*",
     "test:integration":
       "NODE_ENV=test start-server-and-test start http://localhost:1234 cypress:run",
     "test:unit": "jest",
-    "test:lint": "eslint --no-inline-config \"{src, cypress}/**/*.js\"",
-    "test:prettier": "prettier --list-different \"{src, cypress}/**/*.js\"",
+    "test:lint":
+      "eslint --no-inline-config \"{src, scripts, cypress}/**/*.js\"",
+    "test:prettier":
+      "prettier --list-different \"{src, scripts, cypress}/**/*.js\"",
     "precommit": "lint-staged"
   },
   "keywords": ["flash", "cards", "learning"],
@@ -54,6 +56,7 @@
     "@instructure/babel-plugin-transform-class-display-name": "^5.1.1",
     "@instructure/postcss-themeable-styles": "^5.1.1",
     "@instructure/ui-codemods": "^5.1.1",
+    "@sentry/cli": "^1.30.3",
     "autoprefixer": "^8.2.0",
     "babel-eslint": "^8.2.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -96,6 +99,6 @@
   },
   "lint-staged": {
     "*.{json,css,md}": ["prettier --write", "git add"],
-    "{src, cypress}/**/*.js": ["eslint --fix", "git add"]
+    "{src, cypress, scripts}/**/*.js": ["eslint --fix", "git add"]
   }
 }
