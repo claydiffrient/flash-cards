@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const { exec, echo, exit, env, set } = require("shelljs");
+const moment = require('moment');
 
 set('-v')
 
