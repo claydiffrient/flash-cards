@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({699:[function(require,module,exports) {
+})({531:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -93,7 +93,7 @@ exports.default = function (_ref) {
     padding: spacing.medium
   };
 };
-},{}],612:[function(require,module,exports) {
+},{}],457:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -195,7 +195,7 @@ var ModalHeader = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _
   children: _propTypes2.default.node
 }, _temp)) || _class);
 exports.default = ModalHeader;
-},{"react":8,"prop-types":226,"@instructure/ui-themeable":319,"./theme":699}],700:[function(require,module,exports) {
+},{"react":10,"prop-types":338,"@instructure/ui-themeable":341,"./theme":531}],528:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -205,7 +205,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function () {
   return {};
 };
-},{}],614:[function(require,module,exports) {
+},{}],458:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -327,7 +327,7 @@ var ModalBody = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _de
   padding: 'medium'
 }, _temp)) || _class);
 exports.default = ModalBody;
-},{"react":8,"prop-types":226,"@instructure/ui-container/lib/components/Container":389,"@instructure/ui-themeable":319,"@instructure/ui-themeable/lib/utils/ThemeablePropTypes":332,"./theme":700}],695:[function(require,module,exports) {
+},{"react":10,"prop-types":338,"@instructure/ui-container/lib/components/Container":345,"@instructure/ui-themeable":341,"@instructure/ui-themeable/lib/utils/ThemeablePropTypes":384,"./theme":528}],537:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -347,7 +347,7 @@ exports.default = function (_ref) {
     padding: spacing.small
   };
 };
-},{}],613:[function(require,module,exports) {
+},{}],459:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -449,7 +449,7 @@ var ModalFooter = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _
   children: _propTypes2.default.node
 }, _temp)) || _class);
 exports.default = ModalFooter;
-},{"react":8,"prop-types":226,"@instructure/ui-themeable":319,"./theme":695}],748:[function(require,module,exports) {
+},{"react":10,"prop-types":338,"@instructure/ui-themeable":341,"./theme":537}],554:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -521,7 +521,7 @@ function ms(val) {
     return num;
   }
 }
-},{"./parseUnit":558}],826:[function(require,module,exports) {
+},{"./parseUnit":617}],690:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -621,7 +621,7 @@ function shimClassListForIE() {
     classListShimmed = true;
   }
 }
-},{"./findDOMNode":482}],742:[function(require,module,exports) {
+},{"./findDOMNode":428}],552:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1038,7 +1038,7 @@ var Transition = (_temp = _class = function (_React$Component) {
   };
 }, _temp);
 exports.default = Transition;
-},{"react":8,"prop-types":226,"@instructure/ui-utils/lib/dom/getClassList":826,"@instructure/ui-utils/lib/react/ensureSingleChild":570}],741:[function(require,module,exports) {
+},{"react":10,"prop-types":338,"@instructure/ui-utils/lib/dom/getClassList":690,"@instructure/ui-utils/lib/react/ensureSingleChild":544}],553:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1052,7 +1052,7 @@ exports.default = function (_ref) {
     duration: transitions.duration
   };
 };
-},{}],646:[function(require,module,exports) {
+},{}],462:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1272,7 +1272,7 @@ var Transition = (_dec = (0, _uiThemeable2.default)(_theme2.default, styles), _d
   onExited: function onExited() {}
 }, _temp)) || _class);
 exports.default = Transition;
-},{"react":8,"prop-types":226,"@instructure/ui-themeable":319,"@instructure/ui-utils/lib/ms":748,"./BaseTransition":742,"./theme":741}],712:[function(require,module,exports) {
+},{"react":10,"prop-types":338,"@instructure/ui-themeable":341,"@instructure/ui-utils/lib/ms":554,"./BaseTransition":552,"./theme":553}],545:[function(require,module,exports) {
 (function(root) {
   var isOn = false;
   var scrollbarSize;
@@ -1341,7 +1341,7 @@ exports.default = Transition;
   }
 })(this);
 
-},{}],684:[function(require,module,exports) {
+},{}],543:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1392,7 +1392,7 @@ generator.canvas = function (variables) {
     focusBorderColor: variables['ic-brand-primary']
   };
 };
-},{}],605:[function(require,module,exports) {
+},{}],456:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1562,7 +1562,7 @@ var Mask = (_dec = (0, _deprecated2.default)('5.0.0', {
   fullscreen: false
 }, _temp)) || _class) || _class);
 exports.default = Mask;
-},{"react":8,"prop-types":226,"classnames":340,"no-scroll":712,"@instructure/ui-themeable":319,"@instructure/ui-utils/lib/react/ensureSingleChild":570,"@instructure/ui-utils/lib/react/deprecated":479,"@instructure/ui-utils/lib/react/passthroughProps":478,"./theme":684}],498:[function(require,module,exports) {
+},{"react":10,"prop-types":338,"classnames":386,"no-scroll":545,"@instructure/ui-themeable":341,"@instructure/ui-utils/lib/react/ensureSingleChild":544,"@instructure/ui-utils/lib/react/deprecated":423,"@instructure/ui-utils/lib/react/passthroughProps":425,"./theme":543}],448:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1591,7 +1591,7 @@ exports.default = function (_ref) {
     zIndex: stacking.topmost
   };
 };
-},{}],391:[function(require,module,exports) {
+},{}],347:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2059,7 +2059,7 @@ var Modal = (_dec = (0, _deprecated2.default)('3.0.0', {
   children: null
 }, _temp)) || _class) || _class) || _class);
 exports.default = Modal;
-},{"./ModalHeader":612,"./ModalBody":614,"./ModalFooter":613,"react":8,"prop-types":226,"classnames":340,"@instructure/ui-a11y/lib/components/Dialog":636,"@instructure/ui-buttons/lib/components/CloseButton":635,"@instructure/ui-utils/lib/react/CustomPropTypes":476,"@instructure/ui-utils/lib/react/passthroughProps":478,"@instructure/ui-utils/lib/createChainedFunction":507,"@instructure/ui-utils/lib/react/deprecated":479,"@instructure/ui-motion/lib/components/Transition":646,"@instructure/ui-portal/lib/components/Portal":645,"@instructure/ui-themeable":319,"@instructure/ui-utils/lib/Browser":341,"../Mask":605,"./theme":498}],311:[function(require,module,exports) {
+},{"./ModalHeader":457,"./ModalBody":458,"./ModalFooter":459,"react":10,"prop-types":338,"classnames":386,"@instructure/ui-a11y/lib/components/Dialog":461,"@instructure/ui-buttons/lib/components/CloseButton":460,"@instructure/ui-utils/lib/react/CustomPropTypes":422,"@instructure/ui-utils/lib/react/passthroughProps":425,"@instructure/ui-utils/lib/createChainedFunction":449,"@instructure/ui-utils/lib/react/deprecated":423,"@instructure/ui-motion/lib/components/Transition":462,"@instructure/ui-portal/lib/components/Portal":463,"@instructure/ui-themeable":341,"@instructure/ui-utils/lib/Browser":387,"../Mask":456,"./theme":448}],340:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2069,7 +2069,7 @@ exports.default = generator;
 function generator() {
   return {};
 }
-},{}],289:[function(require,module,exports) {
+},{}],218:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2293,7 +2293,7 @@ var Home = function (_Component) {
 }(_react.Component);
 
 exports.default = (0, _uiThemeable2.default)(_theme2.default, styles)(Home);
-},{"react":8,"@instructure/ui-elements/lib/components/Heading":380,"@instructure/ui-elements/lib/components/Text":381,"@instructure/ui-container/lib/components/Container":389,"@instructure/ui-elements/lib/components/List":382,"@instructure/ui-buttons/lib/components/Button":390,"@instructure/ui-overlays/lib/components/Modal":391,"../DeckPicker":290,"@instructure/ui-themeable":319,"./theme.js":311}],928:[function(require,module,exports) {
+},{"react":10,"@instructure/ui-elements/lib/components/Heading":342,"@instructure/ui-elements/lib/components/Text":343,"@instructure/ui-container/lib/components/Container":345,"@instructure/ui-elements/lib/components/List":344,"@instructure/ui-buttons/lib/components/Button":346,"@instructure/ui-overlays/lib/components/Modal":347,"../DeckPicker":219,"@instructure/ui-themeable":341,"./theme.js":340}],1035:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -2323,7 +2323,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60585' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61554' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -2462,5 +2462,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[928,289])
+},{}]},{},[1035,218])
 //# sourceMappingURL=/Home.a5e71350.map
