@@ -58,7 +58,7 @@ describe("Viewing", () => {
       cy.contains("Front").should("be.visible");
     });
 
-    it.only("should flip to the front of the next card when moving to a different card", () => {
+    it("should flip to the front of the next card when moving to a different card", () => {
       cy.contains("Flip").click();
       cy.contains("Next").click();
       cy.contains("Front").should("be.visible");
