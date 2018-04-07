@@ -148,12 +148,7 @@ class DeckPicker extends Component {
                     </Link>
                   </td>
                   <td style={{ textAlign: "right" }}>
-                    <Popover
-                      shouldContainFocus
-                      shouldReturnFocus
-                      applicationElement={() => document.getElementById("main")}
-                      on="click"
-                    >
+                    <Popover shouldContainFocus shouldReturnFocus on="click">
                       <PopoverTrigger>
                         <Button variant="icon">
                           <IconMoreLine title="More Actions" />

@@ -4,6 +4,7 @@ import Text from "@instructure/ui-elements/lib/components/Text";
 import Container from "@instructure/ui-container/lib/components/Container";
 import List, { ListItem } from "@instructure/ui-elements/lib/components/List";
 import Button from "@instructure/ui-buttons/lib/components/Button";
+import CloseButton from "@instructure/ui-buttons/lib/components/CloseButton";
 import Modal, {
   ModalBody,
   ModalHeader
@@ -82,13 +83,19 @@ class Home extends Component {
         </Container>
         <Modal
           label="Deck Selector"
-          closeButtonLabel="Close"
           open={this.state.deckPickerModalOpen}
-          applicationElement={() => document.getElementById("main")}
           onDismiss={this.closeDeckPickerModal}
           size="medium"
         >
           <ModalHeader>
+            <CloseButton
+              placement="end"
+              offset="medium"
+              variant="icon"
+              onClick={this.closeDeckPickerModal}
+            >
+              Close
+            </CloseButton>
             <Heading>Choose a Deck of Cards</Heading>
           </ModalHeader>
           <ModalBody>

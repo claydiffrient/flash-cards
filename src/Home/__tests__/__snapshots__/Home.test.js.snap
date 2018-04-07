@@ -392,8 +392,6 @@ exports[`renders 1`] = `
       </div>
     </Container>
     <Modal
-      applicationElement={[Function]}
-      closeButtonLabel="Close"
       contentRef={[Function]}
       defaultFocusElement={null}
       insertAt="bottom"
