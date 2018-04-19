@@ -52,6 +52,10 @@ export class SessionPage extends Component {
       currentlyDisplayedIndex: 0,
       showEditor: false,
       timerValue: 0,
+      sessionStats: {
+        correct: [],
+        incorrect: []
+      },
       ...this.getDeckProperties(props.decks)
     };
   }
@@ -181,6 +185,32 @@ export class SessionPage extends Component {
     });
   };
 
+  handleSuccessClick = id =>
+    this.setState(previousState => {
+      return {
+        ...previousState,
+        sessionStats: {
+          ...previousState.sessionStats,
+          correct: previousState.sessionStats.correct.concat(id)
+        }
+      };
+    });
+
+  handleFailureClick = id =>
+    this.setState(previousState => {
+      return {
+        ...previousState,
+        sessionStats: {
+          ...previousState.sessionStats,
+          incorrect: previousState.sessionStats.correct.concat(id)
+        }
+      };
+    });
+
+  hasResponded = id =>
+    this.state.sessionStats.correct.includes(id) ||
+    this.state.sessionStats.incorrect.includes(id);
+
   render() {
     const card = this.state.cards[this.state.currentlyDisplayedIndex];
     const position = `${this.state.currentlyDisplayedIndex + 1} / ${
@@ -197,6 +227,9 @@ export class SessionPage extends Component {
                 handleSave={this.handleSave}
                 editMode={this.state.showEditor}
                 cardCountPosition={position}
+                onSuccess={this.handleSuccessClick}
+                onFailure={this.handleFailureClick}
+                hasResponded={this.hasResponded(card.id)}
                 ref={c => {
                   this.card = c;
                 }}

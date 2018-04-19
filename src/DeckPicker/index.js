@@ -15,7 +15,6 @@ import Popover, {
   PopoverContent
 } from "@instructure/ui-overlays/lib/components/Popover";
 import { connect } from "react-redux";
-import { MenuItemSeparator } from "@instructure/ui-menu/lib/components/Menu";
 
 import IconEditLine from "instructure-icons/lib/Line/IconEditLine";
 import IconTrashLine from "instructure-icons/lib/Line/IconTrashLine";
@@ -171,7 +170,6 @@ class DeckPicker extends Component {
                                 <IconEditLine title="Edit" /> &nbsp; Edit
                               </Link>
                             </ListItem>
-                            <MenuItemSeparator />
                             <ListItem>
                               <Link
                                 onClick={() => {

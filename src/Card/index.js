@@ -26,12 +26,18 @@ export class Card extends Component {
     }),
     editMode: bool,
     handleSave: func.isRequired,
-    cardCountPosition: string
+    cardCountPosition: string,
+    onSuccess: func,
+    hasResponded: bool,
+    onFailure: func
   };
 
   static defaultProps = {
     editMode: false,
-    cardCountPosition: ""
+    cardCountPosition: "",
+    hasResponded: false,
+    onSuccess: () => {},
+    onFailure: () => {}
   };
 
   state = {
@@ -136,10 +142,32 @@ export class Card extends Component {
                 <GridRow>
                   <GridCol>
                     <Button
+                      onClick={() => {
+                        this.props.onSuccess(this.props.id);
+                      }}
+                      disabled={this.props.hasResponded}
+                      variant="success"
+                    >
+                      Correct
+                    </Button>
+                  </GridCol>
+                  <GridCol>
+                    <Button
                       onClick={this.flipCard}
                       buttonRef={c => (this.backBtn = c)}
                     >
-                      Flip
+                      Flip Back
+                    </Button>
+                  </GridCol>
+                  <GridCol>
+                    <Button
+                      onClick={() => {
+                        this.props.onFailure(this.props.id);
+                      }}
+                      disabled={this.props.hasResponded}
+                      variant="danger"
+                    >
+                      Incorrect
                     </Button>
                   </GridCol>
                 </GridRow>

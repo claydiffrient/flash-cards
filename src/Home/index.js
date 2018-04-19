@@ -62,7 +62,7 @@ class Home extends Component {
             </ListItem>
             <ListItem>
               <Text color="primary-inverse">
-                Track correct vs. incorrect answers by user input
+                [DONE] Track correct vs. incorrect answers by user input
               </Text>
             </ListItem>
             <ListItem>

@@ -116,3 +116,25 @@ describe("Navigation", () => {
     expect(wrapper.find("Card").props().id).toBe("3");
   });
 });
+
+describe("hasResponded", () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<SessionPage {...testProps} fetchDecks={jest.fn()} />);
+    wrapper.setState({
+      sessionStats: {
+        correct: ["123"],
+        incorrect: ["456"]
+      }
+    });
+  });
+  it("returns true when an id is in the correct group", () => {
+    expect(wrapper.instance().hasResponded("123")).toBeTruthy();
+  });
+  it("returns true when an id is in the incorrect group", () => {
+    expect(wrapper.instance().hasResponded("456")).toBeTruthy();
+  });
+  it("returns false when something is not in either group", () => {
+    expect(wrapper.instance().hasResponded("789")).toBeFalsy;
+  });
+});

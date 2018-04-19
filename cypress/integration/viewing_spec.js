@@ -75,4 +75,31 @@ describe("Viewing", () => {
       cy.contains("New Card Back").should("be.visible");
     });
   });
+
+  describe("Stats Tracking", () => {
+    beforeEach(() => {
+      editDeck();
+      cy.contains("Add Card").click();
+      cy.contains("Add Card").click();
+      cy.contains("Go Home").click();
+      cy.contains("Start").click();
+      viewDeck(DECK_NAME);
+    });
+
+    it("allows marking correct and incorrect only once per card", () => {
+      cy.contains("Flip").click();
+      cy.contains("Correct").click();
+      cy.contains("Correct").should("be.disabled");
+      cy.contains("Incorrect").should("be.disabled");
+      cy.contains("Next").click();
+      cy.contains("Flip").click();
+      cy.contains("Incorrect").click();
+      cy.contains("Correct").should("be.disabled");
+      cy.contains("Incorrect").should("be.disabled");
+      cy.contains("Previous").click();
+      cy.contains("Flip").click();
+      cy.contains("Correct").should("be.disabled");
+      cy.contains("Incorrect").should("be.disabled");
+    });
+  });
 });
