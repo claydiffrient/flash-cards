@@ -67,7 +67,7 @@ class Home extends Component {
             </ListItem>
             <ListItem>
               <Text color="primary-inverse">
-                Summarize stats at the end of a session
+                [DONE] Summarize stats at the end of a session
               </Text>
             </ListItem>
             <ListItem>
