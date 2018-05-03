@@ -71,6 +71,11 @@ const Container = () => (
           )}
         />
         <Route path="/decks" component={() => <LoadableDeckPicker />} />
+        <Route
+          exact
+          path="/session_summary"
+          component={() => <LoadableSessionPage summary />}
+        />
       </Switch>
     </Router>
   </Provider>

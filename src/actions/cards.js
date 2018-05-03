@@ -1,9 +1,11 @@
 import uuid from "uuid/v4";
-import db from "../db";
+import getDB from "../db";
 
 import { createActions } from "redux-actions";
 
 import { updateDeck } from "./decks";
+
+const db = getDB();
 
 export const { savedCard, fetchedCards, newCardAdded } = createActions(
   "SAVED_CARD",

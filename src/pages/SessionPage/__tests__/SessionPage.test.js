@@ -40,6 +40,15 @@ it("renders an edit button when isEditing prop is passed in", () => {
   expect(wrapper.find('Button[children="Toggle Edit"]').exists()).toBe(true);
 });
 
+it("renders an end session button when isEditing is false", () => {
+  const wrapper = mount(
+    <MemoryRouter>
+      <SessionPage {...testProps} fetchDecks={jest.fn()} />
+    </MemoryRouter>
+  );
+  expect(wrapper.find('Button[children="End Session"]').exists()).toBe(true);
+});
+
 describe("Navigation", () => {
   let sampleState;
 

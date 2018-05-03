@@ -7,7 +7,7 @@ import eraseDb from "pouchdb-erase";
 PouchDB.plugin(pouchdbFind);
 PouchDB.plugin(eraseDb);
 
-const db = new PouchDB("flashcards");
+// const db = new PouchDB("flashcards");
 
 // db.setSchema([
 //   {
@@ -26,4 +26,6 @@ const db = new PouchDB("flashcards");
 //   }
 // ]);
 
-export default db;
+export default function getDB(dbName = "flashcards") {
+  return new PouchDB(dbName);
+}

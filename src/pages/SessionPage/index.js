@@ -7,6 +7,7 @@ import Grid, {
 } from "@instructure/ui-layout/lib/components/Grid";
 import RangeInput from "@instructure/ui-forms/lib/components/RangeInput";
 import Card from "../../Card";
+import Results from "../../Results";
 import { bool, arrayOf, shape, string, func } from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -16,6 +17,11 @@ import theme from "./theme.js";
 
 import { saveCard, addCard } from "../../actions/cards";
 import { fetchDecks } from "../../actions/decks";
+import {
+  startSession,
+  endSession,
+  updateSession
+} from "../../actions/sessions";
 
 export class SessionPage extends Component {
   static propTypes = {
@@ -36,12 +42,22 @@ export class SessionPage extends Component {
         )
       })
     ),
+    session: shape({
+      _id: string,
+      correct: arrayOf(string),
+      incorrect: arrayOf(string)
+    }),
     fetchDecks: func.isRequired,
     addCard: func,
-    saveCard: func
+    saveCard: func,
+    summary: bool,
+    startSession: func,
+    endSession: func,
+    updateSession: func
   };
 
   static defaultProps = {
+    summary: false,
     isEditing: false,
     decks: []
   };
@@ -62,6 +78,12 @@ export class SessionPage extends Component {
 
   componentWillMount() {
     this.props.fetchDecks();
+  }
+
+  componentDidMount() {
+    if (!this.props.isEditing) {
+      this.props.startSession();
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -101,6 +123,12 @@ export class SessionPage extends Component {
           }, this.state.timerValue * 1000);
         }
       }
+    }
+  }
+
+  componentWillUnmount() {
+    if (!this.props.isEditing) {
+      this.props.endSession(this.props.session._id);
     }
   }
 
@@ -186,36 +214,27 @@ export class SessionPage extends Component {
   };
 
   handleSuccessClick = id =>
-    this.setState(previousState => {
-      return {
-        ...previousState,
-        sessionStats: {
-          ...previousState.sessionStats,
-          correct: previousState.sessionStats.correct.concat(id)
-        }
-      };
+    this.props.updateSession(this.props.session._id, {
+      correct: id
     });
 
   handleFailureClick = id =>
-    this.setState(previousState => {
-      return {
-        ...previousState,
-        sessionStats: {
-          ...previousState.sessionStats,
-          incorrect: previousState.sessionStats.correct.concat(id)
-        }
-      };
+    this.props.updateSession(this.props.session._id, {
+      incorrect: id
     });
 
   hasResponded = id =>
-    this.state.sessionStats.correct.includes(id) ||
-    this.state.sessionStats.incorrect.includes(id);
+    this.props.session.correct.includes(id) ||
+    this.props.session.incorrect.includes(id);
 
   render() {
     const card = this.state.cards[this.state.currentlyDisplayedIndex];
     const position = `${this.state.currentlyDisplayedIndex + 1} / ${
       this.state.cards.length
     }`;
+    if (this.props.summary) {
+      return <Results session={this.props.session} />;
+    }
     if (card) {
       return (
         <Grid>
@@ -267,8 +286,11 @@ export class SessionPage extends Component {
           </GridRow>
           <GridRow>
             <GridCol>
-              <Button as={Link} to={`/`}>
-                Go Home
+              <Button
+                as={Link}
+                to={this.props.isEditing ? "/" : "/session_summary"}
+              >
+                {this.props.isEditing ? "Go Home" : "End Session"}
               </Button>
             </GridCol>
           </GridRow>
@@ -293,14 +315,18 @@ export class SessionPage extends Component {
 const mapStateToProps = state => {
   return {
     cards: state.cards,
-    decks: state.decks
+    decks: state.decks,
+    session: state.session
   };
 };
 
 const mapDispatchToProps = {
   saveCard,
   addCard,
-  fetchDecks
+  fetchDecks,
+  startSession,
+  endSession,
+  updateSession
 };
 
 export const ConnectedSessionPage = connect(

@@ -43,7 +43,26 @@ const decks = handleActions(
   []
 );
 
+const session = handleActions(
+  {
+    SESSION_STARTED: (state, action) => {
+      return action.payload;
+    },
+    SESSION_ENDED: (state, action) => {
+      return action.payload;
+    },
+    SESSION_UPDATED: (state, action) => {
+      return action.payload;
+    }
+  },
+  {
+    correct: [],
+    incorrect: []
+  }
+);
+
 export default combineReducers({
   cards,
-  decks
+  decks,
+  session
 });
