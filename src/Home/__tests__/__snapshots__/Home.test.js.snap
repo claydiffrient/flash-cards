@@ -11,23 +11,31 @@ exports[`renders 1`] = `
       ellipsis={false}
       level="h1"
     >
-      <Container
+      <View
         as="h1"
         className="_3BZ02Bg _3eNxhb- _3VqD3Wt"
-        display={null}
+        display="auto"
       >
         <h1
-          className="_3BZ02Bg _3eNxhb- _3VqD3Wt"
+          className="_6q8Mxga _3BZ02Bg _3eNxhb- _3VqD3Wt"
           style={
             Object {
-              "margin": null,
-              "padding": null,
+              "borderRadius": undefined,
+              "borderWidth": undefined,
+              "height": undefined,
+              "margin": undefined,
+              "maxHeight": undefined,
+              "maxWidth": undefined,
+              "minHeight": undefined,
+              "minWidth": undefined,
+              "padding": undefined,
+              "width": undefined,
             }
           }
         >
           Flash Cards
         </h1>
-      </Container>
+      </View>
     </Heading>
     <Container
       as="div"
@@ -50,24 +58,32 @@ exports[`renders 1`] = `
           level="h1"
           margin="0 0 x-small"
         >
-          <Container
+          <View
             as="h1"
             className="_3BZ02Bg _3eNxhb- _3VqD3Wt"
-            display={null}
+            display="auto"
             margin="0 0 x-small"
           >
             <h1
-              className="_3BZ02Bg _3eNxhb- _3VqD3Wt"
+              className="_6q8Mxga _3BZ02Bg _3eNxhb- _3VqD3Wt"
               style={
                 Object {
+                  "borderRadius": undefined,
+                  "borderWidth": undefined,
+                  "height": undefined,
                   "margin": "0 0 0.5rem",
-                  "padding": null,
+                  "maxHeight": undefined,
+                  "maxWidth": undefined,
+                  "minHeight": undefined,
+                  "minWidth": undefined,
+                  "padding": undefined,
+                  "width": undefined,
                 }
               }
             >
               What is This?
             </h1>
-          </Container>
+          </View>
         </Heading>
         <Text
           as="p"
@@ -90,24 +106,32 @@ exports[`renders 1`] = `
           level="h2"
           margin="0 0 x-small"
         >
-          <Container
+          <View
             as="h2"
             className="_3BZ02Bg _1t9nPA1 _3VqD3Wt"
-            display={null}
+            display="auto"
             margin="0 0 x-small"
           >
             <h2
-              className="_3BZ02Bg _1t9nPA1 _3VqD3Wt"
+              className="_6q8Mxga _3BZ02Bg _1t9nPA1 _3VqD3Wt"
               style={
                 Object {
+                  "borderRadius": undefined,
+                  "borderWidth": undefined,
+                  "height": undefined,
                   "margin": "0 0 0.5rem",
-                  "padding": null,
+                  "maxHeight": undefined,
+                  "maxWidth": undefined,
+                  "minHeight": undefined,
+                  "minWidth": undefined,
+                  "padding": undefined,
+                  "width": undefined,
                 }
               }
             >
               What Will It Do?
             </h2>
-          </Container>
+          </View>
         </Heading>
         <Text
           as="p"
@@ -128,18 +152,26 @@ exports[`renders 1`] = `
           size="medium"
           variant="default"
         >
-          <Container
+          <View
             as="ul"
             className="_2j92CzO QuihDiE _1eZWDls"
-            display={null}
+            display="auto"
             margin="none"
           >
             <ul
-              className="_2j92CzO QuihDiE _1eZWDls"
+              className="_6q8Mxga _2j92CzO QuihDiE _1eZWDls"
               style={
                 Object {
+                  "borderRadius": undefined,
+                  "borderWidth": undefined,
+                  "height": undefined,
                   "margin": "0",
-                  "padding": null,
+                  "maxHeight": undefined,
+                  "maxWidth": undefined,
+                  "minHeight": undefined,
+                  "minWidth": undefined,
+                  "padding": undefined,
+                  "width": undefined,
                 }
               }
             >
@@ -150,17 +182,25 @@ exports[`renders 1`] = `
                 size="medium"
                 variant="default"
               >
-                <Container
+                <View
                   as="li"
                   className="_1dyDTaI undefined _1jLfonx _9PzDC58"
-                  display={null}
+                  display="auto"
                 >
                   <li
-                    className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                    className="_6q8Mxga _1dyDTaI undefined _1jLfonx _9PzDC58"
                     style={
                       Object {
-                        "margin": null,
-                        "padding": null,
+                        "borderRadius": undefined,
+                        "borderWidth": undefined,
+                        "height": undefined,
+                        "margin": undefined,
+                        "maxHeight": undefined,
+                        "maxWidth": undefined,
+                        "minHeight": undefined,
+                        "minWidth": undefined,
+                        "padding": undefined,
+                        "width": undefined,
                       }
                     }
                   >
@@ -177,7 +217,7 @@ exports[`renders 1`] = `
                       </span>
                     </Text>
                   </li>
-                </Container>
+                </View>
               </ListItem>
               <ListItem
                 as="ul"
@@ -186,17 +226,25 @@ exports[`renders 1`] = `
                 size="medium"
                 variant="default"
               >
-                <Container
+                <View
                   as="li"
                   className="_1dyDTaI undefined _1jLfonx _9PzDC58"
-                  display={null}
+                  display="auto"
                 >
                   <li
-                    className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                    className="_6q8Mxga _1dyDTaI undefined _1jLfonx _9PzDC58"
                     style={
                       Object {
-                        "margin": null,
-                        "padding": null,
+                        "borderRadius": undefined,
+                        "borderWidth": undefined,
+                        "height": undefined,
+                        "margin": undefined,
+                        "maxHeight": undefined,
+                        "maxWidth": undefined,
+                        "minHeight": undefined,
+                        "minWidth": undefined,
+                        "padding": undefined,
+                        "width": undefined,
                       }
                     }
                   >
@@ -213,7 +261,7 @@ exports[`renders 1`] = `
                       </span>
                     </Text>
                   </li>
-                </Container>
+                </View>
               </ListItem>
               <ListItem
                 as="ul"
@@ -222,17 +270,25 @@ exports[`renders 1`] = `
                 size="medium"
                 variant="default"
               >
-                <Container
+                <View
                   as="li"
                   className="_1dyDTaI undefined _1jLfonx _9PzDC58"
-                  display={null}
+                  display="auto"
                 >
                   <li
-                    className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                    className="_6q8Mxga _1dyDTaI undefined _1jLfonx _9PzDC58"
                     style={
                       Object {
-                        "margin": null,
-                        "padding": null,
+                        "borderRadius": undefined,
+                        "borderWidth": undefined,
+                        "height": undefined,
+                        "margin": undefined,
+                        "maxHeight": undefined,
+                        "maxWidth": undefined,
+                        "minHeight": undefined,
+                        "minWidth": undefined,
+                        "padding": undefined,
+                        "width": undefined,
                       }
                     }
                   >
@@ -249,7 +305,7 @@ exports[`renders 1`] = `
                       </span>
                     </Text>
                   </li>
-                </Container>
+                </View>
               </ListItem>
               <ListItem
                 as="ul"
@@ -258,17 +314,25 @@ exports[`renders 1`] = `
                 size="medium"
                 variant="default"
               >
-                <Container
+                <View
                   as="li"
                   className="_1dyDTaI undefined _1jLfonx _9PzDC58"
-                  display={null}
+                  display="auto"
                 >
                   <li
-                    className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                    className="_6q8Mxga _1dyDTaI undefined _1jLfonx _9PzDC58"
                     style={
                       Object {
-                        "margin": null,
-                        "padding": null,
+                        "borderRadius": undefined,
+                        "borderWidth": undefined,
+                        "height": undefined,
+                        "margin": undefined,
+                        "maxHeight": undefined,
+                        "maxWidth": undefined,
+                        "minHeight": undefined,
+                        "minWidth": undefined,
+                        "padding": undefined,
+                        "width": undefined,
                       }
                     }
                   >
@@ -281,11 +345,11 @@ exports[`renders 1`] = `
                       <span
                         className="_3jLMUSh _3fy1EZS _2WOMSfA _2G9WT0d"
                       >
-                        Summarize stats at the end of a session
+                        [DONE] Summarize stats at the end of a session
                       </span>
                     </Text>
                   </li>
-                </Container>
+                </View>
               </ListItem>
               <ListItem
                 as="ul"
@@ -294,17 +358,25 @@ exports[`renders 1`] = `
                 size="medium"
                 variant="default"
               >
-                <Container
+                <View
                   as="li"
                   className="_1dyDTaI undefined _1jLfonx _9PzDC58"
-                  display={null}
+                  display="auto"
                 >
                   <li
-                    className="_1dyDTaI undefined _1jLfonx _9PzDC58"
+                    className="_6q8Mxga _1dyDTaI undefined _1jLfonx _9PzDC58"
                     style={
                       Object {
-                        "margin": null,
-                        "padding": null,
+                        "borderRadius": undefined,
+                        "borderWidth": undefined,
+                        "height": undefined,
+                        "margin": undefined,
+                        "maxHeight": undefined,
+                        "maxWidth": undefined,
+                        "minHeight": undefined,
+                        "minWidth": undefined,
+                        "padding": undefined,
+                        "width": undefined,
                       }
                     }
                   >
@@ -321,10 +393,10 @@ exports[`renders 1`] = `
                       </span>
                     </Text>
                   </li>
-                </Container>
+                </View>
               </ListItem>
             </ul>
-          </Container>
+          </View>
         </List>
       </div>
     </Container>
@@ -353,7 +425,7 @@ exports[`renders 1`] = `
           type="button"
           variant="default"
         >
-          <Container
+          <View
             aria-disabled={null}
             as="button"
             className="_922amOO _16-3B-L _3Gg19qR"
@@ -368,14 +440,22 @@ exports[`renders 1`] = `
           >
             <button
               aria-disabled={null}
-              className="_922amOO _16-3B-L _3Gg19qR"
+              className="_6q8Mxga _922amOO _16-3B-L _3Gg19qR"
               onClick={[Function]}
               onKeyDown={[Function]}
               role="button"
               style={
                 Object {
+                  "borderRadius": undefined,
+                  "borderWidth": undefined,
+                  "height": undefined,
                   "margin": "0",
-                  "padding": null,
+                  "maxHeight": undefined,
+                  "maxWidth": undefined,
+                  "minHeight": undefined,
+                  "minWidth": undefined,
+                  "padding": undefined,
+                  "width": undefined,
                 }
               }
               tabIndex="0"
@@ -387,7 +467,7 @@ exports[`renders 1`] = `
                 Start
               </span>
             </button>
-          </Container>
+          </View>
         </Button>
       </div>
     </Container>

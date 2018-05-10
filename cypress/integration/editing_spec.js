@@ -1,4 +1,6 @@
-import db from "../../src/db";
+import getDB from "../../src/db";
+
+const db = getDB();
 
 describe("Editing", () => {
   beforeEach(() => {

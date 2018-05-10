@@ -27,7 +27,12 @@ beforeEach(() => {
           }
         ]
       }
-    ]
+    ],
+    session: {
+      correct: [],
+      incorrect: []
+    },
+    startSession() {}
   };
 });
 
@@ -83,7 +88,12 @@ describe("Navigation", () => {
             }
           ]
         }
-      ]
+      ],
+      session: {
+        correct: [],
+        incorrect: []
+      },
+      startSession() {}
     };
   });
 
@@ -129,13 +139,36 @@ describe("Navigation", () => {
 describe("hasResponded", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<SessionPage {...testProps} fetchDecks={jest.fn()} />);
-    wrapper.setState({
-      sessionStats: {
+    testProps = {
+      decks: [
+        {
+          cards: [
+            {
+              id: "1",
+              text: {
+                front: "What is the square root of 9?",
+                back: "3"
+              },
+              flipped: false
+            },
+            {
+              id: "2",
+              text: {
+                front: "What is the square root of 144?",
+                back: "12"
+              },
+              flipped: false
+            }
+          ]
+        }
+      ],
+      session: {
         correct: ["123"],
         incorrect: ["456"]
-      }
-    });
+      },
+      startSession() {}
+    };
+    wrapper = shallow(<SessionPage {...testProps} fetchDecks={jest.fn()} />);
   });
   it("returns true when an id is in the correct group", () => {
     expect(wrapper.instance().hasResponded("123")).toBeTruthy();
