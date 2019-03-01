@@ -52,7 +52,7 @@
     "xss": "^0.3.7"
   },
   "devDependencies": {
-    "@instructure/babel-plugin-themeable-styles": "5.7.0",
+    "@instructure/babel-plugin-themeable-styles": "5.44.0",
     "@instructure/babel-plugin-transform-class-display-name": "5.7.0",
     "@instructure/postcss-themeable-styles": "5.7.0",
     "@instructure/ui-codemods": "5.7.0",
