@@ -54,7 +54,7 @@
   "devDependencies": {
     "@instructure/babel-plugin-themeable-styles": "5.7.0",
     "@instructure/babel-plugin-transform-class-display-name": "5.7.0",
-    "@instructure/postcss-themeable-styles": "5.7.0",
+    "@instructure/postcss-themeable-styles": "5.44.0",
     "@instructure/ui-codemods": "5.7.0",
     "@sentry/cli": "1.31.0",
     "autoprefixer": "8.4.1",
