@@ -63,7 +63,7 @@
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-0": "6.24.1",
-    "core-js": "2.5.6",
+    "core-js": "2.6.12",
     "cypress": "2.1.0",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
