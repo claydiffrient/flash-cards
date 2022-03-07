@@ -89,7 +89,7 @@
     "pouchdb-erase": "1.0.2",
     "pouchdb-find": "6.4.3",
     "prettier": "1.12.1",
-    "prop-types": "15.6.1",
+    "prop-types": "15.8.1",
     "react-hot-loader": "4.2.0",
     "redux-logger": "3.0.6",
     "relational-pouch": "3.0.1",
