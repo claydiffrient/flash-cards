@@ -33,7 +33,7 @@
     "@instructure/ui-overlays": "^5.2.0",
     "@instructure/ui-themeable": "^5.2.0",
     "@instructure/ui-themes": "^5.2.0",
-    "axios": "^0.18.0",
+    "axios": "^0.27.0",
     "babel-polyfill": "^6.26.0",
     "instructure-icons": "^4.3.2",
     "raven-js": "^3.24.0",
